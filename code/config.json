@@ -1,0 +1,41 @@
+{
+  "gameToken": "Screw you Max, you're not getting the answer from here",
+  "hint": "Guess what... I've forgotten the hint... Can you help me remember it?",
+  "tester": "Very null",
+  "filter": {
+    "blockList":["fgt","faggot","faggott","shit","prick", "wtf", "cock", "bullshit", "dick", "wanker", "bollocks", "niggi", "niggah", "niggur", "twat", "🖕", "fuck", "lmfao", "nigger", "cunt", "bastard", "nigga", "nigger", "kys", "asshole", "asshat", "bitch", "stfu"],
+    "exemptedChannels": ["269526879759761408", "274488503243636737", "269465956638523395", "269413408799981568", "282658419968835595", "262699181620068352", "284765313206190081", "262699430711525377","307605282660417537"],
+    "hackList":["hack", "aura", "bhop", "bee-hopping", "b-hopping", "fly"]
+  },
+  "customChannels": {
+    
+  },
+  "games": [
+    ["play","314724842307977216","@Play","For any game - Play"],
+    ["bd","316180104118140931","@Battery Dash","• Battery Dash - BD"],
+    ["bed","314770811124842496","@Bed","• Bed Wars - BED"],
+    ["bp","316178286239547392","@BP","• Block Party - BP"],
+    ["cai","316178562228944898","@CaI","• Cowboys and Indians - CaI"],
+    ["cr","316178332037152768","@Cranked","• Cranked - CR"],
+    ["dr","316178667862753291","@DR","• Death Run - DR"],
+    ["draw","316181137464623104","@Draw","• Draw It - Draw"],
+    ["ef","316181329639374848","@Electric Floor","• Electric Floor - EF"],
+    ["gnt","314724242686214144","@GNT","• Sky Giants - GNT"],
+    ["grav","316177927933001729","@Grav","• Gravity - Grav"],
+    ["hide","314724490707730433","@HnS","• Hide and Seek - HIDE"],
+    ["lab","316180772237344768","@Lab","• The Lab - Lab"],
+    ["mimv","316179830863298561","@MiMV","• Murder in Mineville - MiMV"],
+    ["mm","316180524811026453","@Music Masters","• Music Masters - MM"],
+    ["oitc","316179417443467265","@OiTC","• One in The Chamber - OiTC"],
+    ["rr","316181765989466123","@Restaurant Rush","• Restaurant Rush - RR"],
+    ["hero","316234338964340737","@SG:Heroes","• SG:Heroes - HERO"],
+    ["sg","316177478915850240","@SG","• Survival Games - SG"],
+    ["sgn","316234233888768000","@SGN","• Survival Games 2.0 - SGN"],
+    ["sky","314724345161318402","@Sky","• Sky Wars - Sky"],
+    ["slap","316181277415964673","@Slap","• Slaparoo - Slap"],
+    ["sp","316179613737025537","@Splegg","• Splegg - SP"],
+    ["spl","316179952519086085","@Sploop","• Sploop - SPL"],
+    ["hb","316179043106160642","@Herobrine","• The Herobrine - HB"],
+    ["timv","316179776719290368","@TiMV","• Trouble in Mineville - TiMV"]
+  ]
+}
