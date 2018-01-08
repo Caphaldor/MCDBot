@@ -1,6 +1,6 @@
 #BeeBot
 This is the BeeBot 2.0 GitHub Repository.
-It's a Discord Bot, originally made by Maxthat, under constant developement by TNTDragonMC with some help from Maxthat for the Hive's Community Discord..
+It's a Discord Bot, originally made by Maxthat, under constant developement by TNTDragonMC with some help from Maxthat, Alex and Calphador for the Hive's Community Discord.
 #Embed messages
 Red = Error
 Green = Affirmative Log
