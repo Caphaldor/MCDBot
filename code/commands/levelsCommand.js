@@ -4,7 +4,7 @@ function blockLevel(xp) {
 		var level = 1;
 		//50 XP is removed due to a bug(?) in the system
 		var exp = xp-50;
-        while((exp-level*50)>0) {
+        while((exp-level*50) >= 0) {
 			exp = exp-level*50;
 			level++
 		}
@@ -33,6 +33,14 @@ module.exports = {
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
                 var hiveData = JSON.parse(body);
 				message.reply(hiveData.rawBlockExperience[args[1]] + "XP => Level " + blockLevel(hiveData.rawBlockExperience[args[1]]));
+				//var playerLevels = Object.keys(config.blocks).map(function(e) {
+				//	var temp = "N/A";
+				//	if (hiveData.rawBlockExperience[e] != undefined) {
+                //        temp = blockLevel(hiveData.rawBlockExperience[e]);
+                //    }
+                //    return [config.blocks[e], temp];
+				//});
+				//message.reply(playerLevels.[args[1]]);
 		});
         if ((args[0].toLowerCase()=="deathrun")||(args[0].toLowerCase()=="dr")) {
             req("http://api.hivemc.com/v1/game/dr/maps", function (error, response, body) {
