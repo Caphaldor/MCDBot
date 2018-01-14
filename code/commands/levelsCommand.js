@@ -33,7 +33,6 @@ module.exports = {
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
                 var hiveData = JSON.parse(body);
                 if (hiveData.UUID) {
-				message.reply(hiveData.rawBlockExperience[args[1]] + "XP => Level " + blockLevel(hiveData.rawBlockExperience[args[1]]));
 				var playerLevels = Object.keys(config.blocks).map(function(e) {
 					var temp = "N/A";
 					if (hiveData.rawBlockExperience[e] != undefined) {
@@ -45,12 +44,12 @@ module.exports = {
                     if(a[0] > b[0]) return 1;
                     return 0;
                 });
-				if (args[2] == undefined || isNaN(args[2])) {
+				if (args[1] == undefined || isNaN(args[1])) {
                     var listPage = 1;
-                } else if (args[2] > Math.ceil(playerLevels.length/10)) {
+                } else if (args[1] > Math.ceil(playerLevels.length/10)) {
                     var listPage = Math.ceil(playerLevels.length/10);
                 } else {
-                    var listPage = parseInt(args[2]);
+                    var listPage = parseInt(args[1]);
                 }
 				var messageList = "";
                 for (i=(listPage*10-10); i<listPage*10 && i<playerLevels.length; i++) {
