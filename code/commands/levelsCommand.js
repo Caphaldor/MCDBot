@@ -39,7 +39,11 @@ module.exports = {
                         temp = blockLevel(hiveData.rawBlockExperience[e]);
                     }
                     return [config.blocks[e], temp];
-				});
+				}).sort(function(a,b){
+                    if(a[0] < b[0]) return -1;
+                    if(a[0] > b[0]) return 1;
+                    return 0;
+                });
 				message.reply(playerLevels);
 		});
         if ((args[0].toLowerCase()=="deathrun")||(args[0].toLowerCase()=="dr")) {
