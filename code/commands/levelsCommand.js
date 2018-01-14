@@ -54,7 +54,7 @@ module.exports = {
                 }
 				var messageList = "";
                 for (i=(listPage*10-10); i<listPage*10 && i<playerLevels.length; i++) {
-                    messageList += "• **" + playerLevels[i][0] + "** - Level " + timeF(playerLevels[i][1]) + "\n";
+                    messageList += "• **" + playerLevels[i][0] + "** - Level " + playerLevels[i][1] + "\n";
                 }
                 messageList += "*Showing page " + listPage + " out of " + Math.ceil(playerLevels.length/10) + "*\n";
                 if (listPage<Math.ceil(playerLevels.length/10)) {
