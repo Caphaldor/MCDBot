@@ -40,7 +40,7 @@ module.exports = {
                     }
                     return [config.blocks[e], temp];
 				});
-				message.reply(playerLevels[args[1]]);
+				message.reply(playerLevels[args[1]][0] + " | " + playerLevels[args[1]][1]);
 		});
         if ((args[0].toLowerCase()=="deathrun")||(args[0].toLowerCase()=="dr")) {
             req("http://api.hivemc.com/v1/game/dr/maps", function (error, response, body) {
