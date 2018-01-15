@@ -1,6 +1,6 @@
 function blockLevel(xp) {
-    var temp = "Block not used";
-    if (xp != "N/A") {
+    var temp = xp;
+    if (xp != "Block not used") {
 		var level = 1;
 		//50 XP is removed due to a bug(?) in the system
 		var exp = xp-50;
@@ -34,10 +34,12 @@ module.exports = {
                 var hiveData = JSON.parse(body);
                 if (hiveData.UUID) {
 				var playerLevels = Object.keys(config.blocks).map(function(e) {
-					var temp = "N/A";
+					var temp = "Block not used";
 					if (hiveData.rawBlockExperience[e] != undefined) {
                         temp = blockLevel(hiveData.rawBlockExperience[e]);
-                    }
+                    } else {
+						temp = blockLevel(temp);
+					}
                     return [config.blocks[e], temp];
 				}).sort(function(a,b){
                     if(a[0] < b[0]) return -1;
