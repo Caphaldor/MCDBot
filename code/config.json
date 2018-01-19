@@ -79,6 +79,8 @@
     "SOUL_SAND": "Soul Sand",
     "ENDER_PORTAL_FRAME": "End Portal Frame",
     "HOPPER": "Hopper",
-    "PRISMARINE:2": "Dark Prismarine"
+    "PRISMARINE:2": "Dark Prismarine",
+	"WOOD:3": "Jungle Wood Planks",
+	"HARD_CLAY": "Hardened Clay"
   }
 }
