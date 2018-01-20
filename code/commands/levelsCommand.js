@@ -21,7 +21,7 @@ module.exports = {
     description: "Showcasing times for Death Run and Gravity Maps",
     usage: "-times",
     allowedInDM: true,
-    allowedChannels: ["281725164247449600","262702429282238465","335817153603305473"],
+    allowedChannels: ["281725164247449600","262699631123759106"],
     call: function(message, args){
         var divN = 2;
         if (args[0] == undefined) {
