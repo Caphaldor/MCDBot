@@ -117,7 +117,7 @@ bot.on("message", function (message) {
             " of the rules results in punishments!");
     }
 	//Anti-suicide talk for doc (special notification) <currently in testing>
-	if (message.author.id()=="155963500265603072" && text.toLowerCase().includes("Cake")) {
+	if (message.channel.id=="291155962901954561" && message.author.id=="155963500265603072" && text.toLowerCase().includes("cake")) {
 	    message.author.sendMessage("It works!");
     }
 	//Currently commented out, reminder to use @Moderator when reporting hackers
