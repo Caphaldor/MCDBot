@@ -145,14 +145,14 @@ bot.on("message", function (message) {
             "and if you think you have an idea what the secret word is, do \"-guess WORD\"");
     }
     //#discord_suggestions auto-reaction system
-    if(message.channel.id == "262725943951491072" && !(message.author.roles.includes("262918475108843520"))){
+    if(message.channel.id == "409681451341053952" && (message.author.roles.get("262918475108843520") == undefined)){
         message.react(message.guild.emojis.get("303100818041733120")).catch(function () {
             logging.legacyLog("Fatal Error in adding agree rating.");
         });
        setTimeout(function() {message.react(message.guild.emojis.get("303100826434404362")).catch(function () {
             logging.legacyLog("Fatal Error in adding disagree rating.");
         })}, 1000);
-        //timeout exists so that 👍 is always before 👎
+        //timeout exists so that disagree is always before agree
     }
 });
 
