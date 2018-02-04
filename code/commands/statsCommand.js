@@ -782,7 +782,7 @@ module.exports = {
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
                                     "\n**Team Eliminations:** " + hiveData.teams_eliminated, "gold"),
-									"thumbnail": {"url": "https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay"}
+									thumbnail: {"url": "https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay"}
 								}
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
