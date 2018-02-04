@@ -1,5 +1,6 @@
-module.exports = function (title, msg, color) {
+module.exports = function (title, msg, color, thumb) {
     var colour;
+	if (typeof thumb === 'undefined') { thumb = "https://i.imgur.com/rK0V3uO.png"; }
     if(color == "red"){
         colour = 0xe51400;
     }else if(color == "blue"){
@@ -18,6 +19,7 @@ module.exports = function (title, msg, color) {
     }
     return {
         title: title,
+		thumbnail: {"url": thumb},
         description: msg,
         color: colour,
         type: "rich",
