@@ -24,7 +24,7 @@ module.exports = function (title, msg, color, thumb) {
         color: colour,
         type: "rich",
         footer: {
-            text: "Coded by the HUD development team • [Come join our Community Discord](https://discord.gg/q4mAbPK)!"
+            text: "Coded by the HUD development team"
         }
     }
 };
