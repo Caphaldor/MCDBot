@@ -145,7 +145,7 @@ bot.on("message", function (message) {
             "and if you think you have an idea what the secret word is, do \"-guess WORD\"");
     }
     //#discord_suggestions auto-reaction system
-    if(message.channel.id == "262725943951491072" && !(message.author.hasRole("262918475108843520"))){
+    if(message.channel.id == "262725943951491072" && !(message.author.roles.includes("262918475108843520"))){
         message.react(message.guild.emojis.get("303100818041733120")).catch(function () {
             logging.legacyLog("Fatal Error in adding agree rating.");
         });
