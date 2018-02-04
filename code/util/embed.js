@@ -23,9 +23,8 @@ module.exports = function (title, msg, color, thumb) {
         description: msg,
         color: colour,
         type: "rich",
-        timestamp: new Date(),
         footer: {
-            text: "Coded by the HUD development team"
+            text: "Coded by the HUD development team • [Come join our Community Discord](https://discord.gg/q4mAbPK)!"
         }
     }
 };
