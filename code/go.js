@@ -55,7 +55,7 @@ bot.on("ready", function () {
     //Log to Console: Startup done
     console.log("Discord ready, starting up done!");
     //Log to chat: Startup done
-    logging.log("Bot started", "Discord is online, Minecraft Server online at verify.thtmx.rocks:25565", "blue");
+    logging.log("Bot started", "Discord is online,\nMinecraft Server online at `caphaldor.com`", "blue");
 });
 
 bot.on("reconnecting", function () {
@@ -145,7 +145,7 @@ bot.on("message", function (message) {
             "and if you think you have an idea what the secret word is, do \"-guess WORD\"");
     }
     //#discord_suggestions auto-reaction system
-    if(message.channel.id == "262725943951491072" && message.author.id != "155963500265603072"){
+    if(message.channel.id == "262725943951491072" && !(message.author.hasRole("262918475108843520"))){
         message.react(message.guild.emojis.get("303100818041733120")).catch(function () {
             logging.legacyLog("Fatal Error in adding agree rating.");
         });

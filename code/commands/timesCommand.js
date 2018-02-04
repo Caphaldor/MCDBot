@@ -77,7 +77,7 @@ module.exports = {
                     }
                     messageList += "*Showing page " + listPage + " out of " + Math.ceil(playertimes.length/10) + "*\n";
                     if (listPage<Math.ceil(playertimes.length/10)) {
-                        messageList += "\nUse `-times DeathRun" + args[1] + " " + (listPage+1) + "` for the next page.";
+                        messageList += "\nUse `-times DeathRun " + args[1] + " " + (listPage+1) + "` for the next page.";
                     }
                     message.reply("",
                         {
@@ -89,7 +89,7 @@ module.exports = {
                         message.reply("",
                         {
                             embed: embed("Error",
-                                "An error occured. Maybe you misspelled the player's name?", "red")
+                                "An error occured.\nMaybe you misspelled the player's name?", "red")
                         }).then(msg => checkDM(msg, message.channel.type, divN));
                     }
                 });
@@ -169,7 +169,7 @@ module.exports = {
                     message.reply("",
                     {
                         embed: embed("Error",
-                            "An error occured. Maybe you misspelled the player's name?", "red")
+                            "An error occured.\mMaybe you misspelled the player's name?", "red")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 }
                 });
