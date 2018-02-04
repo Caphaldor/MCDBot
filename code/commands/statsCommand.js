@@ -774,14 +774,16 @@ module.exports = {
                     if (hiveData.UUID){
                         message.reply("",
                             {
-                                embed: embed("Bed Wars stats of `" + args[1] + "`",
+                                embed: {embed("Bed Wars stats of `" + args[1] + "`",
                                     "**Points:** " + hiveData.total_points +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.games_played +
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
-                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated, "gold")
+                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated, "gold"),
+									"thumbnail": {"url": "https://crafatar.com/renders/body/"+ hiveData.UUID +"?overlay"}
+								}
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
