@@ -36,7 +36,7 @@ module.exports = {
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Gold Earned:** " + hiveData.gold_earned +
                                     "\n**Beasts Slain:** " + hiveData.beasts_slain +
-                                    "\n**Shutdowns:** " + hiveData.shutdowns, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Shutdowns:** " + hiveData.shutdowns, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -69,7 +69,7 @@ module.exports = {
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Gold Earned:** " + hiveData.gold_earned +
                                     "\n**Beasts Slain:** " + hiveData.beasts_slain +
-                                    "\n**Shutdowns:** " + hiveData.shutdowns, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Shutdowns:** " + hiveData.shutdowns, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     } else {
                         message.reply("",
@@ -108,7 +108,7 @@ module.exports = {
                                     oinky +
                                     raven +
                                     booster +
-                                    torstein, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    torstein, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -138,7 +138,7 @@ module.exports = {
                                     "\n**Correct Guesses:** " + hiveData.correct_guesses +
                                     "\n**Incorrect Guesses:** " + hiveData.incorrect_guesses +
                                     "\n**Total Guesses:** " + (hiveData.correct_guesses+hiveData.incorrect_guesses) +
-                                    "\n**Skips:** " + hiveData.skips, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Skips:** " + hiveData.skips, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -166,7 +166,7 @@ module.exports = {
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.games_played +
                                     "\n**Placings:** " + hiveData.total_placing +
-                                    "\n**Elimiations:** " + hiveData.total_eliminations, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Elimiations:** " + hiveData.total_eliminations, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -197,7 +197,7 @@ module.exports = {
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Most Points:** " + hiveData.most_points +
-                                    timeAlive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    timeAlive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -225,7 +225,7 @@ module.exports = {
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.gamesplayed +
                                     "\n**Slap-Offs:** " + hiveData.kills +
-                                    "\n**Deaths:** " + hiveData.deaths, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Deaths:** " + hiveData.deaths, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -254,7 +254,7 @@ module.exports = {
                                     "\n**Most Karma:** " + hiveData.most_points +
                                     "\n**Traitor Points:** " + hiveData.t_points+
                                     "\n**Innocent Points:** " + hiveData.i_points +
-                                    "\n**Detective Points:** " + hiveData.d_points, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Detective Points:** " + hiveData.d_points, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -282,7 +282,7 @@ module.exports = {
                                     "\n**Games played:** " + hiveData.games_played +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Kills:** " + hiveData.kills+
-                                    "\n**Deaths:** " + hiveData.deaths, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Deaths:** " + hiveData.deaths, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -312,7 +312,7 @@ module.exports = {
                                     "\n**Hiders Killed:** " + hiveData.seekerkills +
                                     "\n**Seekers Killed:** " + hiveData.hiderkills +
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Time Alive:** " + hiveData.timealive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Time Alive:** " + hiveData.timealive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -341,7 +341,7 @@ module.exports = {
                                     "\n**Games Played:** " + hiveData.games_played +
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Checkpoints:** " + hiveData.totalcheckpoints, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Checkpoints:** " + hiveData.totalcheckpoints, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -367,7 +367,7 @@ module.exports = {
                                 embed: embed("Gravity stats of `" + args[1] + "`",
                                     "**Points:** " + hiveData.points + " (" + hiveData.title + ")" +
                                     "\n**Victories:** " + hiveData.victories +
-                                    "\n**Games Played:** " + hiveData.gamesplayed, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Games Played:** " + hiveData.gamesplayed, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -397,7 +397,7 @@ module.exports = {
                                     "\n**Leaders Caught:** " + hiveData.catches +
                                     "\n**Leaders Captured:** " + hiveData.captures +
                                     "\n**Times Caught:** " + hiveData.caught +
-                                    "\n**Times Captured:** " + hiveData.captured, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Times Captured:** " + hiveData.captured, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -425,7 +425,7 @@ module.exports = {
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.gamesplayed +
                                     "\n**Players Outlived:** " + hiveData.outlived+
-                                    "\n**Blocks Activated:** " + hiveData.blocksactivated, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Blocks Activated:** " + hiveData.blocksactivated, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -456,7 +456,7 @@ module.exports = {
                                     "\n**Eggs Fired:** " + hiveData.eggsfired +
                                     "\n**Blocks Destroyed:** " + hiveData.blocksdestroyed +
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    timeAlive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    timeAlive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -483,7 +483,7 @@ module.exports = {
                                     "**Points:** " + hiveData.points + " (" + hiveData.title + ")" +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.gamesplayed +
-                                    "\n**Tables Cleared:** " + hiveData.tablescleared, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Tables Cleared:** " + hiveData.tablescleared, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -512,7 +512,7 @@ module.exports = {
                                     "\n**Games Played:** " + hiveData.gamesplayed +
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Arrows Fired:** " + hiveData.arrowsfired, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Arrows Fired:** " + hiveData.arrowsfired, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -542,7 +542,7 @@ module.exports = {
                                     "\n**Incorrect Notes:** " + hiveData.incorrectnotes +
                                     "\n**Correct Notes:** " + hiveData.correctnotes +
                                     "\n**Perfect Notes:** " + hiveData.notes_perfect +
-                                    "\n**Good Notes:** " + hiveData.notes_good, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Good Notes:** " + hiveData.notes_good, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -574,7 +574,7 @@ module.exports = {
                                     "\n**Cat Uses:** " + hiveData.rccat_count +
                                     "\n**Cat Kills:** " + hiveData.rccat_kills +
                                     "\n**Air Strike Uses:** " + hiveData.airstrike_count +
-                                    "\n**Air Strike Kills:** " + hiveData.airstrike_kills, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Air Strike Kills:** " + hiveData.airstrike_kills, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -601,7 +601,7 @@ module.exports = {
                                     "**Points:** " + hiveData.points + " (" + hiveData.title + ")" +
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Shards Captured:** " + hiveData.captures, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Shards Captured:** " + hiveData.captures, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -630,7 +630,7 @@ module.exports = {
                                     "\n**Games Played:** " + hiveData.games_played +
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Energy Collected:** " + hiveData.energy_collected, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Energy Collected:** " + hiveData.energy_collected, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -656,7 +656,7 @@ module.exports = {
                                 embed: embed("The Lab stats of `" + args[1] + "`",
                                     "**Atoms:** " + hiveData.total_points + " (" + hiveData.title + ")" +
                                     "\n**Victories:** " + hiveData.victories +
-                                    "\n**Games Played:** " + hiveData.gamesplayed, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Games Played:** " + hiveData.gamesplayed, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -689,7 +689,7 @@ module.exports = {
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Deathmatches:** " + hiveData.deathmatches +
                                     "\n**Crates Opened:** " + hiveData.cratesopened +
-                                    timeAlive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    timeAlive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -720,7 +720,7 @@ module.exports = {
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**One vs One Wins:** " + hiveData.one_vs_ones_wins +
                                     "\n**Deathmatches:** " + hiveData.deathmatches +
-                                    "\n**Crates Opened:** " + hiveData.crates_opened, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Crates Opened:** " + hiveData.crates_opened, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -751,7 +751,7 @@ module.exports = {
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Deathmatches:** " + hiveData.deathmatches +
-                                    "\n**Crates Opened:** " + hiveData.crates_opened, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Crates Opened:** " + hiveData.crates_opened, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -781,7 +781,7 @@ module.exports = {
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
-                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -832,7 +832,7 @@ module.exports = {
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.games_played +
                                     "\n**Infections:** " + hiveData.infections+
-                                    "\n**Kills:** " + hiveData.kills, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Kills:** " + hiveData.kills, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -862,7 +862,7 @@ module.exports = {
                                     "\n**Kills:** " + hiveData.kills +
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Generators Powered:** " + hiveData.generators_powered +
-                                    "\n**Looted Crates:** " + hiveData.looted_crates, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Looted Crates:** " + hiveData.looted_crates, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
