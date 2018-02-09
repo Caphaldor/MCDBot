@@ -29,7 +29,6 @@ module.exports = {
               ).then(function(channel) {
                   console.log("Channel created");
                   channels.createChannel(message.author.id, message.author.username, channel.id, channel.name);
-				  channels.setPosition(10);
 
                   logging.log("Channel creation",
                   "`" + channel.name + "` was succesfully created for " + message.author.username, //+ ", channel ID is " + channel.id,

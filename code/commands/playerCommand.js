@@ -53,13 +53,13 @@ module.exports = {
                     }
                     message.reply("",
                     {
-                        embed: embed("[" + hiveData.username + "](https://hivemc.com/player/" + hiveData.username + ") is " + hiveData.status.description.toLowerCase() + " " + hiveData.status.game,
+                        embed: embed(hiveData.username + " is " + hiveData.status.description.toLowerCase() + " " + hiveData.status.game,
                             "**Rank**: " + hiveData.modernRank.human +
                             "\n**Tokens**: " + hiveData.tokens +
                             "\n**Lucky Crates Owned**: " + hiveData.crates +
                             "\n**Golden Medals Collected**: " + hiveData.medals +
                             "\n**" + hiveData.username + "** has " + Object.keys(hiveData.achievements).length + " Global Achievements and " + hiveData.trophies.length + " trophies" +
-                            "\n**" + hiveData.username + "** has first logged on the " + timeConverter(hiveData.firstLogin), color)
+                            "\n**" + hiveData.username + "** has first logged on the " + timeConverter(hiveData.firstLogin), color, "https://crafatar.com/avatars/" + hiveData.UUID + "?overlay", "https://hivemc.com/player/" + hiveData.username)
                     }).then(msg => checkDM(msg, message.channel.type));
                 }else{
                         message.reply("",

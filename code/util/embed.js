@@ -1,6 +1,6 @@
-module.exports = function (title, msg, color, thumb) {
+module.exports = function (title, msg, color, thumb,urlLink) {
     var colour;
-	if (typeof thumb === 'undefined') { thumb = "https://i.imgur.com/rK0V3uO.png"; }
+	if (typeof thumb === 'undefined' || thumb == "empty") { thumb = "https://i.imgur.com/rK0V3uO.png"; }
     if(color == "red"){
         colour = 0xe51400;
     }else if(color == "blue"){
@@ -17,14 +17,24 @@ module.exports = function (title, msg, color, thumb) {
     }else{
         colour = 0x333333;
     }
-    return {
-        title: title,
+	if (typeof urlLink === 'undefined') {
+		title: title,
 		thumbnail: {"url": thumb},
         description: msg,
         color: colour,
         type: "rich",
         footer: {
-            text: "Coded by the HUD development team"
+            text: "Coded by the HUD Dev team"
         }
-    }
+	}else{return {
+        title: title,
+		thumbnail: {"url": thumb},
+		url: urlLink,
+        description: msg,
+        color: colour,
+        type: "rich",
+        footer: {
+            text: "Coded by the HUD Dev team"
+        }
+	}}
 };
