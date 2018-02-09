@@ -53,7 +53,7 @@ module.exports = {
                     }
                     message.reply("",
                     {
-                        embed: embed(hiveData.username + " is " + hiveData.status.description.toLowerCase() + " " + hiveData.status.game,
+                        embed: embed("[" + hiveData.username + "](https://hivemc.com/player/" + hiveData.username + ") is " + hiveData.status.description.toLowerCase() + " " + hiveData.status.game,
                             "**Rank**: " + hiveData.modernRank.human +
                             "\n**Tokens**: " + hiveData.tokens +
                             "\n**Lucky Crates Owned**: " + hiveData.crates +
