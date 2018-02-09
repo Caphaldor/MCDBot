@@ -22,7 +22,7 @@ module.exports = {
             }
 
             if(!filter(channelName)) {
-              bot.guilds.get("262699181620068352").createChannel(
+              message.guild.createChannel(
                   channelName,
                   "voice",
                   false
