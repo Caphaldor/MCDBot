@@ -29,6 +29,7 @@ module.exports = {
               ).then(function(channel) {
                   console.log("Channel created");
                   channels.createChannel(message.author.id, message.author.username, channel.id, channel.name);
+				  //This still doesn't work, Idk how to make it work
 				  message.guild.setChannelPositions([{channel: channel.id, position: "10"}])
 
                   logging.log("Channel creation",
