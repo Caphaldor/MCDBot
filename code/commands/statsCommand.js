@@ -312,7 +312,7 @@ module.exports = {
                                     "\n**Hiders Killed:** " + hiveData.seekerkills +
                                     "\n**Seekers Killed:** " + hiveData.hiderkills +
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Time Alive:** " + hiveData.timealive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +" ?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Time Alive:** " + hiveData.timealive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +" ?overlay")
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -341,7 +341,7 @@ module.exports = {
                                     "\n**Games Played:** " + hiveData.games_played +
                                     "\n**Kills:** " + hiveData.kills+
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Checkpoints:** " + hiveData.totalcheckpoints, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +" ?overlay", "https:/hivemc.com/player/" + args[1])
+                                    "\n**Checkpoints:** " + hiveData.totalcheckpoints, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +" ?overlay", "https:/hivemc.com/")
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
