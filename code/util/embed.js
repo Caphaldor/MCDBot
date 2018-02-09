@@ -18,6 +18,7 @@ module.exports = function (title, msg, color, thumb,urlLink) {
         colour = 0x333333;
     }
 	if (typeof urlLink === 'undefined') {
+		return {
 		title: title,
 		thumbnail: {"url": thumb},
         description: msg,
@@ -26,6 +27,7 @@ module.exports = function (title, msg, color, thumb,urlLink) {
         footer: {
             text: "Coded by the HUD Dev team"
         }
+		}
 	}else{return {
         title: title,
 		thumbnail: {"url": thumb},
