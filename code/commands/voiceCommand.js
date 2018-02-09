@@ -24,8 +24,7 @@ module.exports = {
             if(!filter(channelName)) {
               message.guild.createChannel(
                   channelName,
-                  "voice",
-                  false
+                  "voice"
               ).then(function(channel) {
                   console.log("Channel created");
                   channels.createChannel(message.author.id, message.author.username, channel.id, channel.name);
