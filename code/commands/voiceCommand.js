@@ -29,7 +29,7 @@ module.exports = {
               ).then(function(channel) {
                   console.log("Channel created");
                   channels.createChannel(message.author.id, message.author.username, channel.id, channel.name);
-				  channel.edit({parentID: "360824878900707331"});
+				  message.guild.setChannelPositions([{channel: channel.id, position: "10"}])
 
                   logging.log("Channel creation",
                   "`" + channel.name + "` was succesfully created for " + message.author.username, //+ ", channel ID is " + channel.id,
