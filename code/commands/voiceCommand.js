@@ -23,11 +23,13 @@ module.exports = {
 
             if(!filter(channelName)) {
               message.guild.createChannel(
-                  name: channelName,
-                  type: "voice"
+                  channelName,
+                  "voice",
+				  false
               ).then(function(channel) {
                   console.log("Channel created");
                   channels.createChannel(message.author.id, message.author.username, channel.id, channel.name);
+				  channels.edit({parentID: "360824878900707331"});
 
                   logging.log("Channel creation",
                   "`" + channel.name + "` was succesfully created for " + message.author.username, //+ ", channel ID is " + channel.id,
