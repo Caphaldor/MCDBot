@@ -35,7 +35,7 @@ const server = mc.createServer({
     "online-mode": true,
     encryption: true,
     port: 25565,
-    version: "1.12.1"
+    version: "1.12.2"
 });
 
 //Log to Console: Startup
