@@ -3,7 +3,7 @@
   "hint": "Guess what... I've forgotten the hint... Can you help me remember it?",
   "tester": "Very null",
   "filter": {
-    "blockList":["fgt","faggot","faggott","shit","prick", "wtf", "cock", "bullshit", "dick", "wanker", "bollocks", "niggi", "niggah", "niggur", "twat", "🖕", "fuck", "lmfao", "nigger", "cunt", "bastard", "nigga", "nigger", "kys", "asshole", "asshat", "bitch", "stfu"],
+    "blockList":["fgt","faggot","faggott","shit","prick", "wtf", "cock", "bullshit", "dick", "wanker", "bollocks", "niggi", "niggah", "niggur", "twat", "🖕", "fuck", "lmfao", "nigger", "cunt", "bastard", "nigga", "nigger", "kys", "asshole", "asshat", "bitch", "stfu","milf"],
     "exemptedChannels": ["269526879759761408", "274488503243636737", "269465956638523395", "269413408799981568", "282658419968835595", "262699181620068352", "284765313206190081", "262699430711525377","307605282660417537"],
     "hackList":["hack", "aura", "bhop", "bee-hopping", "b-hopping", "fly"]
   },
