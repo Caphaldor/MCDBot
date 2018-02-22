@@ -9,6 +9,10 @@ module.exports = {
         }else if (bot.guilds.get(config.settings.serverID).channels.find("name", args[0]) != null) {
 			var channelName = args[0];
 			args[0] = " ";
+			if (args[1].toLowerCase() == "delete") {
+				args[1] = " ";
+				message.delete();
+			}
 			bot.guilds.get(config.settings.serverID).channels.find("name", channelName).sendMessage(args.join(' '))
 			.catch(function () {
               console.log("Error in posting to the #" + channelName + " channel.");
