@@ -5,7 +5,7 @@ module.exports = {
     allowedChannels: ["274488503243636737"],
     call: function(message, args){
         if (!config.settings.adminChannels.includes(bot.guilds.get("262699181620068352").channels.find("name", args[0]).id)) {
-			message.reply("I'm sorry, but I cannot send a message to that channel")'
+			message.reply("I'm sorry, but I cannot send a message to that channel");
         }else if (bot.guilds.get("262699181620068352").channels.find("name", args[0]) != null) {
 			var channelName = args[0];
 			args[0] = " ";
