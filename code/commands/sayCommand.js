@@ -9,7 +9,7 @@ module.exports = {
         }else if (bot.guilds.get("262699181620068352").channels.find("name", args[0]) != null) {
 			var channelName = args[0];
 			args[0] = " ";
-			bot.guilds.get("262699181620068352").channels.find("name", args[0]).sendMessage(args.join(' '))
+			bot.guilds.get("262699181620068352").channels.find("name", channelName).sendMessage(args.join(' '))
 			.catch(function () {
               console.log("Error in posting to the #" + channelName + " channel.");
             });
