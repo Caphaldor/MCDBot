@@ -15,10 +15,10 @@ function blockLevel(xp, detail) {
 		leftoeverXP = Math.floor(bars*exp/(level*50))
 		var end = bars-leftoverXP;
 		for (; leftoverXP > 0; leftoverXP--) {
-			progressBar += ╏;
+			progressBar += "╏";
 		}
 		for (; end > 0; end--) {
-			progressBar += ╎;
+			progressBar += "╎";
 		}
 	}
 	temp = "Level " + level;
