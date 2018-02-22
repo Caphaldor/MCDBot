@@ -79,15 +79,15 @@ module.exports = {
                 message.reply("",
                     {
                         embed: embed("Hide and Seek Block Levels for " + args[0],
-                        messageList, "yellow")
+                        messageList, "gold")
                     }    
-                ).then(msg => checkDM(msg, message.channel.type));
+                ).then(msg => checkDM(msg, message.channel.type, divN));
                 }else{
                     message.reply("",
                     {
                         embed: embed("Error",
                             "An error occured.\nMaybe you misspelled the player's name?", "red")
-                    }).then(msg => checkDM(msg, message.channel.type));
+                    }).then(msg => checkDM(msg, message.channel.type, divN));
                 }
 		});
         }
