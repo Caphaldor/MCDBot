@@ -23,7 +23,7 @@ function timeConverter(UNIX_timestamp){
     if (min<10) {
         min = "0" + min;
     }
-    var time = date + dateEnd + " of " + month + ", " + year + " at " + hour + ":" + min + " GMT";
+    var time = date + dateEnd + " of " + month + ", " + year + " at " + hour + ":" + min;
     return time;
 }
 function checkDM(msg, DM) {
@@ -51,7 +51,7 @@ module.exports = {
 					var onlineCheck = "";
                     if (hiveData.status.description == "Currently hibernating in") {
                         color = "gray";
-						onlineCheck = "\n`" + hiveData.username + "` was last seen online on the " + timeConverter(hiveData.lastLogout)
+						onlineCheck = "\n`" + hiveData.username + "` was last seen on the " + timeConverter(hiveData.lastLogout)
                     }
                     message.reply("",
                     {
