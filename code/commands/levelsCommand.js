@@ -1,15 +1,14 @@
 function blockLevel(xp) {
     var temp = xp;
-    if (xp != "Block not used") {
-		var level = 1;
-		//50 XP is removed due to a bug(?) in the system
-		var exp = xp-50;
-        while((exp-level*50) >= 0) {
-			exp = exp-level*50;
-			level++
-		}
-		temp = "Level " + level;
-    } return temp;
+	var level = 1;
+	//50 XP is removed due to a bug(?) in the system
+	var exp = xp-50;
+    while((exp-level*50) >= 0) {
+		exp = exp-level*50;
+		level++
+	}
+	temp = "Level " + level;
+    return temp;
 };
 //checks for deletion in case not in DM
 function checkDM(msg, DM, div) {
@@ -37,9 +36,7 @@ module.exports = {
 					var temp = "Block not used";
 					if (hiveData.rawBlockExperience[e] != undefined) {
                         temp = blockLevel(hiveData.rawBlockExperience[e]);
-                    } else {
-						temp = blockLevel(temp);
-					}
+                    }
                     return [config.blocks[e], temp];
 				}).sort(function(a,b){
                     if(a[0] < b[0]) return -1;

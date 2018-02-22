@@ -40,7 +40,7 @@ module.exports = {
         if (message.channel.type != "dm") {message.delete();}
         if (args[0]==undefined) {
             message.reply("The proper usage for the command is:\n" +
-            "-player {Player}\n" +
+            "`-player {Player}`\n" +
             "*`{Player}` can be either the IGN or the UUID of a player*").then(msg => checkDM(msg, message.channel.type));
         }else{
             req("http://api.hivemc.com/v1/player/" + args[0], function (error, response, body) {
