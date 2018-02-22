@@ -51,7 +51,7 @@ module.exports = {
 					var onlineCheck = "";
                     if (hiveData.status.description == "Currently hibernating in") {
                         color = "gray";
-						onlineCheck = "\n`" + hiveData.username + "` was last seen online on the " + timeConverter(hiveData.lastlogout)
+						onlineCheck = "\n`" + hiveData.username + "` was last seen online on the " + timeConverter(hiveData.lastLogout)
                     }
                     message.reply("",
                     {
