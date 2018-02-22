@@ -48,8 +48,10 @@ module.exports = {
                 var hiveData = JSON.parse(body);
                 if (hiveData.UUID){
                     var color = "green";
+					var onlineCheck = "";
                     if (hiveData.status.description == "Currently hibernating in") {
                         color = "gray";
+						onlineCheck = "\n`" + hiveData.username + "` was last seen online on the " + timeConverter(hiveData.lastlogout)
                     }
                     message.reply("",
                     {
@@ -58,8 +60,9 @@ module.exports = {
                             "\n**Tokens**: " + hiveData.tokens +
                             "\n**Lucky Crates Owned**: " + hiveData.crates +
                             "\n**Golden Medals Collected**: " + hiveData.medals +
-                            "\n**" + hiveData.username + "** has " + Object.keys(hiveData.achievements).length + " Global Achievements and " + hiveData.trophies.length + " trophies" +
-                            "\n**" + hiveData.username + "** has first logged on the " + timeConverter(hiveData.firstLogin), color, "https://crafatar.com/avatars/" + hiveData.UUID + "?overlay", "https://hivemc.com/player/" + hiveData.username)
+                            "\n`" + hiveData.username + "` has " + Object.keys(hiveData.achievements).length + " Global Achievements and " + hiveData.trophies.length + " trophies" +
+                            "\n`" + hiveData.username + "` has first logged on the " + timeConverter(hiveData.firstLogin) + 
+							onlineCheck, color, "https://crafatar.com/avatars/" + hiveData.UUID + "?overlay", "https://hivemc.com/player/" + hiveData.username)
                     }).then(msg => checkDM(msg, message.channel.type));
                 }else{
                         message.reply("",
