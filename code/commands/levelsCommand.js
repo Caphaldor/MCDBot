@@ -9,7 +9,7 @@ function blockLevel(xp, detail) {
 	}
 	var progressBar = "";
 	if (detail) {
-		var bars = 20;
+		var bars = 10;
 		var leftoverXP = Math.floor(bars*exp/(level*50))
 		var end = bars-leftoverXP;
 		for (; leftoverXP > 0; leftoverXP--) {
@@ -18,10 +18,10 @@ function blockLevel(xp, detail) {
 		for (; end > 0; end--) {
 			progressBar += "▯";
 		}
-		progressBar += "`  " + exp + "/" + (level*50);
+		progressBar += "`  *" + exp + "/" + (level*50) + "*";
 	}
 	temp = "Level " + level;
-	if (detail) {temp+= "\n    `" + progressBar}
+	if (detail) {temp+= "\n  `" + progressBar}
     return temp;
 };
 //checks for deletion in case not in DM
