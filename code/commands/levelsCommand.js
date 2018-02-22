@@ -61,7 +61,7 @@ module.exports = {
                     return 0;
                 });
 				var pageCount = 10;
-				if {detailValue} {pageCount = 5}
+				if (detailValue) {pageCount = 5}
 				if (args[1] == undefined || isNaN(args[1])) {
                     var listPage = 1;
                 } else if (args[1] > Math.ceil(playerLevels.length/pageCount)) {
