@@ -4,7 +4,7 @@ function timeConverter(UNIX_timestamp){
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var date = a.getDate();
-    switch (date) {
+    switch (date%10) {
         case "1":
         var dateEnd = "st";
         break;
