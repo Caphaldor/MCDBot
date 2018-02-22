@@ -11,6 +11,7 @@ function blockLevel(xp, detail) {
 	if (detail) {
 		var bars = 10;
 		var leftoverXP = Math.floor(bars*exp/(level*50))
+		if (level = 30) {leftoverXP = 10}
 		var end = bars-leftoverXP;
 		for (; leftoverXP > 0; leftoverXP--) {
 			progressBar += "▮";
@@ -18,7 +19,11 @@ function blockLevel(xp, detail) {
 		for (; end > 0; end--) {
 			progressBar += "▯";
 		}
-		progressBar += "`  *" + exp + "/" + (level*50) + "*";
+		if (level = 30) {
+			progressBar +=  "`  *Max Level*";
+		}else{
+			progressBar += "`  *" + exp + "/" + (level*50) + "*";
+		}
 	}
 	temp = "Level " + level;
 	if (detail) {temp+= "\n  `" + progressBar}
