@@ -14,6 +14,8 @@ module.exports = function (title, msg, color, thumb,urlLink) {
         colour =0xc1f1ff;
     }else if(color == "gray"){
         colour =0x808080;
+    }else if(color = "orange"){
+		colour = 0xff6600;
     }else{
         colour = 0x333333;
     }

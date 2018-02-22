@@ -111,7 +111,7 @@ bot.on("message", function (message) {
     //exit if the message was sent by a bot or there is no guild-user sending it (i.e. the user is not part of the community discord)
     if ((message.author.bot) || (bot.guilds.get("262699181620068352").members.get(message.author.id) == undefined)) return;
     if (filter(message.content, "cunt") && message.channel.type != "dm" && !config.filter.exemptedChannels.includes(message.channel.id)){
-        logging.log("Abusive Chat", "User: " + message.author.username + "\nMessage: " + message.content + "\nChannel: " + message.channel.name, "red", "rulebreakers");
+        logging.log("Abusive Chat", "User: " + message.author.username + "\nMessage: " + message.content + "\nChannel: " + message.channel.name, "orange", "rulebreakers");
         message.delete();
         message.author.sendMessage("We just deleted one of your messages. Please stay appropriate. Further violation of the rules results in punishments!");
     }
