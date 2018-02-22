@@ -138,10 +138,9 @@ bot.on("message", function (message) {
 
     else if (message.channel.type == "dm"){
         message.reply("Hello " + message.author.username + ", I am your friendly BeeBot, what can I do for you today?" +
-            "\nIf you would like to verify your account, use \"-verify\". This is required for access to the Unofficial Discord" +
-            "\nYou can also get stats of players on the Hive, simply use \"-stats\" for more information (this also works in #spam)" +
-            "\nIf you think you have what it takes to find my secrets, type \"-hint\" to get a hint, " +
-            "and if you think you have an idea what the secret word is, do \"-guess WORD\"");
+            "\nIf you would like to verify your account, use `-verify`. This is required to access the Hive Community Discord" +
+            "\nYou can use commands without verifying though, use `-help` to see the full list!" +
+            "\nIf you think you have what it takes to find my secrets, type `-hint` to get a hint, and if you think you know what the secret word is, do `-guess SECRET`");
     }
     //#discord_suggestions auto-reaction system
     if(message.channel.id == "262725943951491072" && message.author.id != "155963500265603072"){

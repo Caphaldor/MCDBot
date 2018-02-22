@@ -92,5 +92,9 @@ module.exports = {
               console.log("Error in posting to the #music channel.");
             });
         }
+		if (bot.guilds.get("262699181620068352").channels.find("name", args[0]) != null) {
+			logging.legacyLog("Sent message to destination: " + args[0]);
+			bot.guilds.get("262699181620068352").channels.find("name", args[0]).sendMessage(args.join(' '));
+		}
     }
 };
