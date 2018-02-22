@@ -3,8 +3,8 @@ function timeConverter(UNIX_timestamp){
     var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
-    var date = a.getDate();
-    switch (date%10) {
+    var date = (parseInt(a.getDate())%10);
+    switch (date) {
         case "1":
         var dateEnd = "st";
         break;
