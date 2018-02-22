@@ -12,7 +12,7 @@ function blockLevel(xp, detail) {
 		//number of bars in detailed answer
 		var bars = 20;
 		//number of bars that are 'filled'
-		var leftoeverXP = Math.floor(bars*exp/(level*50))
+		var leftoverXP = Math.floor(bars*exp/(level*50))
 		var end = bars-leftoverXP;
 		for (; leftoverXP > 0; leftoverXP--) {
 			progressBar += "╏";
