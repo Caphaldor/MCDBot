@@ -81,8 +81,8 @@ module.exports = {
                     }
                     message.reply("",
                         {
-                            embed: embed("Death Run Records for " + args[1],
-                            messageList, "blue")
+                            embed: embed("Death Run Records for `" + args[1] + "`",
+                            messageList, "gold")
                         }    
                     ).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
@@ -161,8 +161,8 @@ module.exports = {
                 }
                 message.reply("",
                     {
-                        embed: embed("Gravity Records for " + args[1],
-                        messageList, "blue")
+                        embed: embed("Gravity Records for `" + args[1] + "`",
+                        messageList, "gold")
                     }    
                 ).then(msg => checkDM(msg, message.channel.type, divN));
                 }else{

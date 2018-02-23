@@ -52,7 +52,7 @@ module.exports = {
                 var hiveData = JSON.parse(body);
                 if (hiveData.UUID) {
 				var detailValue = false;
-				if (args[2] == true || args[2] == "detail" || args[2] == "-d") {detailValue = true;}
+				if (args[2] == "detail" || args[2] == "-d") {detailValue = true;}
 				var playerLevels = Object.keys(config.blocks).map(function(e) {
 					var temp = "Block not used";
 					if (hiveData.rawBlockExperience[e] != undefined) {
