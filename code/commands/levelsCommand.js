@@ -36,14 +36,14 @@ function checkDM(msg, DM, div) {
     }
 };
 module.exports = {
-    description: "Showcasing times for Death Run and Gravity Maps",
-    usage: "-times",
+    description: "Lists all block levels from Hide and Seek.",
+    usage: "-levels {PLAYER} <PAGE> [-d]",
     allowedInDM: true,
     allowedChannels: ["281725164247449600","262699631123759106"],
     call: function(message, args){
         var divN = 2;
         if (args[0] == undefined) {
-            message.reply("The proper usage of this command is `-levels {PLAYER} <PAGE>`").then(msg => checkDM(msg, message.channel.type, divN));
+            message.reply("The proper usage of this command is `-levels {PLAYER} <PAGE> [-d]`").then(msg => checkDM(msg, message.channel.type, divN));
         } else {
 		req("http://api.hivemc.com/v1/player/" + args[0] + "/HIDE", function (error, response, body) {
                 if (message.channel.id == "281725164247449600") {divN = 1;}
@@ -74,12 +74,14 @@ module.exports = {
                     var listPage = parseInt(args[1]);
                 }
 				var messageList = "";
+				var nextPage = ""
+				if (detailValue) {nextPage = " -d"}
                 for (i=(listPage*pageCount-pageCount); i<listPage*pageCount && i<playerLevels.length; i++) {
                     messageList += "• **" + playerLevels[i][0] + "** - " + playerLevels[i][1] + "\n";
                 }
                 messageList += "*Showing page " + listPage + " out of " + Math.ceil(playerLevels.length/pageCount) + "*\n";
                 if (listPage<Math.ceil(playerLevels.length/pageCount)) {
-                    messageList += "\nUse `-levels " + args[0] + " " + (listPage+1) + "` for the next page.";
+                    messageList += "\nUse `-levels " + args[0] + " " + (listPage+1) + nextPage + "` for the next page.";
                 }
                 message.reply("",
                     {
