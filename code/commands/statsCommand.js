@@ -11,7 +11,7 @@ function hideTimeAlive(hiveData) {
         var newTimeAlive;
         newTimeAlive = hiveData.total_points - 30*hiveData.seekerkills - 50*hiveData.victories;
         if (newTimeAlive>0 && newTimeAlive<4320000) {
-            temp = "\'s time alive is ~" + Math.floor(newTimeAlive/86400) + " d. " + Math.floor((newTimeAlive%86400)/3600) + " h, " + Math.floor((newTimeAlive%3600)/60) + " min and " + Math.floor(newTimeAlive%60) + " s\n*This time has been estimated and may not be fully accurate*";
+            temp = "\'s time alive is ≈ " + Math.floor(newTimeAlive/86400) + " d. " + Math.floor((newTimeAlive%86400)/3600) + " h, " + Math.floor((newTimeAlive%3600)/60) + " min and " + Math.floor(newTimeAlive%60) + " s\n*This time has been estimated and may not be fully accurate*";
         } else {
             temp = "*\'s time alive is glitched :(*";
         }
