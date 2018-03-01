@@ -3,6 +3,21 @@ function checkDM(msg, DM, div) {
         msg.delete(30000/div);
     }
 };
+function hideTimeAlive(hiveData) {
+    var temp = "";
+    if (Math.abs(hiveData.timealive)<13302000) {
+        temp = "\'s time alive is: " + Math.floor(hiveData.timealive/86400) + " d. " + Math.floor((hiveData.timealive%86400)/3600) + " h, " + Math.floor((hiveData.timealive%3600)/60) + " min and " + Math.floor(hiveData.timealive%60) + " s";
+    } else {
+        var newTimeAlive;
+        newTimeAlive = hiveData.total_points - 30*hiveData.seekerkills - 50*hiveData.victories;
+        if (newTimeAlive>0 && newTimeAlive<4320000) {
+            temp = "\'s time alive is: " + Math.floor(newTimeAlive/86400) + " d. " + Math.floor((newTimeAlive%86400)/3600) + " h, " + Math.floor((newTimeAlive%3600)/60) + " min and " + Math.floor(newTimeAlive%60) + " s";
+        } else {
+            temp = "*\'s time alive is glitched :(*";
+        }
+    }
+    return temp;
+}
 module.exports = {
     description: "Provides statistics for a specified user on the Hive.",
     usage: "-stats {Game Code} {Player} \nFor list of available Main Game Codes, type \"-stats list\" \nFor list of available Arcade Game Codes, type \"-stats arcade\"",
@@ -312,7 +327,7 @@ module.exports = {
                                     "\n**Hiders Killed:** " + hiveData.seekerkills +
                                     "\n**Seekers Killed:** " + hiveData.hiderkills +
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n**Time Alive:** " + hiveData.timealive, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                                    "\n`" + args[1] + "`" + hideTimeAlive(hiveData), "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -574,7 +589,9 @@ module.exports = {
                                     "\n**Cat Uses:** " + hiveData.rccat_count +
                                     "\n**Cat Kills:** " + hiveData.rccat_kills +
                                     "\n**Air Strike Uses:** " + hiveData.airstrike_count +
-                                    "\n**Air Strike Kills:** " + hiveData.airstrike_kills, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                                    "\n**Air Strike Kills:** " + hiveData.airstrike_kills +
+                                    "\n**Sonic Squid Uses:** " + hiveData.sonicsquid_count +
+                                    "\n**Sonic Squid Kills:** " + hiveData.sonicsquid_kills, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",

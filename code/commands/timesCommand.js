@@ -24,7 +24,7 @@ function timeG(valu) {
             }
         }
         miliseconds += (valu % 1000);
-        temp = minutes + seconds + miliseconds;
+        temp = minutes + seconds + miliseconds + " seconds\n";
     } return temp;
 };
 //checks for deletion in case not in DM
@@ -40,7 +40,7 @@ module.exports = {
     allowedChannels: ["281725164247449600","262702429282238465","335817153603305473"],
     call: function(message, args){
         if (args[0] == undefined) {
-            message.reply("The proper usage of this command is `-times [DeathRun/Gravity] {PLAYER} <PAGE>`").then(msg => checkDM(msg, message.channel.type, divN));
+            message.reply("The proper usage of this command is `-times [DeathRun/Gravity] {PLAYER} <PAGE>`").then(msg => checkDM(msg, message.channel.type, 1));
         } else {
         if ((args[0].toLowerCase()=="deathrun")||(args[0].toLowerCase()=="dr")) {
             req("http://api.hivemc.com/v1/game/dr/maps", function (error, response, body) {
@@ -153,7 +153,7 @@ module.exports = {
                 }
                 var messageList = "";
                 for (i=(listPage*10-10); i<listPage*10 && i<playertimes.length; i++) {
-                    messageList += "• **" + playertimes[i][1] + "** - " + timeG(playertimes[i][0]) + " seconds\n";
+                    messageList += "• **" + playertimes[i][1] + "** - " + timeG(playertimes[i][0]);
                 }
                 messageList += "*Showing page " + listPage + " out of " + Math.ceil(playertimes.length/10) + "*\n";
                 if (listPage<Math.ceil(playertimes.length/10)) {
