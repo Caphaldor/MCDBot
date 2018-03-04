@@ -49,8 +49,8 @@ module.exports = {
             if (message.channel.type != "dm") {message.delete();}
             message.reply("The proper usage for the command is: " +
             "\n-compare {Game Code} {Player1} {Player2}"+
-            "\nFor list of available Main Game Codes, type \"-compare list\""+
-            "\nFor list of available Arcade Game Codes, type \"-compare arcade\"").then(msg => checkDM(msg, msg.channel.type, 2));
+            "\nFor list of available Main Game Codes, type `-compare list`"+
+            "\nFor list of available Arcade Game Codes, type `-compare arcade`").then(msg => checkDM(msg, msg.channel.type, 2));
         }else{
         switch (args[0].toLowerCase()) {
             case "gntm":

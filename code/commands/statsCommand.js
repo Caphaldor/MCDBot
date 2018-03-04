@@ -25,6 +25,7 @@ module.exports = {
     allowedChannels: ["281725164247449600","314752337354948608","335817153603305473","262700752613539840", "262700708925669376", "262703646452613120", "262700135644004352", "262702429282238465", "262699631123759106", "262703696306110477", "262701246559944704", "262704059595620352", "262701380597186560", "262701745132535808", "262699939027484674"],
     call: function(message, args){
         if (args[0]==undefined) {
+            if (message.channel.type != "dm") {message.delete(30000);}
             message.reply("The proper usage for the command is: " +
             "\n-stats {Game Code} {Players}"+
             "\nFor list of available Main Game Codes, type \"-stats list\""+
