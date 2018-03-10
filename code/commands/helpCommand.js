@@ -23,6 +23,6 @@ module.exports = {
                 if (commands[c][4]) {return[c, commands[c][1], commands[c][2]];}
             });
         }
-        message.reply(commands + "\n\n" + channels.help "\n\n" + availableCommands);
+        message.reply(commands + "\n\n" + channels.help + "\n\n" + availableCommands);
     }
 };
