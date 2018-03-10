@@ -14,6 +14,6 @@ module.exports = {
             channels[c] = command[c].allowedChannels;
             return [c, description, usage, DMAllowance];
         });
-        message.reply(commands + "\n\n" + channels);
+        message.reply(commands + "\n\n" + channels.help);
     }
 };
