@@ -10,9 +10,9 @@ module.exports = {
             var description = command[c].description;
             var usage = command[c].usage;
             var DMAllowance = command[c].allowedInDM;
-            var otherChannels = command[c].allowedChannels;
-            return [c, description, usage, DMAllowance, otherChannels];
+            var channels[c] = command[c].allowedChannels;
+            return [c, description, usage, DMAllowance];
         });
-        message.reply(commands);
+        message.reply(commands + "\n\n" + channels);
     }
 };
