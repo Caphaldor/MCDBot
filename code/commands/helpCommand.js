@@ -6,11 +6,12 @@ module.exports = {
     call: function(message, args){
         //turning all available commands into an object
         const command = require("./commands.js");
+        var channels = [];
         var commands = Object.keys(command).map(function(c) {
             var description = command[c].description;
             var usage = command[c].usage;
             var DMAllowance = command[c].allowedInDM;
-            var channels[c] = command[c].allowedChannels;
+            channels[c] = command[c].allowedChannels;
             return [c, description, usage, DMAllowance];
         });
         message.reply(commands + "\n\n" + channels);
