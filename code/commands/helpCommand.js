@@ -18,6 +18,11 @@ module.exports = {
             if(a[0] > b[0]) return 1;
             return 0;
         });
-        message.reply(commands + "\n\n" + channels.help);
+        if (message.channel.type=="dm") {
+            var availableCommands = Object.keys(command).map(function(c) {
+                if (commands[c][4]) {return[c, commands[c][1], commands[c][2]];}
+            });
+        }
+        message.reply(commands + "\n\n" + channels.help "\n\n" + availableCommands);
     }
 };
