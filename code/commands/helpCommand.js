@@ -22,7 +22,7 @@ module.exports = {
         //commands[c] requires number not name
             var availableCommands = Object.keys(command).map(function(c) {
                 for (i=0; i<commands.length;i++) {
-                    if (commands[i][0]==c && commands[i][3]) {return[c, commands[i][1], commands[i][2]];message.reply("Beep\n");, "\n"}
+                    if (commands[i][0]==c && commands[i][3]) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
             });
             message.reply(availableCommands);
