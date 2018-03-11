@@ -21,7 +21,9 @@ module.exports = {
         if (message.channel.type=="dm") {
         //commands[c] requires number not name
             var availableCommands = Object.keys(command).map(function(c) {
-                if (commands.c[3]) {return[c, commands.c[1], commands.c[2]];}
+                for (i=0; i<commands.length;i++) {
+                    if (commands[i][0]==c && commands[i][3]) {return[c, commands.c[1], commands.c[2]];message.reply("Beep\n");}
+                }
             });
         }
         message.reply(commands + "\n\n" + channels.help + "\n\n" + availableCommands);
