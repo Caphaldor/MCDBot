@@ -25,7 +25,7 @@ module.exports = {
                     if (commands[i][0]==c && commands[i][3]) {message.reply("Beep\n");return[c, commands[i][1], commands[i][2]];message.reply("Beep\n");}
                 }
             });
+            message.reply(commands + "\n\n" + channels.help + "\n\n" + availableCommands);
         }
-        message.reply(commands + "\n\n" + channels.help + "\n\n" + availableCommands);
     }
 };
