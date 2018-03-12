@@ -25,8 +25,8 @@ module.exports = {
                     if (commands[i][0]==c && commands[i][3] && !(c=="ldb"||c=="leaderboard")) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
             });
-            for (i=0;i<availableCommands.length;i++) {
-                if (!availableCommands[i]) {message.reply("Beep at " + i);}
+            for (i=availableCommands.length;i>=0;i--) {
+                if (!availableCommands[i]) {availableCommands.splice(i,1);message.reply("Removed " + commands[i][0])}
             }
             var pageEntries = 4;
             if (args[1] == undefined || isNaN(args[1])) {
