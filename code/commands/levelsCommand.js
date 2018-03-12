@@ -37,7 +37,7 @@ function checkDM(msg, DM, div) {
 };
 module.exports = {
     description: "Lists players block levels from Hide and Seek.",
-    usage: "-levels {PLAYER} <PAGE> [-d]",
+    usage: "-levels {Player} <Page> [-d]",
     allowedInDM: true,
     allowedChannels: ["281725164247449600","262699631123759106"],
     call: function(message, args){
