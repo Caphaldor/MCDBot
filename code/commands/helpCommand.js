@@ -25,10 +25,10 @@ module.exports = {
                     if (commands[i][0]==c && commands[i][3] && !(c=="ldb"||c=="leaderboard")) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
             });
-            for (i=availableCommands.length;i>=0;i--) {
-                if (!availableCommands[i]) {availableCommands.splice(i,1);message.reply("Removed " + i)}
+            for (i=availableCommands.length-1;i>=0;i--) {
+                if (!availableCommands[i]) {availableCommands.splice(i,1);message.reply("Removed " + commands[i][0])}
             }
-            var pageEntries = 4;
+            var pageEntries = 8;
             if (args[1] == undefined || isNaN(args[1])) {
                 var listPage = 1;
             } else if (args[1] > Math.ceil(availableCommands.length/pageEntries)) {
