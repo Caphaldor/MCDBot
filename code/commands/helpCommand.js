@@ -26,15 +26,16 @@ module.exports = {
                 }
             });
             for (i=availableCommands.length-1;i>=0;i--) {
-                if (!availableCommands[i]) {availableCommands.splice(i,1);message.reply("Removed " + commands[i][0])}
+                if (!availableCommands[i]) {availableCommands.splice(i,1);}
             }
+            message.reply(availableCommands);
             var pageEntries = 8;
             if (args[1] == undefined || isNaN(args[1])) {
                 var listPage = 1;
             } else if (args[1] > Math.ceil(availableCommands.length/pageEntries)) {
                 var listPage = Math.ceil(availableCommands.length/pageEntries);
             } else {
-                var listPage = parseInt(args[2]);
+                var listPage = parseInt(args[1]);
             }
             var messageFields = [];
             var fieldNum=0;
