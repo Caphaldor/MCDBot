@@ -1,6 +1,6 @@
 module.exports = {
     description: "Provides help for all public BeeBot 2.0 commands",
-    usage: "-help <Command>",
+    usage: "-help",
     allowedInDM: true,
     allowedChannels: ["All"],
     call: function(message, args){
