@@ -25,15 +25,23 @@ module.exports = {
                     if (commands[i][0]==c && commands[i][3] && !(c=="ldb"||c=="leaderboard")) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
             });
+            var pageEntries = 8;
+            if (args[1] == undefined || isNaN(args[1])) {
+                var listPage = 1;
+            } else if (args[1] > Math.ceil(commands.length/pageEntries)) {
+                var listPage = Math.ceil(commands.length/pageEntries);
+            } else {
+                var listPage = parseInt(args[2]);
+            }
+            var messageFields = [];
+            messageFields[0] = {
+                 "name": "`Hello`",
+                 "value": "Just some testing"
+            }
             message.reply("",
                 {
                     embed: {
-                    "fields": [
-                        {
-                            "name": "`Hello`",
-                            "value": "Just some testing"
-                        }
-                    ] 
+                    "fields": messageFields
                     }
                 }
             );
