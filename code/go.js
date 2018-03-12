@@ -131,7 +131,7 @@ bot.on("message", function (message) {
       var commandIdentifier = msgParts[0];
       msgParts.splice(0,1);
       var commands = Object.keys(command);
-      if( (commands.includes(commandIdentifier)) && ( ( (message.channel.type == "dm") && (command[commandIdentifier].allowedInDM) ) || (command[commandIdentifier].allowedChannels.includes(message.channel.id) ) ) ){
+      if( (commands.includes(commandIdentifier)) && ( ( (message.channel.type == "dm") && (command[commandIdentifier].allowedInDM) ) || (command[commandIdentifier].allowedChannels.includes(message.channel.id) || command[commandIdentifier].allowedChannels.includes("All") ) ) ){
           command[commandIdentifier].call(message, msgParts);
       }
     }
