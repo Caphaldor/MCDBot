@@ -1,9 +1,16 @@
+//checks for deletion in case not in DM
+function checkDM(msg, DM, div) {
+    if (DM != "dm") {
+        msg.delete(30000/div);
+    }
+};
 module.exports = {
     description: "Provides help for all public BeeBot 2.0 commands",
     usage: "-help",
     allowedInDM: true,
     allowedChannels: ["All"],
     call: function(message, args){
+        if (message.channel.type != "dm") {message.delete();}
         //turning all available commands into an object
         const command = require("./commands.js");
         var channels = [];
@@ -57,7 +64,7 @@ module.exports = {
                     "fields": messageFields
                     }
                 }
-            );
+            ).then(msg => checkDM(msg, message.channel.type, 1));
         }else {
             var availableCommands = Object.keys(command).map(function(c) {
                 for (i=0; i<commands.length;i++) {
@@ -101,7 +108,7 @@ module.exports = {
                     "fields": messageFields
                     }
                 }
-            );
+            ).then(msg => checkDM(msg, message.channel.type, 1));
         }
     }
 };
