@@ -26,7 +26,7 @@ module.exports = {
                 }
             });
             for (i=availableCommands.length;i>=0;i--) {
-                if (!availableCommands[i]) {availableCommands.splice(i,1);message.reply("Removed " + commands[i][0])}
+                if (!availableCommands[i]) {availableCommands.splice(i,1);message.reply("Removed " + i)}
             }
             var pageEntries = 4;
             if (args[1] == undefined || isNaN(args[1])) {
