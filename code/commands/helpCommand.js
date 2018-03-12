@@ -27,7 +27,7 @@ module.exports = {
             for (i=availableCommands.length-1;i>=0;i--) {
                 if (!availableCommands[i]) {availableCommands.splice(i,1);}
             }
-            var pageEntries = 8;
+            var pageEntries = 7;
             if (args[0] == undefined || isNaN(args[0])) {
                 var listPage = 1;
             } else if (args[0] > Math.ceil(availableCommands.length/pageEntries)) {
@@ -67,7 +67,7 @@ module.exports = {
             for (i=availableCommands.length-1;i>=0;i--) {
                 if (!availableCommands[i]) {availableCommands.splice(i,1);}
             }
-            var pageEntries = 8;
+            var pageEntries = 7;
             if (args[0] == undefined || isNaN(args[0])) {
                 var listPage = 1;
             } else if (args[0] > Math.ceil(availableCommands.length/pageEntries)) {

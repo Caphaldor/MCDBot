@@ -5,7 +5,7 @@ function checkDM(msg, DM, div) {
 };
 module.exports = {
     description: "Provides leaderboard info for a specified user on the Hive.",
-    usage: "-leaderboards <GAMESHORTCODE>",
+    usage: "-leaderboards {Game Code}",
     allowedInDM: true,
     allowedChannels: ["281725164247449600","262700752613539840", "262700708925669376", "262703646452613120", "262700135644004352", "262702429282238465", "262699631123759106", "262703696306110477", "262701246559944704", "262704059595620352", "262701380597186560", "262701745132535808", "262699939027484674"],
     call: function(message, args){
