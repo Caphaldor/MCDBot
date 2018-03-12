@@ -26,7 +26,7 @@ module.exports = {
                 }
             });
             for (i=0;i<availableCommands.length;i++) {
-                if (!availableCommands[i][1]) {message.reply("Beep at " + i);}
+                if (!availableCommands[i]) {message.reply("Beep at " + i);}
             }
             var pageEntries = 4;
             if (args[1] == undefined || isNaN(args[1])) {
