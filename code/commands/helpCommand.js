@@ -25,7 +25,7 @@ module.exports = {
                     if (commands[i][0]==c && commands[i][3] && !(c=="ldb"||c=="leaderboard")) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
             });
-            var pageEntries = 8;
+            var pageEntries = 4;
             if (args[1] == undefined || isNaN(args[1])) {
                 var listPage = 1;
             } else if (args[1] > Math.ceil(availableCommands.length/pageEntries)) {
