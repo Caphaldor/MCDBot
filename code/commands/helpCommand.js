@@ -61,8 +61,12 @@ module.exports = {
         }else {
             var availableCommands = Object.keys(command).map(function(c) {
                 for (i=0; i<commands.length;i++) {
-                    if (commands[i][0]==c && commands[i][3] && !(c=="ldb"||c=="leaderboard")) {return[c, commands[i][1], commands[i][2], "\n"];}
+                    if (commands[i][0]==c && (command[i].allowedChannels.includes(message.channel.id) || command[i].allowedChannels.includes("All")) && !(c=="ldb"||c=="leaderboard"||c=="math")) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
+            }).sort(function(a,b){
+                if(a[0] < b[0]) return -1;
+                if(a[0] > b[0]) return 1;
+                return 0;
             });
             for (i=availableCommands.length-1;i>=0;i--) {
                 if (!availableCommands[i]) {availableCommands.splice(i,1);}
