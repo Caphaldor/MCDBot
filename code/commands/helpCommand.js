@@ -28,14 +28,13 @@ module.exports = {
             for (i=availableCommands.length-1;i>=0;i--) {
                 if (!availableCommands[i]) {availableCommands.splice(i,1);}
             }
-            message.reply(availableCommands);
             var pageEntries = 8;
-            if (args[1] == undefined || isNaN(args[1])) {
+            if (args[0] == undefined || isNaN(args[0])) {
                 var listPage = 1;
-            } else if (args[1] > Math.ceil(availableCommands.length/pageEntries)) {
+            } else if (args[0] > Math.ceil(availableCommands.length/pageEntries)) {
                 var listPage = Math.ceil(availableCommands.length/pageEntries);
             } else {
-                var listPage = parseInt(args[1]);
+                var listPage = parseInt(args[0]);
             }
             var messageFields = [];
             var fieldNum=0;
@@ -45,6 +44,12 @@ module.exports = {
                     "value": availableCommands[i][1]
                 };
                 fieldNum++;
+            }
+            if (listPage*pageEntries<availableCommands.length) {
+                messageFields[fieldNum] = {
+                    "name": "",
+                    "value": "\nUse `-help " + (listPage+1) + "` for the next page."
+                }
             }
             message.reply("",
                 {
