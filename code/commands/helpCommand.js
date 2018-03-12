@@ -40,7 +40,7 @@ module.exports = {
             var fieldNum=0;
             for (i=(listPage*pageEntries-pageEntries); i<listPage*pageEntries && i<availableCommands.length; i++) {
                 messageFields[fieldNum] = {
-                    "name": "`" + availableCommands[i][2] + "`",
+                    "name": availableCommands[i][2],
                     "value": availableCommands[i][1]
                 };
                 fieldNum++;
