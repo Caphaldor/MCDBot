@@ -35,7 +35,7 @@ function checkDM(msg, DM, div) {
 };
 module.exports = {
     description: "Showcasing times for Death Run and Gravity Maps",
-    usage: "-times",
+    usage: "-times {Game} {Player} <Page>",
     allowedInDM: true,
     allowedChannels: ["281725164247449600","262702429282238465","335817153603305473"],
     call: function(message, args){

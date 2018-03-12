@@ -5,7 +5,7 @@
 //    }
 //}
 module.exports = {
-    description: "Edits the config file.",
+    description: "Unfinished command",
     usage: "-config",
     allowedInDM: false,
     allowedChannels: ["274488503243636737"],

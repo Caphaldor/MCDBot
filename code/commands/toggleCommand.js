@@ -1,6 +1,6 @@
 module.exports = {
-    description: "Toggles notifications recieved from @Moderator.",
-    usage: "-toggle",
+    description: "Toggles notifications received from specific roles.",
+    usage: "-toggle {Role}",
     allowedInDM: true,
     allowedChannels: [],
     call: function(message, args) {

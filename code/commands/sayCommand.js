@@ -1,6 +1,6 @@
 module.exports = {
     description: "Command used to say anything in (almost) any channel",
-    usage: "-say {Chat} {Message}",
+    usage: "-say {Chat channel} [delete] {Message}",
     allowedInDM: false,
     allowedChannels: [config.settings.logChannelID],
     call: function(message, args){

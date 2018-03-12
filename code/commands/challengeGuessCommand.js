@@ -1,6 +1,6 @@
 module.exports = {
-    description: "Command used to guess the current challenge.",
-    usage: "-guess <guess>",
+    description: "Command used to guess the answer to the current challenge.",
+    usage: "-guess {Guess}",
     allowedInDM: true,
     allowedChannels: [],
     call: function(message, args){

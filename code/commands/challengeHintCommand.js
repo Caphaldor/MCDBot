@@ -1,5 +1,5 @@
 module.exports = {
-    description: "Providing the current hint for the challenge.",
+    description: "Provides the hint for the current challenge.",
     usage: "-hint",
     allowedInDM: true,
     allowedChannels: [],

@@ -32,7 +32,7 @@ function checkDM(msg, DM) {
     }
 };
 module.exports = {
-    description: "Providing information about a given player.",
+    description: "Provides information about a given player.",
     usage: "-player {Player}",
     allowedInDM: true,
     allowedChannels: ["281725164247449600"],

@@ -1,5 +1,5 @@
 module.exports = {
-    description: "Providing the uptime of the current BeeBot 2.0 instance.",
+    description: "Provides the uptime of the current BeeBot 2.0 instance.",
     usage: "-uptime",
     allowedInDM: false,
     allowedChannels: ["274488503243636737"],

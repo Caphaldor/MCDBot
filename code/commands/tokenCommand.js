@@ -1,6 +1,6 @@
 module.exports = {
-    description: "Command used to redeem a token to verify the user's authentication status.",
-    usage: "-token <token>",
+    description: "Command used to redeem the verification token.",
+    usage: "-token (token)",
     allowedInDM: true,
     allowedChannels: [],
     call: function(message, args){

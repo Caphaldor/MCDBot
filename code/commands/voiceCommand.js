@@ -1,6 +1,6 @@
 module.exports = {
-    description: "All voice channel related commands",
-    usage: "-voice",
+    description: "WIP command for voice channels",
+    usage: "-voice create <Channel Name>",
     allowedInDM: false,
     allowedChannels: ["274488503243636737","281725164247449600","285168563076071424"],
     call: function(message, args){

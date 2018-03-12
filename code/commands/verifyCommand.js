@@ -1,5 +1,5 @@
 module.exports = {
-    description: "Providing instructions for verification & user authentication.",
+    description: "Provides instructions for verification & user authentication.",
     usage: "-verify",
     allowedInDM: true,
     allowedChannels: [],
