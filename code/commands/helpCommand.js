@@ -47,7 +47,7 @@ module.exports = {
             }
             if (listPage*pageEntries<availableCommands.length) {
                 messageFields[fieldNum] = {
-                    "name": "",
+                    "name": "` `",
                     "value": "\nUse `-help " + (listPage+1) + "` for the next page."
                 }
             }
