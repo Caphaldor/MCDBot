@@ -37,7 +37,11 @@ module.exports = {
             messageFields[0] = {
                  "name": "`Hello`",
                  "value": "Just some testing"
-            }
+            };
+            messageFields[1] = {
+                "name": "`Hello`",
+                "value": "Just some testing"
+            };
             message.reply("",
                 {
                     embed: {
