@@ -28,23 +28,24 @@ module.exports = {
             var pageEntries = 8;
             if (args[1] == undefined || isNaN(args[1])) {
                 var listPage = 1;
-            } else if (args[1] > Math.ceil(commands.length/pageEntries)) {
-                var listPage = Math.ceil(commands.length/pageEntries);
+            } else if (args[1] > Math.ceil(availableCommands.length/pageEntries)) {
+                var listPage = Math.ceil(availableCommands.length/pageEntries);
             } else {
                 var listPage = parseInt(args[2]);
             }
             var messageFields = [];
             messageFields[0] = {
-                 "name": "`Hello`",
-                 "value": "Just some testing"
+                "name": "`" + availableCommands[0][2] + "`",
+                "value": availableCommands[0][1]
             };
             messageFields[1] = {
-                "name": "`Hello`",
-                "value": "Just some testing"
+                "name": "`" + availableCommands[1][2] + "`",
+                "value": availableCommands[1][1]
             };
             message.reply("",
                 {
                     embed: {
+                    "color": 0xc1f1ff,
                     "fields": messageFields
                     }
                 }
