@@ -25,7 +25,18 @@ module.exports = {
                     if (commands[i][0]==c && commands[i][3] && !(c=="ldb"||c=="leaderboard")) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
             });
-            message.reply(availableCommands);
+            message.reply("",
+                {
+                    embed: {
+                    "fields": [
+                        {
+                            "name": "`Hello`",
+                            "value": "Just some testing"
+                        }
+                    ] 
+                    }
+                }
+            );
         }
     }
 };
