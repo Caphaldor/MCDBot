@@ -34,14 +34,14 @@ module.exports = {
                 var listPage = parseInt(args[2]);
             }
             var messageFields = [];
-            messageFields[0] = {
-                "name": "`" + availableCommands[0][2] + "`",
-                "value": availableCommands[0][1]
-            };
-            messageFields[1] = {
-                "name": "`" + availableCommands[1][2] + "`",
-                "value": availableCommands[1][1]
-            };
+            var fieldNum=0;
+            for (i=(listPage*pageEntries-pageEntries); i<listPage*pageEntries && i<availableCommands.length; i++) {
+                messageFields[fieldNum] = {
+                    "name": "`" + availableCommands[i][2] + "`",
+                    "value": availableCommands[i][1]
+                };
+                fieldNum++;
+            }
             message.reply("",
                 {
                     embed: {
