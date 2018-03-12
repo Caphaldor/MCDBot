@@ -27,7 +27,7 @@ module.exports = {
         if (args[0]==undefined) {
             if (message.channel.type != "dm") {message.delete(30000);}
             message.reply("The proper usage for the command is: " +
-            "\n-stats {Game Code} {Players}"+
+            "\n-stats {Game Code} {Player}"+
             "\nFor list of available Main Game Codes, type \"-stats list\""+
             "\nFor list of available Arcade Game Codes, type \"-stats arcade\"").then(msg => checkDM(msg, message.channel.type,1));
         }else{
@@ -830,7 +830,7 @@ module.exports = {
                             " • Sploop - SPL\n" +
                             " • Survival Games: Heroes - HERO\n" +
                             " • The Herobrine - HB\n" +
-                            "\nUsage: -stats {GAME-CODE} {PLAYERNAME}", "blue")
+                            "\nUsage: -stats {Game Code} {Player}", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 break;
             case "pmk":
@@ -914,7 +914,7 @@ module.exports = {
                             " • The Lab - LAB\n" +
                             " • Trouble in Mineville - TIMV\n" +
                             "For Arcade game codes use -stats Arcade\n" +
-                            "\nUsage: -stats {GAME-CODE} {PLAYERNAME}", "blue")
+                            "\nUsage: -stats {Game Code} {Player}", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 break;
         }
