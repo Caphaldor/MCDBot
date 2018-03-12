@@ -25,6 +25,9 @@ module.exports = {
                     if (commands[i][0]==c && commands[i][3] && !(c=="ldb"||c=="leaderboard")) {return[c, commands[i][1], commands[i][2], "\n"];}
                 }
             });
+            for (i=0;i<availableCommands.length;i++) {
+                if (!availableCommands[i][1]) {message.reply("Beep at " + i);}
+            }
             var pageEntries = 4;
             if (args[1] == undefined || isNaN(args[1])) {
                 var listPage = 1;
