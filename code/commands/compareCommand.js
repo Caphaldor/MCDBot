@@ -1147,7 +1147,7 @@ module.exports = {
                             " • Sploop - SPL\n" +
                             " • Survival Games: Heroes - HERO\n" +
                             " • The Herobrine - HB\n" +
-                            "\nUsage: -compare {GAME-CODE} {PLAYER1} {PLAYER2}", "blue")
+                            "\nUsage: -compare {Game Code} {Player1} {Player2}", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, 1));
                 break;
             case "pmk":
@@ -1233,7 +1233,7 @@ module.exports = {
             break;
             default:
                 if (message.channel.type != "dm") {message.delete();}
-                message.reply("I'm sorry, but I do not recognize that gamemode. Here is a list of supported games:",
+                message.reply("",
                     {
                         embed: embed("HiveMC Gamemode Shortcut Help",
                             "Available Gamemodes: \n" +
@@ -1253,7 +1253,7 @@ module.exports = {
                             " • The Lab - LAB\n" +
                             " • Trouble in Mineville - TIMV\n" +
                             "For Arcade game codes use -compare Arcade\n" +
-                            "\nUsage: -compare {GAME-CODE} {PLAYER1} {PLAYER2}", "blue")
+                            "\nUsage: -compare {Game Code} {Player1} {Player2}", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, 1));
                 break;
         }
