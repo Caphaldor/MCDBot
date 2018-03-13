@@ -22,7 +22,7 @@ module.exports = {
     description: "Provides statistics for a specified user on the Hive.\nFor list of available Main Game Codes, type \"-stats list\" \nFor list of available Arcade Game Codes, type \"-stats arcade\"",
     usage: "-stats {Game Code} {Player}",
     allowedInDM: true,
-    allowedChannels: ["281725164247449600","314752337354948608","335817153603305473","262700752613539840", "262700708925669376", "262703646452613120", "262700135644004352", "262702429282238465", "262699631123759106", "262703696306110477", "262701246559944704", "262704059595620352", "262701380597186560", "262701745132535808", "262699939027484674"],
+    allowedChannels: [config.settings.allowedChannels],
     call: function(message, args){
         if (args[0]==undefined) {
             if (message.channel.type != "dm") {message.delete(30000);}
@@ -319,8 +319,6 @@ module.exports = {
                     //get Hive's response
                     var hiveData = JSON.parse(body);
                     if (hiveData.UUID){
-                        var advertisement = "";
-                        if (config.settings.advertisement || message.channel.type=="dm") {advertisement="\n\n[ᶜˡᶦᶜᵏ ᵐᵉ](https://i3ushidokuroi.deviantart.com/art/Dragon-s-Might-188086091) ᵗᵒ ᶜʰᵉᶜᵏ ᵒᵘᵗ ᵗʰᵉ ᴴᶦᵛᵉ ᶜᵒᵐᵐᵘⁿᶦᵗʸ ʰᵘᵇ"}
                         message.reply("",
                             {
                                 embed: embed("Hide and Seek stats of `" + args[1] + "`",
@@ -330,8 +328,7 @@ module.exports = {
                                     "\n**Hiders Killed:** " + hiveData.seekerkills +
                                     "\n**Seekers Killed:** " + hiveData.hiderkills +
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n`" + args[1] + "`" + hideTimeAlive(hiveData) +
-                                    advertisement, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                                    "\n`" + args[1] + "`" + hideTimeAlive(hiveData), "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -833,7 +830,7 @@ module.exports = {
                             " • Sploop - SPL\n" +
                             " • Survival Games: Heroes - HERO\n" +
                             " • The Herobrine - HB\n" +
-                            "\nUsage: -stats {Game Code} {Player}", "blue")
+                            "\nUsage: `-stats {Game Code} {Player}`", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 break;
             case "pmk":
@@ -916,8 +913,8 @@ module.exports = {
                             " • Survival Games 2.0 - SGN\n" +
                             " • The Lab - LAB\n" +
                             " • Trouble in Mineville - TIMV\n" +
-                            "For Arcade game codes use -stats Arcade\n" +
-                            "\nUsage: -stats {Game Code} {Player}", "blue")
+                            "For Arcade game codes use `-stats Arcade`\n" +
+                            "\nUsage: `-stats {Game Code} {Player}`", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 break;
         }

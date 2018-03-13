@@ -1147,7 +1147,7 @@ module.exports = {
                             " • Sploop - SPL\n" +
                             " • Survival Games: Heroes - HERO\n" +
                             " • The Herobrine - HB\n" +
-                            "\nUsage: -compare {Game Code} {Player1} {Player2}", "blue")
+                            "\nUsage: `-compare {Game Code} {Player1} {Player2}`", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, 1));
                 break;
             case "pmk":
@@ -1252,8 +1252,8 @@ module.exports = {
                             " • Survival Games 2.0 - SGN\n" +
                             " • The Lab - LAB\n" +
                             " • Trouble in Mineville - TIMV\n" +
-                            "For Arcade game codes use -compare Arcade\n" +
-                            "\nUsage: -compare {Game Code} {Player1} {Player2}", "blue")
+                            "For Arcade game codes use `-compare Arcade`\n" +
+                            "\nUsage: `-compare {Game Code} {Player1} {Player2}`", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, 1));
                 break;
         }
