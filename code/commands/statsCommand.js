@@ -320,7 +320,7 @@ module.exports = {
                     var hiveData = JSON.parse(body);
                     if (hiveData.UUID){
                         var advertisement = "";
-                        if (config.settings.advertisement) {advertisement="\n[ᶜˡᶦᶜᵏ ᵐᵉ](https://i3ushidokuroi.deviantart.com/art/Dragon-s-Might-188086091) ᵗᵒ ᶜʰᵉᶜᵏ ᵒᵘᵗ ᵗʰᵉ ᴴᶦᵛᵉ ᶜᵒᵐᵐᵘⁿᶦᵗʸ ʰᵘᵇ"}
+                        if (config.settings.advertisement || message.channel.type=="dm") {advertisement="\n\n[ᶜˡᶦᶜᵏ ᵐᵉ](https://i3ushidokuroi.deviantart.com/art/Dragon-s-Might-188086091) ᵗᵒ ᶜʰᵉᶜᵏ ᵒᵘᵗ ᵗʰᵉ ᴴᶦᵛᵉ ᶜᵒᵐᵐᵘⁿᶦᵗʸ ʰᵘᵇ"}
                         message.reply("",
                             {
                                 embed: embed("Hide and Seek stats of `" + args[1] + "`",
