@@ -319,6 +319,8 @@ module.exports = {
                     //get Hive's response
                     var hiveData = JSON.parse(body);
                     if (hiveData.UUID){
+                        var advertisement = "";
+                        if (config.settings.advertisement) {advertisement="\n[ᶜˡᶦᶜᵏ ᵐᵉ](https://i3ushidokuroi.deviantart.com/art/Dragon-s-Might-188086091) ᵗᵒ ᶜʰᵉᶜᵏ ᵒᵘᵗ ᵗʰᵉ ᴴᶦᵛᵉ ᶜᵒᵐᵐᵘⁿᶦᵗʸ ʰᵘᵇ"}
                         message.reply("",
                             {
                                 embed: embed("Hide and Seek stats of `" + args[1] + "`",
@@ -328,7 +330,8 @@ module.exports = {
                                     "\n**Hiders Killed:** " + hiveData.seekerkills +
                                     "\n**Seekers Killed:** " + hiveData.hiderkills +
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n`" + args[1] + "`" + hideTimeAlive(hiveData), "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                                    "\n`" + args[1] + "`" + hideTimeAlive(hiveData) +
+                                    advertisement, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
