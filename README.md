@@ -15,6 +15,7 @@ BeeBot is a Discord Bot, which provides an easy and clean access to stats from t
 * Bot control commands.
 
 *As the bot is constantly under development, there are many more commands that will come in the future!*
+
 The bot has a settings area in the config.json file under the code directory. Don't forget to put your Server ID and Log Channel ID there when you set up the bot, and set the rest as you please
 
 ## Embeded message ##
@@ -35,10 +36,10 @@ Black = unassigned (default)
 ## Contact & Information ##
 
 You can easily contact me (TNT Dragon) on Hive's Community Hub, linked below. Said Discord is also (currently) linked at the bottom of -stats commands, but you can disable it in settings.
-In those settings you can also change the automatic bot messages, swear filter and its exemptions as well as a few other things. When first setting the bot up, you have to put in your serverId and a logChannelID into the settings file, and rest will work automatically.
+In those settings you can also change the automatic bot messages, swear filter and its exemptions as well as a few other things.
 
 ## Links ##
 
-[Discord Server] (https://discord.gg/q4mAbPK)
+[Discord Server](https://discord.gg/q4mAbPK)
 
 [Forum post](https://forum.hivemc.com/forums/)
