@@ -35,8 +35,7 @@ Black = unassigned (default)
 
 ## Contact & Information ##
 
-You can easily contact me (TNT Dragon) on Hive's Community Hub, linked below. Said Discord is also (currently) linked at the bottom of -stats commands, but you can disable it in settings.
-In those settings you can also change the automatic bot messages, swear filter and its exemptions as well as a few other things.
+You can easily contact me (TNT Dragon) on Hive's Community Hub, linked below. Said Discord is also (currently) linked at the bottom of -stats commands, but you can disable that in the settings.
 
 ## Links ##
 
