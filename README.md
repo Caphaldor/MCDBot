@@ -37,8 +37,12 @@ Black = unassigned (default)
 
 You can easily contact me (TNT Dragon) on Hive's Community Hub, linked below. Said Discord is also (currently) linked at the bottom of -stats commands, but you can disable that in the settings.
 
+If you have troubles with installing sodium for the bot, you can use the link below to grab a working version and put it in your npm_modules folder.
+
 ## Links ##
 
 [Discord Server](https://discord.gg/q4mAbPK)
 
 [Forum post](https://forum.hivemc.com/forums/)
+
+[sodium download](https://drive.google.com/file/d/1E-AjE6b9mTCE8OwOqy5gUrilsOY2BuN7/view)
