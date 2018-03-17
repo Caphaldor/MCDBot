@@ -1,17 +1,44 @@
-# BeeBot #
+# BeeBot 2.0 #
 
-## What it is ##
+## What am I? ##
 
-This is the BeeBot 2.0 GitHub Repository.
+BeeBot is a Discord Bot, which provides an easy and clean access to stats from the "The Hive" Minecraft server. The bot was originally made by Maxthat, but is currently maintained and updated by TNT Dragon and Caphaldor. Check out the forum post linked at the bottom for more information.
 
-BeeBot is a Discord Bot, originally made by Maxthat, under constant developement by TNTDragonMC with some help from Calphador. It's made for the [Hive's Community Hub](https://discord.gg/q4mAbPK).
+## Bot Features ##
 
-## Embed messages ##
+* Player statistics for all Hive gamemodes\n
+* Comparison of stats between players\n
+* A list of speedrunning records for any player\n
+* Information on a players Block Levels\n
+* Information on a specific player\n
+* Swear Filter\n
+* Bot control commands.
+
+*As the bot is constantly under development, there are many more commands that will come in the future!*
+The bot has a settings area in the config.json file under the code directory. Don't forget to put your Server ID and Log Channel ID there when you set up the bot, and set the rest as you please
+
+## Embeded message ##
+
+Most responses by BeeBot are color-coded embeds, following these simple rules:
 
 ```
+Gold  = Hive Data
 Red   = Error
 Green = Affirmative Log
 Blue  = Informative Log
-Gold  = Hive Data
-White = Explanator Log
-Black = unassigned (default)```
+White = Help messages
+Black = unassigned (default)
+```
+
+*Note, 'White' has a blue tint to be visible in the light version of the Discord application.*
+
+## Contact & Information ##
+
+You can easily contact me (TNT Dragon) on Hive's Community Hub, linked below. Said Discord is also (currently) linked at the bottom of -stats commands, but you can disable it in settings.
+In those settings you can also change the automatic bot messages, swear filter and its exemptions as well as a few other things. When first setting the bot up, you have to put in your serverId and a logChannelID into the settings file, and rest will work automatically.
+
+## Links ##
+
+[Discord Server] (https://discord.gg/q4mAbPK)
+
+[Forum post](https://forum.hivemc.com/forums/)
