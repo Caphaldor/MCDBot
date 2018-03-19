@@ -45,8 +45,7 @@ module.exports = {
         }else{
             req("http://api.hivemc.com/v1/player/" + args[0], function (error, response, body) {
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
-                console.log(String(body)); 
-                if (false){
+                if (!(String(body).includes("Sorry, the page you are looking for could not be found"))){
                     var hiveData = JSON.parse(body);
                     var color = "green";
 					var onlineCheck = "";
