@@ -46,7 +46,7 @@ module.exports = {
             req("http://api.hivemc.com/v1/player/" + args[0], function (error, response, body) {
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
                 message.reply(body);
-                if (body != undefined){
+                if (false){
                     var hiveData = JSON.parse(body);
                     var color = "green";
 					var onlineCheck = "";
