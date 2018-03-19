@@ -45,8 +45,8 @@ module.exports = {
         }else{
             req("http://api.hivemc.com/v1/player/" + args[0], function (error, response, body) {
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
-                var hiveData = JSON.parse(body);
-                if (hiveData.UUID){
+                if (JSON.parse(body)){
+                    var hiveData = JSON.parse(body);
                     var color = "green";
 					var onlineCheck = "";
                     if (hiveData.status.description == "Currently hibernating in") {
