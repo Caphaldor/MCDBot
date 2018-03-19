@@ -45,9 +45,17 @@ module.exports = {
         }else{
             req("http://api.hivemc.com/v1/player/" + args[0], function (error, response, body) {
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
-                message.reply(String(body));
-                if (false){
-                    var hiveData = JSON.parse(body);
+                var player = true;
+                var hiveData = JSON.parse(body)
+                .catch(function (error) {
+                    player = false;
+                    message.reply("",
+                    {
+                        embed: embed("Error",
+                        "An error occured. Maybe you misspelled the player's name?", "red")
+                    }).then(msg => checkDM(msg, message.channel.type));
+                 });
+                if (player){
                     var color = "green";
 					var onlineCheck = "";
                     if (hiveData.status.description == "Currently hibernating in") {
