@@ -6,7 +6,7 @@ module.exports = {
     call: function(message, args){
         switch (args.join(' ').toLowerCase()) {
             case "train" :
-                message.reply("`Day 2:` *The train worked well, but it broke down in some small town south of Mineville. Thankfully, the Johnson family helped out but they're absolutely crazy! They own a bookstore in town, and spend their entire monthly salary on tacos! At least they let me stay at their house for a couple of days, but I never did figure out just how many tacos they could afford...*");
+                message.reply("`Day 2:` *The train worked well, but it broke down in some small town south of Mineville. Thankfully, the Johnson family helped out, but they're absolutely crazy! They own a bookstore in town, and spend their entire monthly salary on tacos! At least they let me stay at their house for a couple of days, but I never did figure out just how many tacos they could afford...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 1", "green");
             break;
             case "600" :
@@ -18,11 +18,11 @@ module.exports = {
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 3", "green");
             break;
             case "em84ll1n4" :
-                message.reply("`Day 5:` *I had trouble resting today. The constant fighting up in the sky makes it impossible to sleep. I wish I knew what all the commotion was for...*");
+                message.reply("`Day 5:` *I had trouble resting today. The constant fighting up in the sky makes it impossible to sleep. I wish I knew what all the commotion was about...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 4", "green");
             break;
             case "lemon tree" :
-                message.reply("`Day 6:` *I have decided to go up and see what all the fighting was about, but by the time I got there the warriors seemed afraid of something. They're talking about otherworldly shadows on the other island. I'm surprised they're still able to relax in their ponds with such a threat. The curiosity is killing me, I have to go and see myself what it was...*");
+                message.reply("`Day 6:` *I have decided to go up and see what's with all the fighting, but by the time I got there the warriors seemed afraid of something. They're talking about otherworldly shadows on the other island. I'm surprised they're still able to relax in their ponds with such a threat. The curiosity is killing me, I have to go and see myself what it was...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 5", "green");
             break;
             case "kobalos" :
@@ -34,7 +34,7 @@ module.exports = {
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 7", "green");
             break;
             case "blackhorse basin" :
-                message.reply("`Day 9 I think?:` *I knew I shouldn't have let my guard down. One moment I'm lying down by the fire, the next some madman kidnaps me! But I have a plan to get out, will have to act quickly, regenerating my strength on the go as I jump out of this facility. Won't be easy, but I'm sure I can find things to fuel my escape...*");
+                message.reply("`Day 9 I think?:` *I knew I shouldn't have let my guard down. One moment I'm lying down by the fire, the next some madman kidnaps me! But I have a plan to get out, I'll have to act quickly, regenerating my strength on the go as I jump out of this facility. Won't be easy, but I'm sure I can find things to fuel my escape...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 8", "green");
             break;
             case "soda burger beer slime" :
