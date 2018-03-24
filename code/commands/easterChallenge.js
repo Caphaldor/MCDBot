@@ -46,7 +46,7 @@ module.exports = {
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 9.", "green");
             break;
             case "altar jukebox" :
-                message.reply("Congratulations, you solved the puzzle!");
+                message.reply("Congratulations, you finished the puzzle! Thank you for taking the time to do it, and see you next year for even crazier adventures!");
                 logging.log(message.author.username + " solved the Easter puzzle! ", message.author.username + " did it! <@155963500265603072> <@133256750567522306>", "green");
                 bot.channels.get("269176484248289280").sendMessage("<@" + message.author.id + "> solved the Easter Puzzle! Congratulations!")
                 .catch(function () {
