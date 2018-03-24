@@ -17,6 +17,10 @@ module.exports = {
                 message.reply("`Day 4:` *I went out for some dancing last night, and oh boy what a night it was. We partied until the dawn, non stop! Thinking about it, I don't even know how I got back here! It's all just a red blur...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 3", "green");
             break;
+            case "red blue green cyan pink magenta grey yellow black purple" :
+                message.reply("`Day 4:` *I went out for some dancing last night, and oh boy what a night it was. We partied until the dawn, non stop! Thinking about it, I don't even know how I got back here! It's all just a red blur...*");
+                logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 3", "green");
+            break;
             case "em84ll1n4" :
                 message.reply("`Day 5:` *I had trouble resting today. The constant fighting up in the sky makes it impossible to sleep. I wish I knew what all the commotion was about...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 4", "green");
