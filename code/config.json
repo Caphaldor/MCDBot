@@ -5,7 +5,7 @@
 	"logChannelID": "274488503243636737"
   },
   "gameToken": "Screw you Max, you're not getting the answer from here",
-  "hint": "Guess what... I've forgotten the hint... Can you help me remember it?",
+  "hint": "`Day 1:` *The overseer tried to stop me, but I just had to leave, there's got to be others that survived. I'm still sifting through all this rubble, I hope I can find a way to move faster once I get out...*",
   "tester": "Very null",
   "filter": {
     "blockList":["fgt","faggot","faggott","shit","prick", "wtf", "cock", "bullshit", "dick", "wanker", "bollocks", "niggi", "niggah", "niggur", "twat", "🖕", "fuck", "lmfao", "nigger", "cunt", "bastard", "nigga", "nigger", "kys", "asshole", "asshat", "bitch", "stfu","milf"],
