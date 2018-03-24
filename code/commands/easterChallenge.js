@@ -13,11 +13,11 @@ module.exports = {
                 message.reply("`Day 3:` *I saw an actual rainbow today! I was listening to the sounds of one Glorious Morning when I noticed it, but it looked a little off. The color order was different, and there were more of them...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 2" ,"green");
             break;
-            case "red blue green cyan pink magenta gray yellow black purple" :
+            case "red blue green cyan pink magenta light gray yellow black purple" :
                 message.reply("`Day 4:` *I went out for some dancing last night, and oh boy what a night it was. We partied until the dawn, non stop! Thinking about it, I don't even know how I got back here! It's all just a red blur...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 3", "green");
             break;
-            case "red blue green cyan pink magenta grey yellow black purple" :
+            case "red blue green cyan pink magenta light grey yellow black purple" :
                 message.reply("`Day 4:` *I went out for some dancing last night, and oh boy what a night it was. We partied until the dawn, non stop! Thinking about it, I don't even know how I got back here! It's all just a red blur...*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 3", "green");
             break;
