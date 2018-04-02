@@ -6,7 +6,7 @@ function checkDM(msg, DM, div) {
 };
 module.exports = {
     description: "Provides help for all public BeeBot 2.0 commands",
-    usage: "-help",
+    usage: "-help <Page>",
     allowedInDM: true,
     allowedChannels: ["All"],
     call: function(message, args){

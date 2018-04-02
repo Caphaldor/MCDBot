@@ -292,7 +292,7 @@ module.exports = {
                                     theText(playerA.points,playerB.points,"‖    Points     ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories   ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖ Games  Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.correctnotes,playerB.correctnotes,"‖ Correct Notes ‖",true) + "\n" +
                                     theText(playerA.incorrectnotes,playerB.incorrectnotes,"‖Incorrect Notes‖",false) + "\n" +
                                     theText(Math.round(1000*playerA.correctnotes/(playerA.correctnotes+playerA.incorrectnotes))/1000,Math.round(1000*playerB.correctnotes/(playerB.correctnotes+playerB.incorrectnotes))/1000,"‖ Note Accuracy ‖",true) + "\n" +
@@ -611,7 +611,7 @@ module.exports = {
                                     theText(playerA.total_points,playerB.total_points,"‖    Points    ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖  Victories   ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖ Games Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio  ‖",true) + "\n" +
                                     theText(playerA.catches,playerB.catches,"‖   Catches    ‖",true) + "\n" +
                                     theText(playerA.captures,playerB.captures,"‖   Captures   ‖",true) + "\n" +
                                     theText(Math.round(100*playerA.captures/playerA.catches)/100,Math.round(100*playerB.captures/playerB.catches)/100,"‖    Ratio     ‖",true) + "\n" +
@@ -654,7 +654,7 @@ module.exports = {
                                     theText(playerA.points,playerB.points,"‖     Points     ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories    ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖  Games Played  ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖   W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.outlived,playerB.outlived,"‖Players Outlived‖",true) + "\n" +
                                     theText(playerA.blocksactivated,playerB.blocksactivated,"‖Blocks Activated‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
@@ -693,7 +693,7 @@ module.exports = {
                                     theText(playerA.points,playerB.points,"‖     Points     ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories    ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖  Games Played  ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +  
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖   W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.eggsfired,playerB.eggsfired,"‖   Eggs Fired   ‖",true) + "\n" +
                                     theText(playerA.blocksdestroyed,playerB.blocksdestroyed,"‖Blocks Destroyed‖",true) + "\n" +
                                     theText(Math.round(100*playerA.blocksdestroyed/playerA.eggsfired)/100,Math.round(100*playerB.blocksdestroyed/playerB.eggsfired)/100,"‖    Accuracy    ‖",true) + "\n" +
@@ -734,7 +734,7 @@ module.exports = {
                                     theText(playerA.points,playerB.points,"‖    Points    ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖  Victories   ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖ Games Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio  ‖",true) + "\n" +
                                     theText(playerA.tablescleared,playerB.tablescleared,"‖Tables Cleared‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
@@ -1019,7 +1019,7 @@ module.exports = {
                                     theText(playerA.most_points,playerB.most_points,"‖  Most Points  ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories   ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖ Games  Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖     Kills     ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖    Deaths     ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D Ratio   ‖",true) + "\n" +
@@ -1063,7 +1063,7 @@ module.exports = {
                                     theText(playerA.most_points,playerB.most_points,"‖  Most Points  ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories   ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖ Games  Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖  W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖     Kills     ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖    Deaths     ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D Ratio   ‖",true) + "\n" +
