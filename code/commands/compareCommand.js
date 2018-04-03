@@ -212,7 +212,7 @@ module.exports = {
                                     theText(playerA.total_points,playerB.total_points,"‖    Points     ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories   ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖ Games  Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +                                    
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.correct_guesses,playerB.correct_guesses,"‖Correct Guesses‖",true) + "\n" +
                                     theText(playerA.incorrect_guesses,playerB.incorrect_guesses,"‖ Wrong guesses ‖",false) + "\n" + 
                                     theText(Math.round(100*playerA.correct_guesses/(playerA.correct_guesses+playerA.incorrect_guesses))/100,Math.round(100*playerB.correct_guesses/(playerB.correct_guesses+playerB.incorrect_guesses))/100,"‖C/W Guess Ratio‖", true) + "\n" +
@@ -693,7 +693,7 @@ module.exports = {
                                     theText(playerA.points,playerB.points,"‖     Points     ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories    ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖  Games Played  ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖   W/L  Ratio   ‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.eggsfired,playerB.eggsfired,"‖   Eggs Fired   ‖",true) + "\n" +
                                     theText(playerA.blocksdestroyed,playerB.blocksdestroyed,"‖Blocks Destroyed‖",true) + "\n" +
                                     theText(Math.round(100*playerA.blocksdestroyed/playerA.eggsfired)/100,Math.round(100*playerB.blocksdestroyed/playerB.eggsfired)/100,"‖    Accuracy    ‖",true) + "\n" +
@@ -809,20 +809,23 @@ module.exports = {
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Cranked Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖    Category    ‖ " + statsFormatting(args[2], true) + "\n" +
-                                    theText(playerA.total_points,playerB.total_points,"‖     Points     ‖",true) + "\n" +
-                                    theText(playerA.victories,playerB.victories,"‖   Victories    ‖",true) + "\n" +
-                                    theText(playerA.gamesplayed,playerB.gamesplayed,"‖  Games Played  ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
-                                    theText(playerA.kills,playerB.kills,"‖     Kills      ‖",true) + "\n" +
-                                    theText(playerA.deaths,playerB.deaths,"‖     Deaths     ‖",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D  Ratio   ‖",true) + "\n" + 
-                                    theText(playerA.rccat_count,playerB.rccat_count,"‖    Cat Uses    ‖",true) + "\n" +
-                                    theText(playerA.rccat_kills,playerB.rccat_kills,"‖   Cat  Kills   ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.rccat_kills/playerA.rccat_count)/100,Math.round(100*playerB.rccat_kills/playerB.rccat_count)/100,"‖    Accuracy    ‖",true) + "\n" + 
-                                    theText(playerA.airstrike_count,playerB.airstrike_count,"‖Air Strike Uses ‖",true) + "\n" +
-                                    theText(playerA.airstrike_kills,playerB.airstrike_kills,"‖Air Strike Kills‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.airstrike_kills/playerA.airstrike_count)/100,Math.round(100*playerB.airstrike_kills/playerB.airstrike_count)/100,"‖    Accuracy    ‖",true) + "```", "gold")
+                                    "```" + statsFormatting(args[1], false) + " ‖    Category     ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    theText(playerA.total_points,playerB.total_points,"‖     Points      ‖",true) + "\n" +
+                                    theText(playerA.victories,playerB.victories,"‖    Victories    ‖",true) + "\n" +
+                                    theText(playerA.gamesplayed,playerB.gamesplayed,"‖  Games Played   ‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖   W/L  Ratio   ‖",true) + "\n" +
+                                    theText(playerA.kills,playerB.kills,"‖      Kills      ‖",true) + "\n" +
+                                    theText(playerA.deaths,playerB.deaths,"‖     Deaths      ‖",false) + "\n" +
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D  Ratio    ‖",true) + "\n" +
+                                    theText(playerA.rccat_count,playerB.rccat_count,"‖    Cat Uses     ‖",true) + "\n" +
+                                    theText(playerA.rccat_kills,playerB.rccat_kills,"‖   Cat  Kills    ‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.rccat_kills/playerA.rccat_count)/100,Math.round(100*playerB.rccat_kills/playerB.rccat_count)/100,"‖    Accuracy     ‖",true) + "\n" +
+                                    theText(playerA.airstrike_count,playerB.airstrike_count,"‖ Air Strike Uses ‖",true) + "\n" +
+                                    theText(playerA.airstrike_kills,playerB.airstrike_kills,"‖Air Strike Kills ‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.airstrike_kills/playerA.airstrike_count)/100,Math.round(100*playerB.airstrike_kills/playerB.airstrike_count)/100,"‖    Accuracy     ‖",true) + "\n" +
+                                    theText(playerA.sonicsquid_count,playerB.sonicsquid_count,"‖Sonic Squid Uses ‖",true) + "\n" +
+                                    theText(playerA.sonicsquid_kills,playerB.sonicsquid_kills,"‖Sonic Squid Kills‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.sonicsquid_kills/playerA.sonicsquid_count)/100,Math.round(100*playerB.sonicsquid_kills/playerB.sonicsquid_count)/100,"‖    Accuracy     ‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
@@ -1166,13 +1169,13 @@ module.exports = {
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of PuMpKiNfEcTiOn Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖    Category    ‖ " + statsFormatting(args[2], true) + "\n" +
-                                    theText(playerA.total_points,playerB.total_points,"‖     Points     ‖",true) + "\n" +
-                                    theText(playerA.victories,playerB.victories,"‖   Victories    ‖",true) + "\n" +
-                                    theText(playerA.games_played,playerB.games_played,"‖  Games Played  ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
-                                    theText(playerA.kills,playerB.kills,"‖     Kills      ‖",true) + "\n" +
-                                    theText(playerA.infections,playerB.infections,"‖   Infections   ‖",false) + "\n" + "```", "gold")
+                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
+                                    theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
+                                    theText(playerA.games_played,playerB.games_played,"‖Games Played‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio‖",true) + "\n" +
+                                    theText(playerA.kills,playerB.kills,"‖   Kills    ‖",true) + "\n" +
+                                    theText(playerA.infections,playerB.infections,"‖ Infections ‖",false) + "\n" + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
