@@ -25,6 +25,7 @@ const fs = require("fs");
 //creating discord client
 bot = new dc.Client();
 
+//logging module
 logging = require("./logging.js");
 
 //list with tokens
