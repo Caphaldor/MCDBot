@@ -115,10 +115,6 @@ bot.on("message", function (message) {
         message.delete();
         message.author.sendMessage("We just deleted one of your messages. Please stay appropriate. Further violation of the rules results in punishments!");
     }
-	//Anti-suicide talk for doc (special notification)
-	if (message.channel.id=="291155962901954561" && message.author.id=="209441455595454464" && message.content.toLowerCase().includes("suicide")) {
-	    message.author.sendMessage("Hey doc, I'd just like to remind you that if you'd like to talk about suicide, #art is not a place for this and you should use #off_topic instead. Have a great day and stay strong <3");
-    }
 	//Currently commented out, reminder to use @Moderator when reporting hackers
 	//if (message.channel.id == "262703814535020554" && !message.isMentioned("291117656306876417") && filter(message.content, "mod") && (message.member.roles.get("262707342783545344") == undefined) && (message.member.roles.get("262708985767919616") == undefined) && (message.member.roles.get("262709499331084290") == undefined) && (message.member.roles.get("262709291520098304") == undefined)) {
     //    message.reply("I believe you forgot to do " + message.guild.roles.get("291117656306876417") + ", so I'll do it for you. In the future, please use the mention to notify mods of any reports :)").then(msg.delete(16000));
