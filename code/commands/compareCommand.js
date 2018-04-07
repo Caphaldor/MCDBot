@@ -819,13 +819,13 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D  Ratio    ‖",true) + "\n" +
                                     theText(playerA.rccat_count,playerB.rccat_count,"‖    Cat Uses     ‖",true) + "\n" +
                                     theText(playerA.rccat_kills,playerB.rccat_kills,"‖   Cat  Kills    ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.rccat_kills/playerA.rccat_count)/100,Math.round(100*playerB.rccat_kills/playerB.rccat_count)/100,"‖    Accuracy     ‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.rccat_kills/playerA.rccat_count)/100,Math.round(100*playerB.rccat_kills/playerB.rccat_count)/100,"‖  Cat Accuracy   ‖",true) + "\n" +
                                     theText(playerA.airstrike_count,playerB.airstrike_count,"‖ Air Strike Uses ‖",true) + "\n" +
                                     theText(playerA.airstrike_kills,playerB.airstrike_kills,"‖Air Strike Kills ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.airstrike_kills/playerA.airstrike_count)/100,Math.round(100*playerB.airstrike_kills/playerB.airstrike_count)/100,"‖    Accuracy     ‖",true) + "\n" +
+                                    theText(Math.round(100*playerA.airstrike_kills/playerA.airstrike_count)/100,Math.round(100*playerB.airstrike_kills/playerB.airstrike_count)/100,"‖Chicken Accuracy ‖",true) + "\n" +
                                     theText(playerA.sonicsquid_count,playerB.sonicsquid_count,"‖Sonic Squid Uses ‖",true) + "\n" +
                                     theText(playerA.sonicsquid_kills,playerB.sonicsquid_kills,"‖Sonic Squid Kills‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.sonicsquid_kills/playerA.sonicsquid_count)/100,Math.round(100*playerB.sonicsquid_kills/playerB.sonicsquid_count)/100,"‖    Accuracy     ‖",true) + "```", "gold")
+                                    theText(Math.round(100*playerA.sonicsquid_kills/playerA.sonicsquid_count)/100,Math.round(100*playerB.sonicsquid_kills/playerB.sonicsquid_count)/100,"‖ Squid Accuracy  ‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
