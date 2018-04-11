@@ -891,6 +891,33 @@ module.exports = {
                     }
                 });
             break;
+            case "ee":
+                var divN = 2;
+                if (message.channel.id == "314752337354948608" || message.channel.id == "281725164247449600") {divN = 1;}
+                if (message.channel.type != "dm") {message.delete();}
+                req("http://api.hivemc.com/v1/player/" + args[1] + "/EE", function (error, response, body) {
+                    //in case Hive's API has issues
+                    if (error){logging.legacyLog("URGENT HTTP ERROR")}
+                    //get Hive's response
+                    var hiveData = JSON.parse(body);
+                    if (hiveData.UUID){
+                        message.reply("",
+                            {
+                                embed: embed("Exploding Eggs stats of `" + args[1] + "`",
+                                    "**Points:** " + hiveData.points +
+                                    "\n**Victories:** " + hiveData.victories +
+                                    "\n**Games Played:** " + hiveData.gamesplayed +
+                                    "\n**Leaps:** " + hiveData.leaps, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }else{
+                        message.reply("",
+                            {
+                                embed: embed("Error",
+                                    "An error occured.\nMaybe you misspelled the player's name?", "red")
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }
+                });
+            break;
             default:
                 var divN = 2;
                 if (message.channel.type != "dm") {message.delete();}
@@ -902,6 +929,7 @@ module.exports = {
                             " • Bed Wars - BED\n" +
                             " • Cowboys and Indians - CAI\n" +
                             " • DeathRun - DR\n" +
+                            " • Exploding Eggs - EE\n" +
                             " • Gravity - GRAV\n" +
                             " • Hide and Seek - HIDE\n" +
                             " • Murder in Mineville - MIMV\n" +
