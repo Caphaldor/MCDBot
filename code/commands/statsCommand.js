@@ -499,7 +499,8 @@ module.exports = {
                                     "**Points:** " + hiveData.points + " (" + hiveData.title + ")" +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.gamesplayed +
-                                    "\n**Tables Cleared:** " + hiveData.tablescleared, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                                    "\n**Tables Cleared:** " + hiveData.tablescleared +
+                                    "\n**Highscore:** " + hiveData.highscore, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
