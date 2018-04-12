@@ -496,7 +496,7 @@ module.exports = {
                         message.reply("",
                             {
                                 embed: embed("Restaurant Rush stats of `" + args[1] + "`",
-                                    "**Points:** " + hiveData.points + " (" + hiveData.title + ")" +
+                                    "**Points:** " + hiveData.points +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.gamesplayed +
                                     "\n**Tables Cleared:** " + hiveData.tablescleared +
