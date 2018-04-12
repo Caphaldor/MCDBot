@@ -1256,7 +1256,7 @@ module.exports = {
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
-                                    theText(playerA.kills,playerB.leaps,"‖   Leaps    ‖",true) + "\n" + "```", "gold")
+                                    theText(playerA.leaps,playerB.leaps,"‖   Leaps    ‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
