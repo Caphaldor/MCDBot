@@ -8,13 +8,21 @@ function hideTimeAlive(hiveData) {
     if (Math.abs(hiveData.timealive)<13302000) {
         temp = "\'s time alive is: " + Math.floor(hiveData.timealive/86400) + " d. " + Math.floor((hiveData.timealive%86400)/3600) + " h, " + Math.floor((hiveData.timealive%3600)/60) + " min and " + Math.floor(hiveData.timealive%60) + " s";
     } else {
-        var newTimeAlive;
-        newTimeAlive = hiveData.total_points - 30*hiveData.seekerkills - 50*hiveData.victories;
-        if (newTimeAlive>3600 && newTimeAlive<4320000) {
-            temp = "\'s time alive is ≈" + Math.floor(newTimeAlive/86400) + " days and " + Math.floor((newTimeAlive%86400)/3600) + " hours\n*This time has been estimated and may not be fully accurate*";
-        } else {
-            temp = "*\'s time alive is glitched :(*";
+        var newTimeAlive,maxTimeAlive,minTimeAlive;
+        maxTimeAlive = (hiveData.total_points - 20*hiveData.seekerkills - 10*hiveData.hiderkills)*2 + hiveData.gamesplayed/2;
+        minTimeAlive = (hiveData.total_points - 30*hiveData.seekerkills - 10*hiveData.hiderkills - 50*hiveData.victories - 50*hiveData.gamesplayed)*2 + hiveData.gamesplayed/2;
+        newTimeAlive = 0;
+        var statisticalConstant = 0.298202206;
+        for (i=1;i<4;i++) {
+            if (((maxTimeAlive-minTimeAlive)*i*statisticalConstant + minTimeAlive)>0) {
+                newTimeAlive = (maxTimeAlive-minTimeAlive)*i*statisticalConstant + minTimeAlive;
+                i=4;
+            }
         }
+        if (newTimeAlive==0) {
+            newTimeAlive = maxTimeAlive;
+        }
+        temp = "\'s time alive is ≈" + Math.floor(newTimeAlive/86400) + " days and " + Math.floor((newTimeAlive%86400)/3600) + " hours\n*This time has been estimated and may not be fully accurate*";
     }
     return temp;
 }
