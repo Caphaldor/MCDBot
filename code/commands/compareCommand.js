@@ -555,7 +555,7 @@ module.exports = {
                                     theText(playerA.points,playerB.points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,">Games Played<",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" + "```"
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" + "```"
                                 ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
@@ -1065,7 +1065,7 @@ module.exports = {
                                     theText(playerA.total_points,playerB.total_points,">    Points     <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">   Victories   <",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"> Games  Played <",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" +
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,">   W/L Ratio   <",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,">     Kills     <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">    Deaths     <",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">   K/D Ratio   <",true) + "\n" +
