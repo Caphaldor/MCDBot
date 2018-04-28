@@ -770,7 +770,7 @@ module.exports = {
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of One in The Chamber Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false, true) + "‖  Category  ‖" + statsFormatting(args[2], true, true) + "\n" +
+                                    "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
