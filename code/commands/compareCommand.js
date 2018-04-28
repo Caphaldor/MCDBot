@@ -1,6 +1,6 @@
 //stats compare formatting function
 function statsFormatting(variable, playerB) {
-    var needed = (15 - variable.toString().length);
+    var needed = (16 - variable.toString().length);
     var spaceString = "";
     for(var i = 0; i < needed; i++) {
         spaceString += " ";
