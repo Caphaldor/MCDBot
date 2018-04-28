@@ -36,7 +36,7 @@ function theText(varA,varB,middleText,more) {
           }
      }
      var middle = statA + middleText + statB;
-     output = statsFormatting(varA,false) + leader(middleText,varA,varB,more) + statsFormatting(varB,true);
+     output = startChar + statsFormatting(varA,false) + middle + statsFormatting(varB,true) + endChar;
      return output;
 }
 function checkDM(msg, DM, div) {
