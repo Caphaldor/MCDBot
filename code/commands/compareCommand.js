@@ -1,7 +1,8 @@
 //stats compare formatting function
-function statsFormatting(variable, playerB) {
+function statsFormatting(variable, playerB, top = false) {
     var needed = (16 - variable.toString().length);
     var spaceString = "";
+    if (top) spaceString = " ";
     for(var i = 0; i < needed; i++) {
         spaceString += " ";
     }
@@ -769,7 +770,7 @@ module.exports = {
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of One in The Chamber Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false, true) + "‖  Category  ‖" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
