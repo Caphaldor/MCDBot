@@ -814,9 +814,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Cranked Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Cranked Stats of " + args[1] + " and " + args[2] + "**\n",
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"  Category   \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">     Points      <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">    Victories    <",true) + "\n" +
@@ -833,7 +831,7 @@ module.exports = {
                                     theText(Math.round(100*playerA.airstrike_kills/playerA.airstrike_count)/100,Math.round(100*playerB.airstrike_kills/playerB.airstrike_count)/100,">Chicken  Accuracy<",true) + "\n" +
                                     theText(playerA.sonicsquid_count,playerB.sonicsquid_count,">Sonic Squid Uses <",true) + "\n" +
                                     theText(playerA.sonicsquid_kills,playerB.sonicsquid_kills,">Sonic Squid Kills<",true) + "\n" +
-                                    theText(Math.round(100*playerA.sonicsquid_kills/playerA.sonicsquid_count)/100,Math.round(100*playerB.sonicsquid_kills/playerB.sonicsquid_count)/100,"> Squid  Accuracy <",true) + "```", "gold")
+                                    theText(Math.round(100*playerA.sonicsquid_kills/playerA.sonicsquid_count)/100,Math.round(100*playerB.sonicsquid_kills/playerB.sonicsquid_count)/100,"> Squid  Accuracy <",true) + "```"
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
@@ -1290,6 +1288,7 @@ module.exports = {
                             " • Bed Wars - BED\n" +
                             " • Cowboys and Indians - CAI\n" +
                             " • DeathRun - DR\n" +
+                            " • Explosive Eggs - EE" + "\n" +
                             " • Gravity - GRAV\n" +
                             " • Hide and Seek - HIDE\n" +
                             " • Murder in Mineville - MIMV\n" +
@@ -1299,6 +1298,7 @@ module.exports = {
                             " • Sky Wars - SKY\n" +
                             " • Survival Games - SG\n" +
                             " • Survival Games 2.0 - SGN\n" +
+                            " • Survive the Night - SURV" + "\n" +
                             " • The Lab - LAB\n" +
                             " • Trouble in Mineville - TIMV\n" +
                             "For Arcade game codes use `-compare Arcade`\n" +
