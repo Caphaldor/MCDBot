@@ -7,9 +7,13 @@ function statsFormatting(variable, playerB, top = false) {
         spaceString += " ";
     }
     if(!playerB && top) {
-      return "<" + variable + spaceString;
+        return "<" + variable + spaceString;
     } else if (playerB && top){
-     return spaceString + variable + ">";
+        return spaceString + variable + ">";
+    } else if (!playerB) {
+        return variable + spaceString;
+    } else {
+        return spaceString + variable;
     }
  }
 function theText(varA,varB,middleText,more) {
