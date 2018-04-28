@@ -832,7 +832,7 @@ module.exports = {
                                     theText(playerA.sonicsquid_count,playerB.sonicsquid_count,">Sonic Squid Uses <",true) + "\n" +
                                     theText(playerA.sonicsquid_kills,playerB.sonicsquid_kills,">Sonic Squid Kills<",true) + "\n" +
                                     theText(Math.round(100*playerA.sonicsquid_kills/playerA.sonicsquid_count)/100,Math.round(100*playerB.sonicsquid_kills/playerB.sonicsquid_count)/100,"> Squid  Accuracy <",true) + "```"
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
