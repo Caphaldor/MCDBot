@@ -69,11 +69,11 @@ module.exports = {
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of SkyGiants: Mini Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +                                    
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖   Kills    ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖   Deaths   ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖    K/D     ‖",true) + "\n" +
@@ -108,15 +108,15 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of SkyGiants Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +                               
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖   Kills    ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖   Deaths   ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖    K/D     ‖",true) + "\n" +
@@ -166,7 +166,7 @@ module.exports = {
                                     theText(playerA.total_points,playerB.total_points,"‖    Points    ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖  Victories   ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖ Games Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖  W/L  Ratio  ‖",true) + "\n" +                                   
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖  W/L  Ratio  ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖    Kills     ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖    Deaths    ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖     K/D      ‖",true) + "\n" +
@@ -204,7 +204,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Draw It Stats of " + args[1] + " and " + args[2],
@@ -214,7 +214,7 @@ module.exports = {
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖ Games  Played ‖",true) + "\n" +
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.correct_guesses,playerB.correct_guesses,"‖Correct Guesses‖",true) + "\n" +
-                                    theText(playerA.incorrect_guesses,playerB.incorrect_guesses,"‖ Wrong guesses ‖",false) + "\n" + 
+                                    theText(playerA.incorrect_guesses,playerB.incorrect_guesses,"‖ Wrong guesses ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.correct_guesses/(playerA.correct_guesses+playerA.incorrect_guesses))/100,Math.round(100*playerB.correct_guesses/(playerB.correct_guesses+playerB.incorrect_guesses))/100,"‖C/W Guess Ratio‖", true) + "\n" +
                                     theText(playerA.skips,playerB.skips,"‖ Words Skipped ‖",false) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
@@ -245,15 +245,15 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Block Party Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.total_placing,playerB.total_placing,"‖  Placings  ‖",true) + "\n" +
                                     theText(playerA.total_eliminations,playerB.total_eliminations,"‖Eliminations‖",false) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
@@ -284,7 +284,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Music Masters Stats of " + args[1] + " and " + args[2],
@@ -326,15 +326,15 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Sky Wars Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +  
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖   Kills    ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖   Deaths   ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖ K/D  Ratio ‖",true) + "```", "gold")
@@ -366,15 +366,15 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Block Slaparoo of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.points,playerB.points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖ Slap-Offs  ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖   Deaths   ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖ K/D  Ratio ‖",true) + "```", "gold")
@@ -406,7 +406,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Trouble in Mineville Stats of " + args[1] + " and " + args[2],
@@ -445,15 +445,15 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Murder in Mineville Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Karma    ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +  
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖   Kills    ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖   Deaths   ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖ K/D  Ratio ‖",true) + "```", "gold")
@@ -485,7 +485,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Hide and Seek Stats of " + args[1] + " and " + args[2],
@@ -493,7 +493,7 @@ module.exports = {
                                     theText(playerA.total_points,playerB.total_points,"‖    Points    ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖  Victories   ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖ Games Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio  ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖  W/L  Ratio  ‖",true) + "\n" +
                                     theText(playerA.seekerkills,playerB.seekerkills,"‖Hiders  Killed‖",true) + "\n" +
                                     theText(playerA.hiderkills,playerB.hiderkills,"‖Seekers Killed‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖    Deaths    ‖",false) + "```", "gold")
@@ -525,18 +525,18 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Death Run Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +  
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖   Kills    ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖   Deaths   ‖",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖ K/D  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖ K/D  Ratio ‖",true) + "\n" +
                                     theText(playerA.totalcheckpoints,playerB.totalcheckpoints,"‖Checkpoints ‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
@@ -566,11 +566,11 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Gravity Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.points,playerB.points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
@@ -603,7 +603,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Cowboys and Indians Stats of " + args[1] + " and " + args[2],
@@ -646,7 +646,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Electric FLoor Stats of " + args[1] + " and " + args[2],
@@ -685,7 +685,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Splegg Stats of " + args[1] + " and " + args[2],
@@ -726,7 +726,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Restaurant Rush Stats of " + args[1] + " and " + args[2],
@@ -765,18 +765,18 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of One in The Chamber Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖   Kills    ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖   Deaths   ‖",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖ K/D  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖ K/D  Ratio ‖",true) + "\n" +
                                     theText(playerA.arrowsfired,playerB.arrowsfired,"‖Arrows Fired‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
@@ -806,7 +806,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Cranked Stats of " + args[1] + " and " + args[2],
@@ -855,7 +855,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of The Herobrine Stats of " + args[1] + " and " + args[2],
@@ -863,7 +863,7 @@ module.exports = {
                                     theText(playerA.points,playerB.points,"‖    Points     ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖     Kills     ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖    Deaths     ‖",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D Ratio   ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D Ratio   ‖",true) + "\n" +
                                     theText(playerA.captures,playerB.captures,"‖Shards Captured‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
@@ -893,7 +893,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Battery Dash Stats of " + args[1] + " and " + args[2],
@@ -904,7 +904,7 @@ module.exports = {
                                     theText(Math.round(100*playerA.batteries_charged/(playerA.games_played-playerA.batteries_charged))/100,Math.round(100*playerB.batteries_charged/(playerB.games_played-playerB.batteries_charged))/100,"‖   W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖     Kills      ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖     Deaths     ‖",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D  Ratio   ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D  Ratio   ‖",true) + "\n" +
                                     theText(playerA.energy_collected,playerB.energy_collected,"‖Energy Collected‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
@@ -934,11 +934,11 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of The Lab Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
@@ -971,7 +971,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Bed Wars Stats of " + args[1] + " and " + args[2],
@@ -979,10 +979,10 @@ module.exports = {
                                     theText(playerA.total_points,playerB.total_points,"‖     Points     ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories    ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖  Games Played  ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖   W/L  Ratio   ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖   W/L  Ratio   ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖     Kills      ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖     Deaths     ‖",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D  Ratio   ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D  Ratio   ‖",true) + "\n" +
                                     theText(playerA.beds_destroyed,playerB.beds_destroyed,"‖ Beds destroyed ‖",true) + "\n" +
                                     theText(Math.round(100*playerA.beds_destroyed/playerA.games_played)/100,Math.round(100*playerB.beds_destroyed/playerB.games_played)/100,"‖Beds  Per  Game ‖",true) + "\n" +
                                     theText(playerA.teams_eliminated,playerB.teams_eliminated,"‖Teams Eliminated‖",true) + "```", "gold")
@@ -1014,7 +1014,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Survival Games: Classic Stats of " + args[1] + " and " + args[2],
@@ -1058,7 +1058,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Survival Games 2.0 Stats of " + args[1] + " and " + args[2],
@@ -1102,7 +1102,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Survival Games: Heroes Stats of " + args[1] + " and " + args[2],
@@ -1110,7 +1110,7 @@ module.exports = {
                                     theText(playerA.total_points,playerB.total_points,"‖    Points     ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖   Victories   ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖ Games  Played ‖",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖ W/L  Ratio ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖     Kills     ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖    Deaths     ‖",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖   K/D Ratio   ‖",true) + "\n" +
@@ -1166,11 +1166,11 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of PuMpKiNfEcTiOn Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,"‖Games Played‖",true) + "\n" +
@@ -1205,7 +1205,7 @@ module.exports = {
                             if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
-                            
+
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Survive The Night Stats of " + args[1] + " and " + args[2],
@@ -1216,7 +1216,7 @@ module.exports = {
                                     theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"‖    W/L  Ratio    ‖",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"‖      Kills       ‖",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,"‖      Deaths      ‖",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖    K/D  Ratio    ‖",true) + "\n" + 
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"‖    K/D  Ratio    ‖",true) + "\n" +
                                     theText(playerA.generators_powered,playerB.generators_powered,"‖Generators Powered‖",true) + "\n" +
                                     theText(playerA.looted_crates,playerB.looted_crates,"‖  Looted  Crates  ‖",true) + "```", "gold")
                                 }).then(msg => checkDM(msg, message.channel.type, divN));
@@ -1251,7 +1251,7 @@ module.exports = {
                                 message.reply("",
                                 {
                                 embed: embed("Comparison of Exploding Eggs Stats of " + args[1] + " and " + args[2],
-                                    "```" + statsFormatting(args[1], false) + " ‖  Category  ‖ " + statsFormatting(args[2], true) + "\n" +
+                                    "```" + statsFormatting(args[1], false) + "‖  Category  ‖" + statsFormatting(args[2], true) + "\n" +
                                     theText(playerA.points,playerB.points,"‖   Points   ‖",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"‖ Victories  ‖",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"‖Games Played‖",true) + "\n" +
