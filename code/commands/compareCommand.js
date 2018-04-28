@@ -814,7 +814,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("**Comparison of Cranked Stats of " + args[1] + " and " + args[2] + "**\n",
+                                message.reply("**Comparison of Cranked Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"  Category   \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">     Points      <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">    Victories    <",true) + "\n" +
