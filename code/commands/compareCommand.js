@@ -20,7 +20,6 @@ function statsFormatting(variable, playerB, top = false) {
 function theText(varA,varB,middleText,more) {
      var output = "";
      var startChar = ">";
-     var endChar = "<";
      var statA = "<";
      var statB = ">";
      if (more) {
@@ -29,7 +28,6 @@ function theText(varA,varB,middleText,more) {
              startChar = "<";
          } else if (varB>varA) {
              statB = "<";
-             endChar = ">";
          }
      } else {
           if (varA<varB) {
@@ -37,11 +35,10 @@ function theText(varA,varB,middleText,more) {
               startChar = "<";
           } else if (varB<varA) {
               statB = "<";
-              endChar = ">";
           }
      }
      var middle = statA + middleText + statB;
-     output = startChar + statsFormatting(varA,false) + middle + statsFormatting(varB,true) + endChar;
+     output = startChar + statsFormatting(varA,false) + middle + statsFormatting(varB,true) + ">"
      return output;
 }
 function checkDM(msg, DM, div) {
