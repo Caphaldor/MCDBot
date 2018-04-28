@@ -2,7 +2,7 @@
 function statsFormatting(variable, playerB, top = false) {
     var needed = (16 - variable.toString().length);
     var spaceString = "";
-    if (top) spaceString = " ";
+    //if (top) spaceString = " ";
     for(var i = 0; i < needed; i++) {
         spaceString += " ";
     }
