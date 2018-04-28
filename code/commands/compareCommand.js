@@ -73,9 +73,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
                             
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of SkyGiants: Mini Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of SkyGiants: Mini Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
@@ -86,8 +84,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">    K/D     <",true) + "\n" +
                                     theText(playerA.gold_earned,playerB.gold_earned,">Gold  Earned<",true) + "\n" +
                                     theText(playerA.beasts_slain,playerB.beasts_slain,">Beasts Slain<",true) + "\n" +
-                                    theText(playerA.shutdowns,playerB.shutdowns,"> Shutdowns  <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.shutdowns,playerB.shutdowns,"> Shutdowns  <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -116,9 +114,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of SkyGiants Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of SkyGiants Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
@@ -129,8 +125,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">    K/D     <",true) + "\n" +
                                     theText(playerA.gold_earned,playerB.gold_earned,">Gold  Earned<",true) + "\n" +
                                     theText(playerA.beasts_slain,playerB.beasts_slain,">Beasts Slain<",true) + "\n" +
-                                    theText(playerA.shutdowns,playerB.shutdowns,"> Shutdowns  <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.shutdowns,playerB.shutdowns,"> Shutdowns  <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -166,9 +162,7 @@ module.exports = {
                                 var oinkyB = playerB.character_stats.OinkyCharacter ? (Math.round(100*(playerB.character_stats.OinkyCharacter.kills/playerB.character_stats.OinkyCharacter.deaths))/100) : "";
                                 var boosterB = playerB.character_stats.BoosterCharacter ? (Math.round(100*(playerB.character_stats.BoosterCharacter.kills/playerB.character_stats.BoosterCharacter.deaths))/100) : "";
                                 var torsteinB = playerB.character_stats.TorsteinCharacter ? (Math.round(100*(playerB.character_stats.TorsteinCharacter.kills/playerB.character_stats.TorsteinCharacter.deaths))/100) : "";
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Sploop Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Sploop Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">    Points    <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">  Victories   <",true) + "\n" +
@@ -182,8 +176,8 @@ module.exports = {
                                     theText(boosterA,boosterB,"> Booster  K/D <",true) + "\n" +
                                     theText(oinkyA,oinkyB,">  Oinky  K/D  <",true) + "\n" +
                                     theText(ravenA,ravenB,">  Raven  K/D  <",true) + "\n" +
-                                    theText(torsteinA,torsteinB,"> Torstein K/D <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(torsteinA,torsteinB,"> Torstein K/D <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -212,9 +206,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Draw It Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Draw It Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">    Points     <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">   Victories   <",true) + "\n" +
@@ -223,8 +215,8 @@ module.exports = {
                                     theText(playerA.correct_guesses,playerB.correct_guesses,">Correct Guesses<",true) + "\n" +
                                     theText(playerA.incorrect_guesses,playerB.incorrect_guesses,"> Wrong guesses <",false) + "\n" +
                                     theText(Math.round(100*playerA.correct_guesses/(playerA.correct_guesses+playerA.incorrect_guesses))/100,Math.round(100*playerB.correct_guesses/(playerB.correct_guesses+playerB.incorrect_guesses))/100,">C/W Guess Ratio<", true) + "\n" +
-                                    theText(playerA.skips,playerB.skips,"> Words Skipped <",false) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.skips,playerB.skips,"> Words Skipped <",false) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -253,17 +245,15 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Block Party Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Block Party Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,">Games Played<",true) + "\n" +
                                     theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" +
                                     theText(playerA.total_placing,playerB.total_placing,">  Placings  <",true) + "\n" +
-                                    theText(playerA.total_eliminations,playerB.total_eliminations,">Eliminations<",false) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.total_eliminations,playerB.total_eliminations,">Eliminations<",false) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -292,9 +282,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Music Masters Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Music Masters Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">    Points     <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">   Victories   <",true) + "\n" +
@@ -304,8 +292,8 @@ module.exports = {
                                     theText(playerA.incorrectnotes,playerB.incorrectnotes,">Incorrect Notes<",false) + "\n" +
                                     theText(Math.round(1000*playerA.correctnotes/(playerA.correctnotes+playerA.incorrectnotes))/1000,Math.round(1000*playerB.correctnotes/(playerB.correctnotes+playerB.incorrectnotes))/1000,"> Note Accuracy <",true) + "\n" +
                                     theText(playerA.notes_good,playerB.notes_good,">  Good  Notes  <",true) +"\n" +
-                                    theText(playerA.notes_perfect,playerB.notes_perfect,"> Perfect Notes <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.notes_perfect,playerB.notes_perfect,"> Perfect Notes <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -334,9 +322,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Sky Wars Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Sky Wars Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
@@ -344,8 +330,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,">   Kills    <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">   Deaths   <",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -374,9 +360,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Block Slaparoo of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Block Slaparoo of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
@@ -384,8 +368,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,"> Slap-Offs  <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">   Deaths   <",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, 1));
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, 1));
                             }else{
                                 message.reply("",
                                  {
@@ -414,17 +398,15 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Trouble in Mineville Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Trouble in Mineville Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"  Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">     Karma      <",true) + "\n" +
                                     theText(playerA.most_points,playerB.most_points,">   Most Karma   <",true) + "\n" +
                                     theText(playerA.role_points,playerB.role_points,">  Role  Points  <",true) + "\n" +
                                     theText(playerA.d_points,playerB.d_points,">Detective Points<",true) + "\n" +
                                     theText(playerA.i_points,playerB.i_points,">Innocent  Points<",true) + "\n" +
-                                    theText(playerA.t_points,playerB.t_points,"> Traitor Points <",true) + "\n" + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.t_points,playerB.t_points,"> Traitor Points <",true) + "\n" + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -453,9 +435,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Murder in Mineville Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Murder in Mineville Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Karma    <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
@@ -463,8 +443,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,">   Kills    <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">   Deaths   <",false) + "\n" +
-                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -493,9 +473,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Hide and Seek Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Hide and Seek Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">    Points    <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">  Victories   <",true) + "\n" +
@@ -503,8 +481,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,">  W/L  Ratio  <",true) + "\n" +
                                     theText(playerA.seekerkills,playerB.seekerkills,">Hiders  Killed<",true) + "\n" +
                                     theText(playerA.hiderkills,playerB.hiderkills,">Seekers Killed<",true) + "\n" +
-                                    theText(playerA.deaths,playerB.deaths,">    Deaths    <",false) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.deaths,playerB.deaths,">    Deaths    <",false) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -533,9 +511,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Death Run Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Death Run Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
@@ -544,8 +520,8 @@ module.exports = {
                                     theText(playerA.kills,playerB.kills,">   Kills    <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">   Deaths   <",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "\n" +
-                                    theText(playerA.totalcheckpoints,playerB.totalcheckpoints,">Checkpoints <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.totalcheckpoints,playerB.totalcheckpoints,">Checkpoints <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -574,15 +550,13 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Gravity Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Gravity Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,">Games Played<",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -611,9 +585,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Cowboys and Indians Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Cowboys and Indians Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">    Points    <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">  Victories   <",true) + "\n" +
@@ -624,8 +596,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.captures/playerA.catches)/100,Math.round(100*playerB.captures/playerB.catches)/100,">    Ratio     <",true) + "\n" +
                                     theText(playerA.caught,playerB.caught,"> Times Caught <",false) + "\n" +
                                     theText(playerA.captured,playerB.captured,">Times Captured<",false) + "\n" +
-                                    theText(Math.round(100*playerA.captured/playerA.caught)/100,Math.round(100*playerB.captured/playerB.caught)/100,">    Ratio     <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(Math.round(100*playerA.captured/playerA.caught)/100,Math.round(100*playerB.captured/playerB.caught)/100,">    Ratio     <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -654,17 +626,15 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Electric FLoor Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Electric FLoor Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"  Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">     Points     <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">   Victories    <",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,">  Games Played  <",true) + "\n" +
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,">   W/L  Ratio   <",true) + "\n" +
                                     theText(playerA.outlived,playerB.outlived,">Players Outlived<",true) + "\n" +
-                                    theText(playerA.blocksactivated,playerB.blocksactivated,">Blocks Activated<",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.blocksactivated,playerB.blocksactivated,">Blocks Activated<",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -693,9 +663,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Splegg Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Splegg Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"  Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">     Points     <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">   Victories    <",true) + "\n" +
@@ -704,8 +672,8 @@ module.exports = {
                                     theText(playerA.eggsfired,playerB.eggsfired,">   Eggs Fired   <",true) + "\n" +
                                     theText(playerA.blocksdestroyed,playerB.blocksdestroyed,">Blocks Destroyed<",true) + "\n" +
                                     theText(Math.round(100*playerA.blocksdestroyed/playerA.eggsfired)/100,Math.round(100*playerB.blocksdestroyed/playerB.eggsfired)/100,">    Accuracy    <",true) + "\n" +
-                                    theText(playerA.deaths,playerB.deaths,">     Deaths     <",false) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.deaths,playerB.deaths,">     Deaths     <",false) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -734,17 +702,15 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Restaurant Rush Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Restaurant Rush Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">    Points    <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">  Victories   <",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,"> Games Played <",true) + "\n" +
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,">  W/L  Ratio  <",true) + "\n" +
                                     theText(playerA.highscore,playerB.highscore,">  Highscore   <",true) +
-                                    theText(playerA.tablescleared,playerB.tablescleared,">Tables Cleared<",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.tablescleared,playerB.tablescleared,">Tables Cleared<",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -773,9 +739,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of One in The Chamber Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of One in The Chamber Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
@@ -784,8 +748,8 @@ module.exports = {
                                     theText(playerA.kills,playerB.kills,">   Kills    <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">   Deaths   <",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"> K/D  Ratio <",true) + "\n" +
-                                    theText(playerA.arrowsfired,playerB.arrowsfired,">Arrows Fired<",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.arrowsfired,playerB.arrowsfired,">Arrows Fired<",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -861,16 +825,14 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of The Herobrine Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of The Herobrine Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">    Points     <",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,">     Kills     <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">    Deaths     <",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">   K/D Ratio   <",true) + "\n" +
-                                    theText(playerA.captures,playerB.captures,">Shards Captured<",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.captures,playerB.captures,">Shards Captured<",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -899,9 +861,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Battery Dash Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Battery Dash Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"  Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">     Points     <",true) + "\n" +
                                     theText(playerA.batteries_charged,playerB.batteries_charged,">   Victories    <",true) + "\n" +
@@ -910,8 +870,8 @@ module.exports = {
                                     theText(playerA.kills,playerB.kills,">     Kills      <",true) + "\n" +
                                     theText(playerA.deaths,playerB.deaths,">     Deaths     <",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">   K/D  Ratio   <",true) + "\n" +
-                                    theText(playerA.energy_collected,playerB.energy_collected,">Energy Collected<",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.energy_collected,playerB.energy_collected,">Energy Collected<",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -940,15 +900,13 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of The Lab Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of The Lab Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,">Games Played<",true) + "\n" +
-                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"> W/L  Ratio <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"> W/L  Ratio <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -977,9 +935,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Bed Wars Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Bed Wars Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"  Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">     Points     <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">   Victories    <",true) + "\n" +
@@ -990,8 +946,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">   K/D  Ratio   <",true) + "\n" +
                                     theText(playerA.beds_destroyed,playerB.beds_destroyed,"> Beds destroyed <",true) + "\n" +
                                     theText(Math.round(100*playerA.beds_destroyed/playerA.games_played)/100,Math.round(100*playerB.beds_destroyed/playerB.games_played)/100,">Beds  Per  Game <",true) + "\n" +
-                                    theText(playerA.teams_eliminated,playerB.teams_eliminated,">Teams Eliminated<",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.teams_eliminated,playerB.teams_eliminated,">Teams Eliminated<",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -1020,9 +976,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Survival Games: Classic Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Survival Games: Classic Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">    Points     <",true) + "\n" +
                                     theText(playerA.most_points,playerB.most_points,">  Most Points  <",true) + "\n" +
@@ -1034,8 +988,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">   K/D Ratio   <",true) + "\n" +
                                     theText(playerA.deathmatches,playerB.deathmatches,"> Deathmatches  <",true) + "\n" +
                                     theText(playerA.cratesopened,playerB.cratesopened,"> Crates Opened <",true) + "\n" +
-                                    theText(Math.round(100*playerA.cratesopened/playerA.gamesplayed)/100,Math.round(100*playerB.cratesopened/playerB.gamesplayed)/100,">Crates Per Game<",true) +"```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(Math.round(100*playerA.cratesopened/playerA.gamesplayed)/100,Math.round(100*playerB.cratesopened/playerB.gamesplayed)/100,">Crates Per Game<",true) +"```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -1064,9 +1018,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Survival Games 2.0 Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Survival Games 2.0 Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">    Points     <",true) + "\n" +
                                     theText(playerA.most_points,playerB.most_points,">  Most Points  <",true) + "\n" +
@@ -1078,8 +1030,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">   K/D Ratio   <",true) + "\n" +
                                     theText(playerA.deathmatches,playerB.deathmatches,"> Deathmatches  <",true) + "\n" +
                                     theText(playerA.crates_opened,playerB.crates_opened,"> Crates Opened <",true) + "\n" +
-                                    theText(Math.round(100*playerA.crates_opened/playerA.games_played)/100,Math.round(100*playerB.crates_opened/playerB.games_played)/100,">Crates Per Game<",true) +"```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(Math.round(100*playerA.crates_opened/playerA.games_played)/100,Math.round(100*playerB.crates_opened/playerB.games_played)/100,">Crates Per Game<",true) +"```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -1108,9 +1060,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Survival Games: Heroes Stats of " + args[1] + " and " + args[2],
+                                message.reply("Comparison of Survival Games: Heroes Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\" Category  \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">    Points     <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">   Victories   <",true) + "\n" +
@@ -1121,8 +1071,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">   K/D Ratio   <",true) + "\n" +
                                     theText(playerA.deathmatches,playerB.deathmatches,"> Deathmatches  <",true) + "\n" +
                                     theText(playerA.crates_opened,playerB.crates_opened,"> Crates Opened <",true) + "\n" +
-                                    theText(Math.round(100*playerA.crates_opened/playerA.games_played)/100,Math.round(100*playerB.crates_opened/playerB.games_played)/100,">Crates Per Game<",true) +"```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, 1));
+                                    theText(Math.round(100*playerA.crates_opened/playerA.games_played)/100,Math.round(100*playerB.crates_opened/playerB.games_played)/100,">Crates Per Game<",true) +"```"
+                                ).then(msg => checkDM(msg, message.channel.type, 1));
                             }else{
                                 message.reply("",
                                  {
@@ -1172,17 +1122,15 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of PuMpKiNfEcTiOn Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of PuMpKiNfEcTiOn Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
                                     theText(playerA.games_played,playerB.games_played,">Games Played<",true) + "\n" +
                                     theText(Math.round(100*playerA.victories/(playerA.games_played-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.games_played-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" +
                                     theText(playerA.kills,playerB.kills,">   Kills    <",true) + "\n" +
-                                    theText(playerA.infections,playerB.infections,"> Infections <",false) + "\n" + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.infections,playerB.infections,"> Infections <",false) + "\n" + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -1211,9 +1159,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Survive The Night Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Survive The Night Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"   Category   \"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,">      Points      <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,">    Victories     <",true) + "\n" +
@@ -1223,8 +1169,8 @@ module.exports = {
                                     theText(playerA.deaths,playerB.deaths,">      Deaths      <",false) + "\n" +
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,">    K/D  Ratio    <",true) + "\n" +
                                     theText(playerA.generators_powered,playerB.generators_powered,">Generators Powered<",true) + "\n" +
-                                    theText(playerA.looted_crates,playerB.looted_crates,">  Looted  Crates  <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.looted_crates,playerB.looted_crates,">  Looted  Crates  <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
@@ -1253,16 +1199,14 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("",
-                                {
-                                embed: embed("Comparison of Exploding Eggs Stats of " + args[1] + " and " + args[2],
+                                message.reply("**Comparison of Exploding Eggs Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "<=\"Category\"=<" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.points,playerB.points,">   Points   <",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"> Victories  <",true) + "\n" +
                                     theText(playerA.gamesplayed,playerB.gamesplayed,">Games Played<",true) + "\n" +
                                     theText(Math.round(100*playerA.victories/(playerA.gamesplayed-playerA.victories))/100,Math.round(100*playerB.victories/(playerB.gamesplayed-playerB.victories))/100,"> W/L  Ratio <",true) + "\n" +
-                                    theText(playerA.leaps,playerB.leaps,">   Leaps    <",true) + "```", "gold")
-                                }).then(msg => checkDM(msg, message.channel.type, divN));
+                                    theText(playerA.leaps,playerB.leaps,">   Leaps    <",true) + "```"
+                                ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",
                                  {
