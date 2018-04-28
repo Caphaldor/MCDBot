@@ -6,9 +6,9 @@ function statsFormatting(variable, playerB, top = false) {
     for(var i = 0; i < needed; i++) {
         spaceString += " ";
     }
-    if(!playerB) {
+    if(!playerB && top) {
       return "<" + variable + spaceString;
-    } else {
+    } else if (playerB && top){
      return spaceString + variable + ">";
     }
  }
