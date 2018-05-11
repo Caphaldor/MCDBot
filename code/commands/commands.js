@@ -5,7 +5,7 @@ module.exports = {
     math: require("./math.js"),
     times: require("./timesCommand.js"),
     guess: require("./easterChallenge.js"),
-    uptime: require("./uptimeCommand.js"),
+    info: require("./uptimeCommand.js"),
     shutdown: require("./shutdownCommand.js"),
     verify: require("./verifyCommand.js"),
     token: require("./tokenCommand.js"),

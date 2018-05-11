@@ -2,6 +2,8 @@
 
 //config
 config = require("./config.json");
+//bot information
+const botInfo = require("./package.json");
 //discord library
 const dc = require("discord.js");
 //minecraft protocol handler

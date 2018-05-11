@@ -1,6 +1,6 @@
 module.exports = {
-    description: "Provides the uptime of the current BeeBot 2.0 instance.",
-    usage: "-uptime",
+    description: "Provides information on the current BeeBot 2.0 instance.",
+    usage: "-info",
     allowedInDM: false,
     allowedChannels: ["274488503243636737"],
     call: function(message, args){
@@ -9,6 +9,8 @@ module.exports = {
             Math.floor(bot.uptime / 86400000) + " days\n" +
             Math.floor(bot.uptime / 3600000 % 24) + " hours\n" +
             Math.floor(bot.uptime / 60000 % 60) + " minutes and\n" +
-            Math.floor(bot.uptime / 1000 % 60) + " seconds.", "blue");
+            Math.floor(bot.uptime / 1000 % 60) + " seconds.\n" +
+            "**Current Bot Version:** " + botInfo.version + "\n" +
+            "**Bot License:** " + botInfo.license, "blue");
     }
 };
