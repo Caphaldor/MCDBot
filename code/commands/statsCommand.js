@@ -19,7 +19,7 @@ function hideTimeAlive(hiveData) {
                 i=4;
             }
         }
-        if (newTimeAlive==0) {
+        if (newTimeAlive<=0) {
             newTimeAlive = maxTimeAlive;
         }
         temp = "\'s time alive is ≈" + Math.floor(newTimeAlive/86400) + " days and " + Math.floor((newTimeAlive%86400)/3600) + " hours\n*This time has been estimated and may not be fully accurate*";
