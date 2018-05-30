@@ -5,7 +5,7 @@ function timeF(valu) {
     } return temp;
 };
 function timeG(valu) {
-    var temp = "Map not played";
+    var temp = "Map not played\n";
     if (valu != "N/A") {
         var minutes = "";
         if ((valu/60000)>1) {
