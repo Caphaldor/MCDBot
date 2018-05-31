@@ -1,3 +1,18 @@
+function hideLevel(expArray) {
+    var level = 1;
+    var exp = 0;
+    for (i=0; i<expArray.size, i++) {
+        if (expArray[i][1] != "Block not used") {
+            exp += expArray[i][1] - 50;
+        }
+    }
+    while((exp-level*50) >= 0) {
+   	    exp = exp-level*50;
+        level++
+    }
+    var message = "Your total HnS level is: " + level;
+    return message;
+};
 function blockLevel(xp, detail) {
     var temp = xp;
 	var level = 1;
@@ -89,6 +104,16 @@ module.exports = {
                         messageList, "gold")
                     }    
                 ).then(msg => checkDM(msg, message.channel.type, divN));
+                if (args[2] == "-o") {
+                    var expTotal = Object.keys(config.blocks).map(function(e) {
+                        var temp = "Block not used";
+                        if (hiveData.rawBlockExperience[e] != undefined) {
+                            temp = hiveData.rawBlockExperience[e]
+                        }
+                        return [config.blocks[e], temp];
+                    });
+                    message.reply(hideLevel(expTotal));
+                }
                 }else{
                     message.reply("",
                     {
