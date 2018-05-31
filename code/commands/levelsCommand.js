@@ -6,11 +6,12 @@ function hideLevel(expArray) {
             exp += expArray[i][1] - 50;
         }
     }
+    var message = "Accumulated " + exp + " total xp\n"
     while((exp-level*50) >= 0) {
    	    exp = exp-level*50;
         level++
     }
-    var message = "Your total HnS level is: " + level;
+    var message += "Your total HnS level is: " + level;
     return message;
 };
 function blockLevel(xp, detail) {
