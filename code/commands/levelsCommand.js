@@ -1,7 +1,7 @@
 function hideLevel(expArray) {
     var level = 1;
     var exp = 0;
-    for (i=0; i<expArray.size, i++) {
+    for (i=0; i<expArray.size; i++) {
         if (expArray[i][1] != "Block not used") {
             exp += expArray[i][1] - 50;
         }
