@@ -2,7 +2,7 @@ function hideLevel(expArray) {
     var level = 1;
     var exp = 0;
     var message = "So...\n" + expArray[0][0] + " " + expArray[0][1] + " " + expArray.size;
-    for (i=0; i<expArray.size; i++) {
+    for (i=0; expArray[i][1] != undefined; i++) {
         if (expArray[i][1] != "Block not used") {
             exp += expArray[i][1] - 50;
         }
