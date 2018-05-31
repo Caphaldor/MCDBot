@@ -11,7 +11,7 @@ function hideLevel(expArray) {
    	    exp = exp-level*50;
         level++
     }
-    var message += "Your total HnS level is: " + level;
+    message += "Your total HnS level is: " + level;
     return message;
 };
 function blockLevel(xp, detail) {
