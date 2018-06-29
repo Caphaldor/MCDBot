@@ -19,5 +19,6 @@ module.exports = {
     toggle: require("./toggleCommand.js"),
     compare: require("./compareCommand.js"),
     config: require("./configEditCommand.js"),
-    player: require("./playerCommand.js")
+    player: require("./playerCommand.js"),
+    records: require("./recordsCommand.js")
 };

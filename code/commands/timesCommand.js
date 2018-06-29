@@ -39,7 +39,7 @@ module.exports = {
     allowedInDM: true,
     allowedChannels: ["281725164247449600","262702429282238465","335817153603305473"],
     call: function(message, args){
-        if (args[0] == undefined) {
+        if (args[0]==undefined || args[1]==undefined) {
             message.reply("The proper usage of this command is `-times [DeathRun/Gravity] {PLAYER} <PAGE>`").then(msg => checkDM(msg, message.channel.type, 1));
         } else {
         if ((args[0].toLowerCase()=="deathrun")||(args[0].toLowerCase()=="dr")) {

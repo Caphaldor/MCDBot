@@ -124,7 +124,6 @@ module.exports = {
     allowedInDM: true,
     allowedChannels: [],
     call: function(message, args){
-        var answer = "";
         var number = args[0];
         var format = "";
         var subs = 0;
