@@ -61,7 +61,7 @@ module.exports = {
                             });
                         } else {
                             var suffix = "-t";
-                            var titleText = "DeathRun Record Times;
+                            var titleText = "DeathRun Record Times";
                             var requestedArray = Object.keys(hiveData).map(function(e) {
                                 var temp = "N/A";
                                 if (hivePlayerData.maprecords[e] != undefined) {
