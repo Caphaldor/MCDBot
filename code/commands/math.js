@@ -140,7 +140,9 @@ module.exports = {
             do {
                 tester = 3*decimal+1;
                 steps++;
-                message.reply(format + number + countOZ(number) + format + "  =>  " + decimal + "  -->  " + tester);
+                if (args[2] != "Keep"|| args[3] == line) {
+                    message.reply(format + number + countOZ(number) + format + "  =>  " + decimal + "  -->  " + tester);
+                }
                 if (line=="b") {bLines++}
                 else if (line=="a") {aLines++}
                 for (;tester%2==0;steps++){tester = tester/2}
