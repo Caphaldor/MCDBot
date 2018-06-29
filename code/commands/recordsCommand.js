@@ -1,9 +1,9 @@
 function dataFormatter(valu, type) {
     if (type == "-t") {
         var temp = "No map completion";
-    } else if (type == "-k")(
+    } else if (type == "-k"){
         var temp = "No kills recorded";
-    ) else {
+    } else {
         var temp = "No deaths found";
     }
     if (valu != "N/A") {
