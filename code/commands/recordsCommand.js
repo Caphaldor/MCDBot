@@ -1,7 +1,11 @@
-function recordTime(valu) {
+function dataFormatter(valu) {
     var temp = "Map not played";
     if (valu != "N/A") {
-        temp = Math.floor(valu/60) + ":" + Math.floor((valu % 60)/10) + "" + (valu%10);
+        if (type == "-t") {
+            temp = Math.floor(valu/60) + ":" + Math.floor((valu % 60)/10) + "" + (valu%10);
+        } else {
+            temp = valu;
+        }
     } return temp;
 };
 //checks for deletion in case not in DM
@@ -27,7 +31,7 @@ module.exports = {
                 if (message.channel.type != "dm") {message.delete();}
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
                 var hiveData = JSON.parse(body);
-                req("http://api.hivemc.com/v1/player/" + args[1] + "/DR", function (error, response, body) {
+                req("http://api.hivemc.com/v1/player/" + args[0] + "/DR", function (error, response, body) {
                     if (error){logging.legacyLog("URGENT HTTP ERROR")}
                     var hivePlayerData = JSON.parse(body);
                     if (hivePlayerData.UUID) {
@@ -82,14 +86,8 @@ module.exports = {
                             var listPage = parseInt(args[2]);
                         }
                         var messageList = "";
-                        if (suffix=="-t") {
-                            for (i=(listPage*10-10); i<listPage*10 && i<requestedArray.length; i++) {
-                                messageList += "• **" + requestedArray[i][1] + "** - " + recordTime(requestedArray[i][0]) + "\n";
-                            }
-                        } else {
-                            for (i=(listPage*10-10); i<listPage*10 && i<requestedArray.length; i++) {
-                                messageList += "• **" + requestedArray[i][1] + "** - " + requestedArray[i][0] + "\n";
-                            }
+                        for (i=(listPage*10-10); i<listPage*10 && i<requestedArray.length; i++) {
+                            messageList += "• **" + requestedArray[i][1] + "** - " + dataFormatter(requestedArray[i][0]) + "\n";
                         }
                         messageList += "*Showing page " + listPage + " out of " + Math.ceil(requestedArray.length/10) + "*\n";
                         if (listPage<Math.ceil(requestedArray.length/10)) {
