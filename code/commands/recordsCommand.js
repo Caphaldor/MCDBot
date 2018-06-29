@@ -1,5 +1,11 @@
 function dataFormatter(valu, type) {
-    var temp = "Map not played";
+    if (type == "-t") {
+        var temp = "No map completion";
+    } else if (type == "-k")(
+        var temp = "No kills recorded";
+    ) else {
+        var temp = "No deaths found";
+    }
     if (valu != "N/A") {
         if (type == "-t") {
             temp = Math.floor(valu/60) + ":" + Math.floor((valu % 60)/10) + "" + (valu%10);
@@ -78,12 +84,12 @@ module.exports = {
                                 return 0;
                             });
                         }
-                        if (args[2] == undefined || isNaN(args[2])) {
+                        if (args[1] == undefined || isNaN(args[1])) {
                             var listPage = 1;
-                        } else if (args[2] > Math.ceil(requestedArray.length/10)) {
+                        } else if (args[1] > Math.ceil(requestedArray.length/10)) {
                             var listPage = Math.ceil(requestedArray.length/10);
                         } else {
-                            var listPage = parseInt(args[2]);
+                            var listPage = parseInt(args[1]);
                         }
                         var messageList = "";
                         for (i=(listPage*10-10); i<listPage*10 && i<requestedArray.length; i++) {
@@ -91,11 +97,11 @@ module.exports = {
                         }
                         messageList += "*Showing page " + listPage + " out of " + Math.ceil(requestedArray.length/10) + "*\n";
                         if (listPage<Math.ceil(requestedArray.length/10)) {
-                            messageList += "\nUse `-records " + args[1] + " " + (listPage+1) + " " + suffix + "` for the next page.";
+                            messageList += "\nUse `-records " + args[0] + " " + (listPage+1) + " " + suffix + "` for the next page.";
                         }
                         message.reply("",
                             {
-                                embed: embed(titleText + " for `" + args[1] + "`",
+                                embed: embed(titleText + " for `" + args[0] + "`",
                                 messageList, "gold")
                             }
                         ).then(msg => checkDM(msg, message.channel.type, divN));
