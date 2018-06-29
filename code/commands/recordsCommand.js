@@ -27,9 +27,9 @@ module.exports = {
     allowedChannels: ["281725164247449600","262702429282238465","335817153603305473"],
     call: function(message, args){
         if (args[0]==undefined) {
-            message.reply("The proper usage of this command is `-records {Player} [Page]`\n You can add one of: `-t`, `-d`, `-k`; at the end for different record lists").then(msg => checkDM(msg, message.channel.type, 1));
+            message.reply("The proper usage of this command is `-records {Player} [Page]`\nYou can add one of: `-t`, `-d`, `-k`; at the end for different record lists").then(msg => checkDM(msg, message.channel.type, 1));
         } else if (args[0] == "help") {
-            //Help with -t and alike
+            message.reply("You can choose what type of records you would like to be shown by using *one* of the following:\n• `-t` - On by default, shows you your record map times\n• `-d` - Shows you your total deaths on each map\n• `-k` - Shows you your record kills on each map (from playing as death)\n\nCommand usage: `-records {Player} [Page] [-t|-d|-k]")
         } else {
             req("http://api.hivemc.com/v1/game/dr/maps", function (error, response, body) {
                 var divN = 2;
