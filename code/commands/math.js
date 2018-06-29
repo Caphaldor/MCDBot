@@ -141,7 +141,7 @@ module.exports = {
                 tester = 3*decimal+1;
                 steps++;
                 if (args[2] != "Keep"|| args[3] == line) {
-                    message.reply(format + number + countOZ(number) + format + "  =>  " + decimal + "  -->  " + tester);
+                    message.reply(format + "`" + number + "`" + countOZ(number) + format + "  =>  " + decimal + "  -->  " + tester);
                 }
                 if (line=="b") {bLines++}
                 else if (line=="a") {aLines++}
