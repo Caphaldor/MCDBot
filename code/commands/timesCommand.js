@@ -98,7 +98,7 @@ module.exports = {
                 }
                 messageList += "*Showing page " + listPage + " out of " + Math.ceil(playertimes.length/10) + "*\n";
                 if (listPage<Math.ceil(playertimes.length/10)) {
-                    messageList += "\nUse `-times Gravity " + args[0] + " " + (listPage+1) + "` for the next page.";
+                    messageList += "\nUse `-times " + args[0] + " " + (listPage+1) + "` for the next page.";
                 }
                 message.reply("",
                     {
