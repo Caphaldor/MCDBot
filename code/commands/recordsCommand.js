@@ -1,4 +1,4 @@
-function dataFormatter(valu) {
+function dataFormatter(valu, type) {
     var temp = "Map not played";
     if (valu != "N/A") {
         if (type == "-t") {
@@ -87,7 +87,7 @@ module.exports = {
                         }
                         var messageList = "";
                         for (i=(listPage*10-10); i<listPage*10 && i<requestedArray.length; i++) {
-                            messageList += "• **" + requestedArray[i][1] + "** - " + dataFormatter(requestedArray[i][0]) + "\n";
+                            messageList += "• **" + requestedArray[i][1] + "** - " + dataFormatter(requestedArray[i][0], suffix) + "\n";
                         }
                         messageList += "*Showing page " + listPage + " out of " + Math.ceil(requestedArray.length/10) + "*\n";
                         if (listPage<Math.ceil(requestedArray.length/10)) {
