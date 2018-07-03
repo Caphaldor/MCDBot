@@ -113,7 +113,6 @@ module.exports = {
                                 };
                                 fieldCounter++;
                             }
-                        }
                         messageFields[fieldCounter] = {
                             "name": "Total Hide and Seek Level*",
                             "value": hideLevel(expInfo)
