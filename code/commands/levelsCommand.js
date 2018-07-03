@@ -101,13 +101,11 @@ module.exports = {
                         var fieldNum=0;
                         var fieldInformation = [{title:"Unplayed blocks",count:0},{title:"Levels 1-4",count:0},{title:"Levels 5-9",count:0},{title:"Levels 10-14",count:0},{title:"Levels 15-19",count:0},{title:"Levels 20-24",count:0},{title:"Levels 25-29",count:0},{title:"Levels 30-34",count:0},{title:"Levels 35-39",count:0},{title:"Levels 40-44",count:0},{title:"Levels 45-49",count:0},{title:"Max level blocks",count:0}];
                         for (i=0; expInfo[i] != undefined; i++) {
-                            message.reply(expInfo[i][1] + fieldInformation[Math.ceil((expInfo[i][2]/5)+0.1)].count)
                             fieldInformation[Math.ceil((expInfo[i][2]/5)+0.1)].count++;
                         }
                         var fieldCounter = 0;
                         for (i=0; i<12;i++) {
-                            message.reply("Field number " + i);
-                            if (fieldInformation[i].count)
+                            if (fieldInformation[i].count) {
                                 messageFields[fieldCounter] = {
                                     "name": fieldInformation[i].title,
                                     "value": fieldInformation[i].count,
@@ -115,6 +113,7 @@ module.exports = {
                                 };
                                 fieldCounter++;
                             }
+                        }
                         messageFields[fieldCounter] = {
                             "name": "Total Hide and Seek Level*",
                             "value": hideLevel(expInfo)
