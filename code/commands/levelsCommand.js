@@ -10,8 +10,7 @@ function hideLevel(expArray) {
    	    exp = exp-level*50;
         level++
     }
-    var message = "Your total HnS level is: " + level;
-    return message;
+    return level;
 };
 function blockLevel(xp, detail) {
     var temp = xp;
@@ -60,60 +59,91 @@ module.exports = {
         if (args[0] == undefined) {
             message.reply("The proper usage of this command is `-levels {PLAYER} <PAGE> [-d]`").then(msg => checkDM(msg, message.channel.type, divN));
         } else {
-		req("http://api.hivemc.com/v1/player/" + args[0] + "/HIDE", function (error, response, body) {
+		    req("http://api.hivemc.com/v1/player/" + args[0] + "/HIDE", function (error, response, body) {
                 if (message.channel.id == "281725164247449600") {divN = 1;}
                 if (message.channel.type != "dm") {message.delete();}
                 if (error){logging.legacyLog("URGENT HTTP ERROR")}
                 var hiveData = JSON.parse(body);
                 if (hiveData.UUID) {
-				var detailValue = false;
-				if ((args[1] == "detail" || args[1] == "-d") || (args[2] == "detail" || args[2] == "-d")) {detailValue = true;}
-				var playerLevels = Object.keys(config.blocks).map(function(e) {
-					var temp = "Block not used";
-					if (hiveData.rawBlockExperience[e] != undefined) {
-                        temp = blockLevel(hiveData.rawBlockExperience[e], detailValue);
-                    }
-                    return [config.blocks[e], temp];
-				}).sort(function(a,b){
-                    if(a[0] < b[0]) return -1;
-                    if(a[0] > b[0]) return 1;
-                    return 0;
-                });
-				var pageCount = 10;
-				if (detailValue) {pageCount = 5}
-				if (args[1] == undefined || isNaN(args[1])) {
-                    var listPage = 1;
-                } else if (args[1] > Math.ceil(playerLevels.length/pageCount)) {
-                    var listPage = Math.ceil(playerLevels.length/pageCount);
-                } else {
-                    var listPage = parseInt(args[1]);
-                }
-				var messageList = "";
-				var nextPage = ""
-				if (detailValue) {nextPage = " -d"}
-                for (i=(listPage*pageCount-pageCount); i<listPage*pageCount && i<playerLevels.length; i++) {
-                    messageList += "• **" + playerLevels[i][0] + "** - " + playerLevels[i][1] + "\n";
-                }
-                messageList += "*Showing page " + listPage + " out of " + Math.ceil(playerLevels.length/pageCount) + "*\n";
-                if (listPage<Math.ceil(playerLevels.length/pageCount)) {
-                    messageList += "\nUse `-levels " + args[0] + " " + (listPage+1) + nextPage + "` for the next page.";
-                }
-                message.reply("",
-                    {
-                        embed: embed("Hide and Seek Block Levels for " + args[0],
-                        messageList, "gold")
-                    }    
-                ).then(msg => checkDM(msg, message.channel.type, divN));
-                if ((args[1] == "-o") || (args[2] == "-o")) {
-                    var expTotal = Object.keys(config.blocks).map(function(e) {
+                    var detailValue = false;
+                    if ((args[1] == "detail" || args[1] == "-d") || (args[2] == "detail" || args[2] == "-d")) {detailValue = true;}
+                    var playerLevels = Object.keys(config.blocks).map(function(e) {
                         var temp = "Block not used";
                         if (hiveData.rawBlockExperience[e] != undefined) {
-                            temp = hiveData.rawBlockExperience[e]
+                            temp = blockLevel(hiveData.rawBlockExperience[e], detailValue);
                         }
                         return [config.blocks[e], temp];
+                    }).sort(function(a,b){
+                        if(a[0] < b[0]) return -1;
+                        if(a[0] > b[0]) return 1;
+                        return 0;
                     });
-                    message.reply(hideLevel(expTotal));
-                }
+                    var pageCount = 10;
+                    if (detailValue) {pageCount = 5}
+                    if (args[1] == undefined || isNaN(args[1])) {
+                        var listPage = 1;
+                    } else if (args[1] > Math.ceil(playerLevels.length/pageCount)) {
+                        var listPage = Math.ceil(playerLevels.length/pageCount);
+                    } else {
+                        var listPage = parseInt(args[1]);
+                    }
+                    if ((args[1] == "-o") || (args[2] == "-o")) {
+                        var expInfo = Object.keys(config.blocks).map(function(e) {
+                            var temp = "Block not used";
+                            var level = 0;
+                            if (hiveData.rawBlockExperience[e] != undefined) {
+                                temp = hiveData.rawBlockExperience[e];
+                                level = hiveData.blockExperience[e];
+                            }
+                            return [config.blocks[e], temp, level];
+                        });
+                        var messageFields = [];
+                        var fieldNum=0;
+                        var fieldInformation = [{title:"Unplayed blocks",count:0},{title:"Levels 1-4",count:0},{title:"Levels 5-9",count:0},{title:"Levels 10-14",count:0},{title:"Levels 15-19",count:0},{title:"Levels 20-24",count:0},{title:"Levels 25-29",count:0},{title:"Levels 30-34",count:0},{title:"Levels 35-39",count:0},{title:"Levels 40-44",count:0},{title:"Levels 45-49",count:0},{title:"Max level blocks",count:0}];
+                        for (i=0; expTotal[i] != undefined; i++) {
+                            fieldInformation[Math.ceil((expInfo[2]/5)+0.1)].count++;
+                        }
+                        var fieldCounter = 0;
+                        for (i=0; i<12;i++) {
+                            if (fieldInformation[i].count)
+                                messageFields[fieldCounter] = {
+                                    "name": fieldInformation[i].title,
+                                    "value": fieldInformation[i].count,
+                                    "inline": true;
+                                };
+                                fieldCounter++;
+                            }
+                        }
+                        messageFields[fieldCounter] = {
+                            "name": "Total Hide and Seek Level*",
+                            "value": hideLevel(expInfo);
+                        };
+                        message.reply("",
+                            {
+                                embed: {
+                                "color": 0xFFD700,
+                                "fields": messageFields
+                                }
+                            }
+                        ).then(msg => checkDM(msg, message.channel.type, 1));
+                    } else {
+                        var messageList = "";
+                        var nextPage = ""
+                        if (detailValue) {nextPage = " -d"}
+                        for (i=(listPage*pageCount-pageCount); i<listPage*pageCount && i<playerLevels.length; i++) {
+                            messageList += "• **" + playerLevels[i][0] + "** - " + playerLevels[i][1] + "\n";
+                        }
+                        messageList += "*Showing page " + listPage + " out of " + Math.ceil(playerLevels.length/pageCount) + "*\n";
+                        if (listPage<Math.ceil(playerLevels.length/pageCount)) {
+                            messageList += "\nUse `-levels " + args[0] + " " + (listPage+1) + nextPage + "` for the next page.";
+                        }
+                        message.reply("",
+                            {
+                                embed: embed("Hide and Seek Block Levels for " + args[0],
+                                messageList, "gold")
+                            }
+                        ).then(msg => checkDM(msg, message.channel.type, divN));
+                    }
                 }else{
                     message.reply("",
                     {
@@ -121,7 +151,7 @@ module.exports = {
                             "An error occured.\nMaybe you misspelled the player's name?", "red")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 }
-		});
+		    });
         }
     }
 };
