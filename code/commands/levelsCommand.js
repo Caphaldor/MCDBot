@@ -100,7 +100,7 @@ module.exports = {
                         var messageFields = [];
                         var fieldNum=0;
                         var fieldInformation = [{title:"Unplayed blocks",count:0},{title:"Levels 1-4",count:0},{title:"Levels 5-9",count:0},{title:"Levels 10-14",count:0},{title:"Levels 15-19",count:0},{title:"Levels 20-24",count:0},{title:"Levels 25-29",count:0},{title:"Levels 30-34",count:0},{title:"Levels 35-39",count:0},{title:"Levels 40-44",count:0},{title:"Levels 45-49",count:0},{title:"Max level blocks",count:0}];
-                        for (i=0; expTotal[i] != undefined; i++) {
+                        for (i=0; expInfo[i] != undefined; i++) {
                             fieldInformation[Math.ceil((expInfo[2]/5)+0.1)].count++;
                         }
                         var fieldCounter = 0;
