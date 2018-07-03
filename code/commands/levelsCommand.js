@@ -109,14 +109,14 @@ module.exports = {
                                 messageFields[fieldCounter] = {
                                     "name": fieldInformation[i].title,
                                     "value": fieldInformation[i].count,
-                                    "inline": true;
+                                    "inline": true
                                 };
                                 fieldCounter++;
                             }
                         }
                         messageFields[fieldCounter] = {
                             "name": "Total Hide and Seek Level*",
-                            "value": hideLevel(expInfo);
+                            "value": hideLevel(expInfo)
                         };
                         message.reply("",
                             {
