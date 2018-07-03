@@ -90,7 +90,7 @@ module.exports = {
                     if ((args[1] == "-o") || (args[2] == "-o")) {
                         var expInfo = Object.keys(config.blocks).map(function(e) {
                             var temp = "Block not used";
-                            var level = 0;
+                            var level = -1;
                             if (hiveData.rawBlockExperience[e] != undefined) {
                                 temp = hiveData.rawBlockExperience[e];
                                 level = hiveData.blockExperience[e];
