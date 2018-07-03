@@ -116,7 +116,7 @@ module.exports = {
                         }
                         messageFields[fieldCounter] = {
                             "name": "Total Hide and Seek Level*",
-                            "value": hideLevel(expInfo)
+                            "value": hideLevel(expInfo) + "\n\n**Your total level from all of the experience you have earned.*"
                         };
                         message.reply("",
                             {
