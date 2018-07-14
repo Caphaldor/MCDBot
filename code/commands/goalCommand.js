@@ -30,7 +30,7 @@ function timeEstimator(timeNeeded) {
     var times = ["minutes", "hours", "days"]
     if (timeNeeded<100) {time = Math.floor(timeNeeded);}
     else if (timeNeeded<3000) {time = Math.floor(timeNeeded/60);temp = 1;}
-    else if (timeNeeded<2000000) {time = Math.floor(timeNeeded/1440);temp = 2;}
+    else if (timeNeeded<2000000) {time = (Math.floor(timeNeeded/1440)/3);temp = 2;}
     else {insaneGoal = true;}
     var message = "it will take about " + time + " " + times[temp];
     if (insaneGoal) {message = "you will never reach this goal";}
