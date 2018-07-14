@@ -1,30 +1,30 @@
 {
-    "hide": {
-        "availableGoals": ["wl","kd","kills","deaths","wins","rankup","games","points","seekerkills","hiderkills"],
-	    "gameTime": {
-            "lobbyTime": 60,
-            "lowAverage": 150,
-			"highAverage": 330
-	    },
-        "wins": "victories",
-        "games": "gamesplayed",
-        "deaths": "deaths",
-        "points": "total_points"
+  "hide": {
+    "availableGoals": ["wl","kd","kills","deaths","wins","rankup","games","points","seekerkills","hiderkills"],
+    "gameTime": {
+      "lobbyTime": 60,
+      "lowAverage": 150,
+      "highAverage": 330
     },
-    "dr": {
-        "availableGoals": ["empty"],
-	    "gameTime": {
-            "lobbyTime": 0,
-            "lowAverage": 0,
-			"highAverage": 0
-	    }
-    },
-    "descriptors": {
-      "wl": "W/L",
-      "kd": "K/D",
-      "seekerkills": "seeker kills",
-      "hiderkills": "hider kills"
-    },
-    "genericGoals": ["wins","kills","deaths","games","points"],
-    "ratioGoals": ["wl","kd"]
+    "wins": "victories",
+    "games": "gamesplayed",
+    "deaths": "deaths",
+    "points": "total_points"
+  },
+  "dr": {
+    "availableGoals": ["empty"],
+    "gameTime": {
+      "lobbyTime": 0,
+      "lowAverage": 0,
+      "highAverage": 0
+    }
+  },
+  "descriptors": {
+    "wl": "W/L",
+    "kd": "K/D",
+    "seekerkills": "seeker kills",
+    "hiderkills": "hider kills"
+  },
+  "genericGoals": ["wins","kills","deaths","games","points"],
+  "ratioGoals": ["wl","kd"]
 }
