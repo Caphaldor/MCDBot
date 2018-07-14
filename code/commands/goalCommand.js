@@ -88,11 +88,12 @@ module.exports = {
                     //check necessary wins
                     var needed = goalAmount - actualAmount;
                     //prepare text to show
-                    var requirements = needed + " more" + goalDescriptor;
+                    var requirements = needed + " more " + goalDescriptor;
                     //calculate time it will take
                     //(takes goal/game from current stats)
                     var timeNeeded = ((needed*hiveData[goalsConfig[args[1].toLowerCase()].games])/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAwerage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
                     var timeToGoal = timeEstimator(timeNeeded/60);
+                    var message.reply(timeNeeded + "\n" + goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime);
                 break;
                 //Ratio goals
                 case "ratio":
