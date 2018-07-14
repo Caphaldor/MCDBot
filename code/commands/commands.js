@@ -20,5 +20,7 @@ module.exports = {
     compare: require("./compareCommand.js"),
     config: require("./configEditCommand.js"),
     player: require("./playerCommand.js"),
-    records: require("./recordsCommand.js")
+    records: require("./recordsCommand.js"),
+    dr: require("./recordsCommand.js"),
+    goal: require("./goalCommand.js")
 };

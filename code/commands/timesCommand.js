@@ -110,7 +110,7 @@ module.exports = {
                     message.reply("",
                     {
                         embed: embed("Error",
-                            "An error occured.\mMaybe you misspelled the player's name?", "red")
+                            "An error occured.\nMaybe you misspelled the player's name?", "red")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 }
                 });

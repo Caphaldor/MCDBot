@@ -1,6 +1,6 @@
 function dataFormatter(valu, type) {
     if (type == "-t") {
-        var temp = "No map completion";
+        var temp = "Map not completed";
     } else if (type == "-k"){
         var temp = "No kills recorded";
     } else {
@@ -21,15 +21,15 @@ function checkDM(msg, DM, div) {
     }
 };
 module.exports = {
-    description: "Showcasing various records from DeathRun",
-    usage: "-records {Player} [Page] [-t|-d|-k|-td|-tk]",
+    description: "Showcases various records from DeathRun. By default shows lowest times for map completion, add `-k` or `-d` at the end to show total deaths or highest kills respectively for each map.",
+    usage: "-records {Player} [Page] [-t|-d|-k]",
     allowedInDM: true,
     allowedChannels: ["281725164247449600","262702429282238465","335817153603305473"],
     call: function(message, args){
         if (args[0]==undefined) {
-            message.reply("The proper usage of this command is `-records {Player} [Page]`\nYou can add one of: `-t`, `-d`, `-k`; at the end for different record lists").then(msg => checkDM(msg, message.channel.type, 1));
+            message.reply("The proper usage of this command is `-records {Player} [Page]`\nYou can add `-d` or `-k` at the end for different record lists").then(msg => checkDM(msg, message.channel.type, 1));
         } else if (args[0] == "help") {
-            message.reply("You can choose what type of records you would like to be shown by using *one* of the following:\n• `-t` - On by default, shows you your record map times\n• `-d` - Shows you your total deaths on each map\n• `-k` - Shows you your record kills on each map (from playing as death)\n\nCommand usage: `-records {Player} [Page] [-t|-d|-k]`")
+            message.reply("You can choose what type of records you would like to be shown by using *one* of the following:\n• `-d` - Shows you your total deaths on each map\n• `-k` - Shows you your record kills on each map (from playing as death)\n\nCommand usage: `-records {Player} [Page] [-t|-d|-k]`")
         } else {
             req("http://api.hivemc.com/v1/game/dr/maps", function (error, response, body) {
                 var divN = 2;
