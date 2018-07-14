@@ -75,7 +75,7 @@ module.exports = {
             if (goalsConfig.ratioGoals.includes(switcher)) {switcher = "ratio";}
             switch(switcher) {
                 //General goals
-                case: "generic":
+                case "generic":
                     var actualAmount = hiveData[goalsConfig[args[1].toLowerCase][args[2].toLowerCase()]];
                     //Decide upon a goal
                     if (args[3]&&!isNaN(parseInt(args[3]))) {
@@ -95,7 +95,7 @@ module.exports = {
                     var timeToGoal = timeEstimator(timeNeeded/60);
                 break;
                 //Ratio goals
-                case: "ratio":
+                case "ratio":
 
                 break;
 
