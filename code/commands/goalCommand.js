@@ -91,9 +91,8 @@ module.exports = {
                     var requirements = needed + " more " + goalDescriptor;
                     //calculate time it will take
                     //(takes goal/game from current stats)
-                    var timeNeeded = ((needed*hiveData[goalsConfig[args[1].toLowerCase()].games])/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAwerage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
+                    var timeNeeded = ((needed*hiveData[goalsConfig[args[1].toLowerCase()].games])/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
                     var timeToGoal = timeEstimator(timeNeeded/60);
-                    message.reply((needed*hiveData[goalsConfig[args[1].toLowerCase()].games])/actualAmount);
                 break;
                 //Ratio goals
                 case "ratio":
