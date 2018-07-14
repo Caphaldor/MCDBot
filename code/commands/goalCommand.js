@@ -68,7 +68,7 @@ module.exports = {
             } else {
             var response = "";
             var goalReached = false;
-            var goalDescriptor = args[2].toLowerCase;
+            var goalDescriptor = args[2].toLowerCase();
             if (goalsConfig.descriptors[args[2].toLowerCase()]) {goalDescriptor = goalsConfig.descriptors[args[2].toLowerCase()]}
             var switcher = args[2].toLowerCase();
             if (goalsConfig.genericGoals.includes(switcher)) {switcher = "generic";}
@@ -76,7 +76,7 @@ module.exports = {
             switch(switcher) {
                 //General goals
                 case "generic":
-                    var actualAmount = hiveData[goalsConfig[args[1].toLowerCase][args[2].toLowerCase()]];
+                    var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args[2].toLowerCase()]];
                     //Decide upon a goal
                     if (args[3]&&!isNaN(parseInt(args[3]))) {
                         var goalAmount = args[3];
@@ -91,7 +91,7 @@ module.exports = {
                     var requirements = needed + " more" + goalDescriptor;
                     //calculate time it will take
                     //(takes goal/game from current stats)
-                    var timeNeeded = ((needed*hiveData[goalsConfig[args[1].toLowerCase].games])/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAwerage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
+                    var timeNeeded = ((needed*hiveData[goalsConfig[args[1].toLowerCase()].games])/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAwerage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
                     var timeToGoal = timeEstimator(timeNeeded/60);
                 break;
                 //Ratio goals
@@ -103,7 +103,7 @@ module.exports = {
                 //Gamemode specific goals
 
                 default:
-                    var actualAmount = hiveData[goalsConfig[args[1].toLowerCase][args]];
+                    var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args]];
                     var goalAmount = -1;
                     var requirements = "missing";
                     var obstacle = "mistakes in code";
