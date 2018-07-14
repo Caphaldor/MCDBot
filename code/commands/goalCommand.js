@@ -93,7 +93,7 @@ module.exports = {
                     //(takes goal/game from current stats)
                     var timeNeeded = ((needed*hiveData[goalsConfig[args[1].toLowerCase()].games])/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAwerage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
                     var timeToGoal = timeEstimator(timeNeeded/60);
-                    message.reply(timeNeeded + "\n" + goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime);
+                    message.reply(needed + "\n" + hiveData[goalsConfig[args[1].toLowerCase()].games] + "\n" + actualAmount);
                 break;
                 //Ratio goals
                 case "ratio":
