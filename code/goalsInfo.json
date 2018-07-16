@@ -12,12 +12,30 @@
     "points": "total_points"
   },
   "dr": {
+    "availableGoals": ["wl", "kills", "deaths", "wins", "points", "games"],
+    "gameTime": {
+      "lobbyTime": 40,
+      "lowAverage": 60,
+      "highAverage": 90
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "deaths": "deaths",
+    "points": "total_points",
+    "kills": "kills"
+  },
+  "gnt": {
     "availableGoals": ["empty"],
     "gameTime": {
       "lobbyTime": 0,
       "lowAverage": 0,
       "highAverage": 0
-    }
+    },
+    "wins": "",
+    "games": "",
+    "deaths": "",
+    "points": "",
+    "kills": ""
   },
   "descriptors": {
     "wl": "W/L",

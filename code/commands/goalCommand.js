@@ -13,15 +13,14 @@ function hideLevel(expArray) {
     return level;
 };
 function goalCountDecider(currentCount) {
-    var temp = 0;
-    while (temp<currentCount) {
-    temp += Math.pow(10,temp.toString().length-1);
-    }
-    return temp;
+    var assumedGoal = 0;
+    while (assumedGoal<currentCount) {assumedGoal += Math.pow(10,assumedGoal.toString().length-1);}
+    return assumedGoal;
 };
 function goalRatioDecider(currentRatio) {
-    var temp = 0;
-    return temp;
+    var assumedRatio = 1;
+    while (assumedRatio<currentRatio) {assumedRatio++;}
+    return assumedRatio;
 };
 function timeEstimator(timeNeeded) {
     var temp = 0;
