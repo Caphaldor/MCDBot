@@ -68,6 +68,7 @@ module.exports = {
             var response = "";
             var goalReached = false;
             var goalDescriptor = args[2].toLowerCase();
+            var games = hiveData[goalsConfig[args[1].toLowerCase()].games];
             if (goalsConfig.descriptors[args[2].toLowerCase()]) {goalDescriptor = goalsConfig.descriptors[args[2].toLowerCase()]}
             var switcher = args[2].toLowerCase();
             if (goalsConfig.genericGoals.includes(switcher)) {switcher = "generic";}
@@ -75,7 +76,12 @@ module.exports = {
             switch(switcher) {
                 //General goals
                 case "generic":
-                    var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args[2].toLowerCase()]];
+                    //Check current standing
+                    if (args[2].toLowerCase() == "kills" && args[1].toLowerCase == "hide") {
+                        var actualAmount = hiveData.seekerkills + hiveData.hiderkills;
+                    } else {
+                        var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args[2].toLowerCase()]];
+                    }
                     //Decide upon a goal
                     if (args[3]&&!isNaN(parseInt(args[3]))) {
                         var goalAmount = args[3];
@@ -90,12 +96,43 @@ module.exports = {
                     var requirements = needed + " more " + goalDescriptor;
                     //calculate time it will take
                     //(takes goal/game from current stats)
-                    var timeNeeded = ((needed*hiveData[goalsConfig[args[1].toLowerCase()].games])/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
+                    var timeNeeded = ((needed*games)/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
                     var timeToGoal = timeEstimator(timeNeeded/60);
                 break;
                 //Ratio goals
                 case "ratio":
-
+                    //Check current standing
+                    var upper=lower=0;
+                    if (args[2].toLowerCase() == "wl") {
+                        upper = hiveData[goalsConfig[args[1].toLowerCase()].wins];
+                        lower = games - upper;
+                        var upperText = "wins";
+                    } else if (args[2].toLowerCase() == "kd") {
+                        if (args[1].toLowerCase() != "hide") {
+                            upper = hiveData[goalsConfig[args[1].toLowerCase()].kills];
+                        } else {
+                            upper = hiveData.seekerkills + hiveData.hiderkills;
+                        }
+                        lower = hiveData[goalsConfig[args[1].toLowerCase()].deaths];
+                        var upperText = "kills";
+                    }
+                    var actualAmount = upper/lower;
+                    //Decide upon a goal
+                    if (args[3]&&!isNaN(parseInt(args[3]))) {
+                        var goalAmount = args[3];
+                    } else {
+                        var goalAmount = goalRatioDecider(actualAmount);
+                    }
+                    //Check if goal has been reached
+                    if (goalAmount<actualAmount) {goalReached = true; break;}
+                    //check necessary wins
+                    var needed = goalAmount*lower - upper;
+                    //prepare text to show
+                    var requirements = needed + " more flawless " + upperText;
+                    //calculates needed top variable, assuming ratio of (2-currentRatio/goalRatio)*goalRatio
+                    //then calculates the time it will take to get needed amount of top stat using system from /\
+                    var timeNeeded = (((upper - goalAmount*lower)/((1/(2-upper/(lower*goalAmount)))-1))/(upper/games))*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
+                    var timeToGoal = timeEstimator(timeNeeded/60);
                 break;
 
 
