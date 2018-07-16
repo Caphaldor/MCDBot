@@ -77,7 +77,7 @@ module.exports = {
                 //General goals
                 case "generic":
                     //Check current standing
-                    if (args[2].toLowerCase() == "kills" && args[1].toLowerCase == "hide") {
+                    if (args[2].toLowerCase() == "kills" && args[1].toLowerCase() == "hide") {
                         var actualAmount = hiveData.seekerkills + hiveData.hiderkills;
                     } else {
                         var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args[2].toLowerCase()]];
@@ -133,6 +133,8 @@ module.exports = {
                     //then calculates the time it will take to get needed amount of top stat using system from /\
                     var timeNeeded = (((upper - goalAmount*lower)/((1/(2-upper/(lower*goalAmount)))-1))/(upper/games))*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
                     var timeToGoal = timeEstimator(timeNeeded/60);
+                    //To present the Ratio in a better manner:
+                    actualAmount = Math.round(actualAmount*100)/100;
                 break;
 
 
