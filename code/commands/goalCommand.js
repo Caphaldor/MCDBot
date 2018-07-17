@@ -133,8 +133,8 @@ module.exports = {
                     //calculates needed top variable. Mathematically dependent on the smaller output:
                     //WIll either: assume ratio of (2-currentRatio/goalRatio)*goalRatio
                     //          or assume ratio of (1+currentRatio/goalRatio)*goalRatio
-                    if (goalAmount<2*currentRatio) {
-                        var neededGames = (((upper - goalAmount*lower)/((1/(1+upper/(lower*goalAmount)))-1))/(upper/games));
+                    if (goalAmount<(2*actualAmount)) {
+                        var neededGames = ((upper - goalAmount*lower)/(1/(1+(upper/(lower*goalAmount)))-1))/(upper/games);
                     } else {
                         var neededGames = 2*lower*goalAmount - upper;
                     }
