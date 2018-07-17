@@ -31,7 +31,7 @@ function timeEstimator(timeNeeded) {
     else if (timeNeeded<3000) {time = Math.floor(timeNeeded/60);temp = 1;}
     else if (timeNeeded<2000000) {time = (Math.floor(timeNeeded/480));temp = 2;}
     else {insaneGoal = true;}
-    var message = "it will take about " + time + " " + times[temp];
+    var message = "it will take you about " + time + " " + times[temp];
     if (insaneGoal) {message = "you will never reach this goal";}
     return message;
 }
@@ -69,6 +69,7 @@ module.exports = {
             var goalReached = false;
             var goalDescriptor = args[2].toLowerCase();
             var games = hiveData[goalsConfig[args[1].toLowerCase()].games];
+            var averageGameTime = (goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
             if (goalsConfig.descriptors[args[2].toLowerCase()]) {goalDescriptor = goalsConfig.descriptors[args[2].toLowerCase()]}
             var switcher = args[2].toLowerCase();
             if (goalsConfig.genericGoals.includes(switcher)) {switcher = "generic";}
@@ -96,7 +97,7 @@ module.exports = {
                     var requirements = needed + " more " + goalDescriptor;
                     //calculate time it will take
                     //(takes goal/game from current stats)
-                    var timeNeeded = ((needed*games)/actualAmount)*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
+                    var timeNeeded = ((needed*games)/actualAmount)*averageGameTime;
                     var timeToGoal = timeEstimator(timeNeeded/60);
                 break;
                 //Ratio goals
@@ -129,12 +130,20 @@ module.exports = {
                     var needed = goalAmount*lower - upper;
                     //prepare text to show
                     var requirements = needed + " more flawless " + upperText;
-                    //calculates needed top variable, assuming ratio of (2-currentRatio/goalRatio)*goalRatio
+                    //calculates needed top variable. Mathematically dependent on the smaller output:
+                    //WIll either: assume ratio of (2-currentRatio/goalRatio)*goalRatio
+                    //          or assume ratio of (1+currentRatio/goalRatio)*goalRatio
+                    if (goalAmount<2*currentRatio) {
+                        var neededGames = (((upper - goalAmount*lower)/((1/(1+upper/(lower*goalAmount)))-1))/(upper/games));
+                    } else {
+                        var neededGames = 2*lower*goalAmount - upper;
+                    }
                     //then calculates the time it will take to get needed amount of top stat using system from /\
-                    var timeNeeded = (((upper - goalAmount*lower)/((1/(2-upper/(lower*goalAmount)))-1))/(upper/games))*(goalsConfig[args[1].toLowerCase()].gameTime.lobbyTime + (goalsConfig[args[1].toLowerCase()].gameTime.lowAverage + goalsConfig[args[1].toLowerCase()].gameTime.highAverage)/2);
+                    var timeNeeded = neededGames*averageGameTime;
                     var timeToGoal = timeEstimator(timeNeeded/60);
                     //To present the Ratio in a better manner:
                     actualAmount = Math.round(actualAmount*100)/100;
+                    needed = Math.ceil(needed);
                 break;
 
 
