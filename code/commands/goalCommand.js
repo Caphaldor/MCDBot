@@ -93,12 +93,12 @@ module.exports = {
                     if (goalAmount<actualAmount) {goalReached = true; break;}
                     //check necessary wins
                     var needed = goalAmount - actualAmount;
-                    //prepare text to show
-                    var requirements = needed + " more " + goalDescriptor;
                     //calculate time it will take
                     //(takes goal/game from current stats)
                     var timeNeeded = ((needed*games)/actualAmount)*averageGameTime;
                     var timeToGoal = timeEstimator(timeNeeded/60);
+                    //prepare text to show
+                    var requirements = needed + " more " + goalDescriptor;
                 break;
                 //Ratio goals
                 case "ratio":
@@ -128,8 +128,6 @@ module.exports = {
                     if (goalAmount<actualAmount) {goalReached = true; break;}
                     //check necessary wins
                     var needed = goalAmount*lower - upper;
-                    //prepare text to show
-                    var requirements = needed + " more flawless " + upperText;
                     //calculates needed top variable. Mathematically dependent on the smaller output:
                     //WIll either: assume ratio of (2-currentRatio/goalRatio)*goalRatio
                     //          or assume ratio of (1+currentRatio/goalRatio)*goalRatio
@@ -144,6 +142,8 @@ module.exports = {
                     //To present the Ratio in a better manner:
                     actualAmount = Math.round(actualAmount*100)/100;
                     needed = Math.ceil(needed);
+                    //prepare text to show
+                    var requirements = needed + " more flawless " + upperText;
                 break;
 
 
