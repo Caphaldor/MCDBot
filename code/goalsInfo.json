@@ -45,6 +45,6 @@
     "seekerkills": "kills as a seeker",
     "hiderkills": "kills as a hider"
   },
-  "genericGoals": ["wins","kills","deaths","games","points"],
+  "genericGoals": ["wins","kills","deaths","games","points","hiderkills","seekerkills"],
   "ratioGoals": ["wl","kd"]
 }
