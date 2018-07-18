@@ -9,10 +9,12 @@
     "wins": "victories",
     "games": "gamesplayed",
     "deaths": "deaths",
-    "points": "total_points"
+    "points": "total_points",
+	"seekerkills": "seekerkills",
+	"hiderkills": "hiderkills"
   },
   "dr": {
-    "availableGoals": ["wl", "kills", "deaths", "wins", "points", "games"],
+    "availableGoals": ["wl", "kills", "deaths", "wins", "points", "games", "rankup"],
     "gameTime": {
       "lobbyTime": 40,
       "lowAverage": 60,
@@ -40,8 +42,8 @@
   "descriptors": {
     "wl": "W/L",
     "kd": "K/D",
-    "seekerkills": "seeker kills",
-    "hiderkills": "hider kills"
+    "seekerkills": "kills as a seeker",
+    "hiderkills": "kills as a hider"
   },
   "genericGoals": ["wins","kills","deaths","games","points"],
   "ratioGoals": ["wl","kd"]
