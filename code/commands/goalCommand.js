@@ -158,12 +158,13 @@ module.exports = {
                         //find what rank the player's at
                         for (i=0; i<gameTitles.length;i++) {
                             if (currentRank == gameTitles[i].plain_name) {
+                                message.reply(i);
                                 rankPos = i;
                             }
                         }
                     });
                     //Chceck if top/highest rank has been reached
-                    message.reply(gameTitles);
+                    message.reply(gameTitles[rankPos]);
                     if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
                     var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
