@@ -166,7 +166,7 @@ module.exports = {
                     message.reply(gameTitles);
                     if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
-                    var nextRank = gameTitles[rankPos+1].plain_name;
+                    var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
                     var needed = gameTitles[parseInt(rankPos)+1].required_points - currentPoints;
                     //calculate the time needed to get to it
                     var timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
