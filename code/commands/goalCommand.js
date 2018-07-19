@@ -151,7 +151,7 @@ module.exports = {
                     var currentRank = hiveData.title;
                     var currentPoints = hiveData[goalsConfig[args[1].toLowerCase()].points];
                     var rankPos = -1;
-                    var gameTitles = {};
+                    var gameTitles;
                     req("http://api.hivemc.com/v1/game/" + args[1] + "/titles", function (error2, response2, body2) {
                         if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                         gameTitles = JSON.parse(body2);
