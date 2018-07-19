@@ -161,7 +161,7 @@ module.exports = {
                             }
                         }
                         //Chceck if top/highest rank has been reached
-                        if (rankPos = (gameTitles.length-1)|| rankPos = 0) {goalReached = true; break;}
+                        if (rankPos == (gameTitles.length-1)|| rankPos == 0) {goalReached = true; break;}
                         //Check next rank requirements
                         var nextRank = gameTitles[rankPos+1].plain_name;
                         var needed = gameTitles[rankPos+1].required_points - currentPoints;
