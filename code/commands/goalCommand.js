@@ -164,7 +164,8 @@ module.exports = {
                         }
                     });
                     //Chceck if top/highest rank has been reached
-                    message.reply(gameTitles[1]["plain_name"] + rankPos + "\n" + (rankPos + 1));
+                    message.reply(rankPos + "\n" + (rankPos + 1));
+                    var rankPos = 0;
                     if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
                     //var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
