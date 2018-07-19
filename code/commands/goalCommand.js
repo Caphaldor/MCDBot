@@ -151,7 +151,7 @@ module.exports = {
                     var currentRank = hiveData.title;
                     var currentPoints = hiveData[goalsConfig[args[1].toLowerCase()].points];
                     var rankPos = -1;
-                    var gameTitles;
+                    var gameTitles = {};
                     req("http://api.hivemc.com/v1/game/" + args[1] + "/titles", function (error2, response2, body2) {
                         if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                         gameTitles = JSON.parse(body2);
@@ -164,7 +164,7 @@ module.exports = {
                     });
                     //Chceck if top/highest rank has been reached
                     message.reply(gameTitles);
-                    if (rankPos == (gameTitles.length-1)|| rankPos == 0) {goalReached = true; break;}
+                    if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
                     var nextRank = gameTitles[rankPos+1].plain_name;
                     var needed = gameTitles[parseInt(rankPos)+1].required_points - currentPoints;
