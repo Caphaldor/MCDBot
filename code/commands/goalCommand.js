@@ -158,13 +158,15 @@ module.exports = {
                         //find what rank the player's at
                         message.reply(currentRank);
                         for (i=0; i<gameTitles.length;i++) {
-                            if (i<4) {message.reply(gameTitles[i].plain_name);}
+                            if (i==14) {message.reply(gameTitles[i].plain_name);}
                             if (currentRank == gameTitles[i].plain_name) {
                                 message.reply(i);
                                 rankPos = i;
                             }
                         }
+                        message.reply("rankPos " + rankPos);
                     });
+                    message.reply("rankPos2 " + rankPos);
                     //Chceck if top/highest rank has been reached
                     message.reply(rankPos + "\n" + (rankPos + 1));
                     rankPos = 0;
