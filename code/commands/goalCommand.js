@@ -151,9 +151,10 @@ module.exports = {
                     var currentRank = hiveData.title;
                     var currentPoints = hiveData[goalsConfig[args[1].toLowerCase()].points];
                     var rankPos = -1;
+                    var gameTitles = {};
                     req("http://api.hivemc.com/v1/game/" + args[1] + "/titles", function (error, response, body) {
                         if (error){logging.legacyLog("URGENT HTTP ERROR")}
-                        var gameTitles = JSON.parse(body);
+                        gameTitles = JSON.parse(body);
                         //find what rank the player's at
                         for (i=0; i<gameTitles.length;i++) {
                             if (currentRank == gameTitles[i].plain_name) {
