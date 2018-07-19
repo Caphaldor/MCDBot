@@ -157,6 +157,7 @@ module.exports = {
                         gameTitles = JSON.parse(body2);
                         //find what rank the player's at
                         for (i=0; i<gameTitles.length;i++) {
+                            if (i<3) {message.reply(gameTitles[i].plain_name)}
                             if (currentRank == gameTitles[i].plain_name) {
                                 message.reply(i);
                                 rankPos = i;
