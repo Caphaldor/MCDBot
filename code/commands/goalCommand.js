@@ -157,7 +157,6 @@ module.exports = {
                         gameTitles = JSON.parse(body2);
                         //find what rank the player's at
                         for (i=0; i<gameTitles.length;i++) {
-                            if (i<3) {message.reply(gameTitles[i].plain_name)}
                             if (currentRank == gameTitles[i].plain_name) {
                                 message.reply(i);
                                 rankPos = i;
@@ -165,7 +164,7 @@ module.exports = {
                         }
                     });
                     //Chceck if top/highest rank has been reached
-                    message.reply(gameTitles[rankPos]);
+                    message.reply(gameTitles[1]);
                     if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
                     //var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
