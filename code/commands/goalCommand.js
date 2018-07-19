@@ -156,7 +156,9 @@ module.exports = {
                         if (error2){logging.legacyLog("URGENT HTTP ERROR")}
                         gameTitles = JSON.parse(body2);
                         //find what rank the player's at
+                        message.reply(currentRank);
                         for (i=0; i<gameTitles.length;i++) {
+                            if (i<4) {message.reply(gameTitles[i].plain_name);}
                             if (currentRank == gameTitles[i].plain_name) {
                                 message.reply(i);
                                 rankPos = i;
@@ -168,8 +170,8 @@ module.exports = {
                     rankPos = 0;
                     if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
-                    //var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
-                    //var needed = gameTitles[parseInt(rankPos)+1].required_points - currentPoints;
+                    //var nextRank = gameTitles[rankPos+1].plain_name;
+                    //var needed = gameTitles[rankPos+1].required_points - currentPoints;
                     var nextRank = "tryHard";
                     var needed = 100000;
                     //calculate the time needed to get to it
