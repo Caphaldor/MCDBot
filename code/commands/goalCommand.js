@@ -168,8 +168,10 @@ module.exports = {
                     message.reply(gameTitles[rankPos]);
                     if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
-                    var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
-                    var needed = gameTitles[parseInt(rankPos)+1].required_points - currentPoints;
+                    //var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
+                    //var needed = gameTitles[parseInt(rankPos)+1].required_points - currentPoints;
+                    var nextRank = "tryHard";
+                    var needed = 100000;
                     //calculate the time needed to get to it
                     var timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
                     var timeToGoal = timeEstimator(timeNeeded/60);
