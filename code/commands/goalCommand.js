@@ -164,7 +164,7 @@ module.exports = {
                         }
                     });
                     //Chceck if top/highest rank has been reached
-                    message.reply(gameTitles[1]);
+                    message.reply(gameTitles[1].plain_name + rankPos + "\n" + (rankPos + 1));
                     if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
                     //Check next rank requirements
                     //var nextRank = gameTitles[parseInt(rankPos)+1].plain_name;
@@ -188,7 +188,7 @@ module.exports = {
             //Response
              if (!goalReached) {
                 if (args[2].toLowerCase() == "rankup") {
-                    response = "You currently have the rank of " + currentRank + ", and I don't feel like counting how long it'll take you to rankup.";
+                    response = "You currently have the rank of " + currentRank + ", and you need " + needed + " to reach " + nextRank + ". It is estimated that " + timeToGoal + ".";
                 } else {
                     response = "You currently have " + actualAmount + " " + goalDescriptor + ". To get it up to " + goalAmount + " you will need " + requirements + ". It is estimated that " + timeToGoal + ".";
                 }
