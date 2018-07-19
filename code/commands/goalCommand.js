@@ -145,24 +145,37 @@ module.exports = {
                     //prepare text to show
                     var requirements = needed + " more flawless " + upperText;
                 break;
-
+                //Rankup goals
+                case "rankup":
+                    //Check current standing
+                    var currentRank = hiveData.title;
+                    var rankPos = -1;
+                    req("http://api.hivemc.com/v1/game/" + args[1] + "/titles", function (error, response, body) {
+                        if (error){logging.legacyLog("URGENT HTTP ERROR")}
+                        var gameTitles = JSON.parse(body);
+                        message.reply(gameTitles.length + " " + gameTitles[0].plain_name);
+                    });
+                break;
 
                 //Gamemode specific goals
 
                 default:
-                    var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args]];
+                    var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args[2].toLowerCase]];
                     var goalAmount = -1;
-                    var requirements = "missing";
-                    var obstacle = "mistakes in code";
+                    var requirements = "unknown";
                     var timeToGoal = "something went wrong";
                 break;
             }
             //Response
              if (!goalReached) {
-                response = "You currently have " + actualAmount + " " + goalDescriptor + ". To get it up to " + goalAmount + " you will need " + requirements + ". It is estimated that " + timeToGoal + ".";
+                if (args[2].toLowerCase() == "rankup") {
+                    response = "You currently have the rank of " + currentRank + ", and I don't feel like counting how long it'll take you to rankup.";
+                } else {
+                    response = "You currently have " + actualAmount + " " + goalDescriptor + ". To get it up to " + goalAmount + " you will need " + requirements + ". It is estimated that " + timeToGoal + ".";
+                }
             } else {
-                if (args[2] == "rankup") {
-                    response = "From what I can see, you already have the top rank in the gamemode you specified. Sadly, I can't check how much you need for top KEK rank yet.";
+                if (args[2].toLowerCase() == "rankup") {
+                    response = "From what I can see, you already have the highest rank in the gamemode you specified. Sadly, I can't check how much you need for top KEK rank yet.";
                 } else {
                     response = "From what I can see, you already reached the goal of " + goalAmount + " " + goalDescriptor + ", as you have " + actualAmount + ". Try a higher goal.";
                 }
