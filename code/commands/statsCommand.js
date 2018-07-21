@@ -336,7 +336,7 @@ module.exports = {
                                     "\n**Hiders Killed:** " + hiveData.seekerkills +
                                     "\n**Seekers Killed:** " + hiveData.hiderkills +
                                     "\n**Deaths:** " + hiveData.deaths +
-                                    "\n`" + args[1] + "`" + hideTimeAlive(hiveData), "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                                    "\n\n`" + args[1] + "`" + hideTimeAlive(hiveData), "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
