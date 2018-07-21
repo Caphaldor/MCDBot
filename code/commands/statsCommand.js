@@ -128,7 +128,7 @@ module.exports = {
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Blocks Painted:** " + hiveData.blocks_painted +
                                     "\n**Ultimates Earned:** " + hiveData.ultimates_earned +
-                                    "\n**Characters K/D Ratios:** " +
+                                    "\n\n**Characters K/D Ratios:** " +
                                     oinky +
                                     raven +
                                     booster +
