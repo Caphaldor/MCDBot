@@ -148,7 +148,7 @@ module.exports = {
                 //Rankup goals
                 case "rankup":
                     //Check current standing
-                    var currentRank = hiveData.title, nextRank = timeToGoal = "";
+                    var currentRank = hiveData.title, nextRank = timeToGoal = "",pointsNomenclature = "points";
                     var currentPoints = hiveData[goalsConfig[args[1].toLowerCase()].points];
                     var rankPos = needed = -1,timeNeeded = 0;
                     var gameTitles = {};
@@ -172,6 +172,11 @@ module.exports = {
                         timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
                         timeToGoal = timeEstimator(timeNeeded/60);}
                     });
+                    if ((args[1].toLowerCase == "timv") || (args[1].toLowerCase == "mimv") ) {
+                        pointsNomenclature = "karma";
+                    } else if (args[1].toLowerCase == "lab") {
+                        pointsNomenclature = "atoms";
+                    }
                     break;
                 //Gamemode specific goals
 
@@ -187,7 +192,7 @@ module.exports = {
                 //Timeout exists to go around asynchronous requests
                 setTimeout(function(){
                 if (!goalReached) {
-                    response = "You currently have the rank of " + currentRank + ", and you need " + needed + " to reach " + nextRank + ". It is estimated that " + timeToGoal + ".";
+                    response = "You currently have the rank of " + currentRank + ", and you need " + needed + " " + pointsNomenclature + " to reach " + nextRank + ". It is estimated that " + timeToGoal + ".";
                 } else {
                     response = "From what I can see, you already have the highest rank in the gamemode you specified, so I can't help you. Congrats though!";
                 }
