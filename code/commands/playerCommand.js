@@ -18,6 +18,7 @@ function timeConverter(UNIX_timestamp){
         var dateEnd = "th";
         break;
     }
+    if (Math.floor(date/10)==1) {dateEnd = "th";}
     var hour = a.getHours();
     var min = a.getMinutes();
     if (min<10) {
