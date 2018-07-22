@@ -171,9 +171,9 @@ module.exports = {
                         //calculate the time needed to get to it
                         timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
                         timeToGoal = timeEstimator(timeNeeded/60);}
-
                     });
-                    setTimeout(function(){break;},5000);
+                    //setTimeout(function(){break;},5000);
+                    break;
 
                 //Gamemode specific goals
 
