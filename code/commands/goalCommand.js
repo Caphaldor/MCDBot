@@ -148,9 +148,9 @@ module.exports = {
                 //Rankup goals
                 case "rankup":
                     //Check current standing
-                    var currentRank = hiveData.title;
+                    var currentRank = hiveData.title, nextRank = timeToGoal = "";
                     var currentPoints = hiveData[goalsConfig[args[1].toLowerCase()].points];
-                    var rankPos = -1;
+                    var rankPos = needed = -1,timeNeeded = 0;
                     var gameTitles = {};
                     req("http://api.hivemc.com/v1/game/" + args[1] + "/titles", function (error2, response2, body2) {
                         if (error2){logging.legacyLog("URGENT HTTP ERROR")}
@@ -166,11 +166,11 @@ module.exports = {
                         //Check if top/highest rank has been reached
                         if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true;} else {
                         //Check next rank requirements
-                        var nextRank = gameTitles[rankPos+1].plain_name;
-                        var needed = gameTitles[rankPos+1].required_points - currentPoints;
+                        nextRank = gameTitles[rankPos+1].plain_name;
+                        needed = gameTitles[rankPos+1].required_points - currentPoints;
                         //calculate the time needed to get to it
-                        var timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
-                        var timeToGoal = timeEstimator(timeNeeded/60);}
+                        timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
+                        timeToGoal = timeEstimator(timeNeeded/60);}
                     });
                 break;
 
