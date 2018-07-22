@@ -26,6 +26,17 @@
     "points": "total_points",
     "kills": "kills"
   },
+  "grav": {
+  "availableGoals": ["wl","wins","points","games","rankup"],
+  "gameTime": {
+    "lobbyTime": 40,
+    "lowAverage": 45,
+    "highAverage": 70
+  },
+  "wins": "victories",
+  "games": "gamesplayed",
+  "points": "points",
+},
   "gnt": {
     "availableGoals": ["empty"],
     "gameTime": {
