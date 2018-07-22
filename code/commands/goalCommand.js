@@ -163,14 +163,14 @@ module.exports = {
                                 i = 115;
                             }
                         }
-                        //Chceck if top/highest rank has been reached
-                        if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true; break;}
+                        //Check if top/highest rank has been reached
+                        if ((rankPos == ((gameTitles.length)-1))|| (rankPos == 0)) {goalReached = true;} else {
                         //Check next rank requirements
                         var nextRank = gameTitles[rankPos+1].plain_name;
                         var needed = gameTitles[rankPos+1].required_points - currentPoints;
                         //calculate the time needed to get to it
                         var timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
-                        var timeToGoal = timeEstimator(timeNeeded/60);
+                        var timeToGoal = timeEstimator(timeNeeded/60);}
                     });
                 break;
 
