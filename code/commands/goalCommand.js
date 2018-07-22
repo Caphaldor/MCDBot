@@ -173,7 +173,6 @@ module.exports = {
                         timeToGoal = timeEstimator(timeNeeded/60);}
                     });
                     break;
-
                 //Gamemode specific goals
 
                 default:
@@ -192,16 +191,16 @@ module.exports = {
                 } else {
                     response = "From what I can see, you already have the highest rank in the gamemode you specified, so I can't help you. Congrats though!";
                 }
-                message.reply("done did the thing");
-                },5000);
+                message.reply("",{embed: embed("` `",response, "gold")}).then(msg => checkDM(msg, message.channel.type, divN));
+                },1337);
             } else {
                 if (!goalReached) {
                     response = "You currently have " + actualAmount + " " + goalDescriptor + ". To get it up to " + goalAmount + " you will need " + requirements + ". It is estimated that " + timeToGoal + ".";
                 } else {
                     response = "From what I can see, you already reached the goal of " + goalAmount + " " + goalDescriptor + ", as you have " + actualAmount + ". Try a higher goal.";
                 }
+                message.reply("",{embed: embed("` `",response, "gold")}).then(msg => checkDM(msg, message.channel.type, divN));
             }
-            message.reply("",{embed: embed("` `",response, "gold")}).then(msg => checkDM(msg, message.channel.type, divN));
             }
         });}}}
     }
