@@ -172,7 +172,6 @@ module.exports = {
                         timeNeeded = ((needed*games)/currentPoints)*averageGameTime;
                         timeToGoal = timeEstimator(timeNeeded/60);}
                     });
-                    //setTimeout(function(){break;},5000);
                     break;
 
                 //Gamemode specific goals
@@ -185,15 +184,19 @@ module.exports = {
                 break;
             }
             //Response
-             if (!goalReached) {
-                if (args[2].toLowerCase() == "rankup") {
+            if (args[2].toLowerCase() == "rankup") {
+                //Timeout exists to go around asynchronous requests
+                setTimeout(function(){
+                if (!goalReached) {
                     response = "You currently have the rank of " + currentRank + ", and you need " + needed + " to reach " + nextRank + ". It is estimated that " + timeToGoal + ".";
                 } else {
-                    response = "You currently have " + actualAmount + " " + goalDescriptor + ". To get it up to " + goalAmount + " you will need " + requirements + ". It is estimated that " + timeToGoal + ".";
+                    response = "From what I can see, you already have the highest rank in the gamemode you specified, so I can't help you. Congrats though!";
                 }
+                message.reply("done did the thing");
+                },5000);
             } else {
-                if (args[2].toLowerCase() == "rankup") {
-                    response = "From what I can see, you already have the highest rank in the gamemode you specified. Sadly, I can't check how much you need for top KEK rank yet.";
+                if (!goalReached) {
+                    response = "You currently have " + actualAmount + " " + goalDescriptor + ". To get it up to " + goalAmount + " you will need " + requirements + ". It is estimated that " + timeToGoal + ".";
                 } else {
                     response = "From what I can see, you already reached the goal of " + goalAmount + " " + goalDescriptor + ", as you have " + actualAmount + ". Try a higher goal.";
                 }
