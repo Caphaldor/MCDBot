@@ -18,8 +18,7 @@ function goalCountDecider(currentCount) {
     return assumedGoal;
 };
 function goalRatioDecider(currentRatio) {
-    var assumedRatio = 1;
-    while (assumedRatio<currentRatio) {assumedRatio++;}
+    var assumedRatio = Math.ceil(currentRatio);
     return assumedRatio;
 };
 function timeEstimator(timeNeeded) {
@@ -119,15 +118,19 @@ module.exports = {
                     } else if (args[2].toLowerCase() == "noteacc") {
                         upper = hiveData.correctnotes * 100;
                         lower = hiveData.incorrectnotes+hiveData.correctnotes;
+                        var upperText = "correct note hits";
                     } else if (args[2].toLowerCase() == "catacc") {
                         upper = hiveData.rccat_kills * 100;
                         lower = hiveData.rccat_count;
+                        var upperText = "RC Cat kills";
                     } else if (args[2].toLowerCase() == "chickenacc") {
                         upper = hiveData.airstrike_kills * 100;
                         lower = hiveData.airstrike_count;
+                        var upperText = "Airstrike kills";
                     } else if (args[2].toLowerCase() == "squidacc") {
                         upper = hiveData.sonicsquid_kills * 100;
                         lower = hiveData.sonicsquid_count;
+                        var upperText = "Sonic Squid kills";
                     }
                     var actualAmount = upper/lower;
                     //Decide upon a goal

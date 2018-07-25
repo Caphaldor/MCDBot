@@ -300,13 +300,13 @@
     "beds": "beds broken",
     "teams": "teams eliminated",
     "gold": "gold collected",
-    "noteacc": "note accuracy",
+    "noteacc": "note accuracy[%]",
     "paint": "blocks painted",
     "crates": "crates opened",
     "tables": "tables cleared",
-    "catacc": "RC Cat accuracy",
-    "chickenacc": "Air Strike accuracy",
-    "squidacc": "Sonic Squid accuracy"
+    "catacc": "RC Cat accuracy[%]",
+    "chickenacc": "Air Strike accuracy[%]",
+    "squidacc": "Sonic Squid accuracy[%]"
   },
   "genericGoals": ["wins","kills","deaths","games","points","hiderkills","seekerkills","captures","beds","teams","beasts","gold","shutdowns","energy","shots","eggs","blocks","paint","crates"],
   "ratioGoals": ["wl","kd","noteacc","catacc","chickenacc","squidacc"]
