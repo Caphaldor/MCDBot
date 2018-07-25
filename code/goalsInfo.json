@@ -36,7 +36,7 @@
   "wins": "victories",
   "games": "gamesplayed",
   "points": "points"
-},
+  },
   "bp": {
     "availableGoals": ["wl","points","games","wins","deaths","rankup"],
     "gameTime": {
@@ -128,7 +128,7 @@
     "kills": "kills",
     "gold": "gold_earned",
     "beasts": "beasts_slain",
-    "shutdowns": "shutdowns",
+    "shutdowns": "shutdowns"
   },
   "lab": {
     "availableGoals": ["wl","wins","games","points","rankup"],
