@@ -116,6 +116,18 @@ module.exports = {
                         }
                         lower = hiveData[goalsConfig[args[1].toLowerCase()].deaths];
                         var upperText = "kills";
+                    } else if (args[2].toLowerCase() == "noteacc") {
+                        upper = hiveData.correctnotes * 100;
+                        lower = hiveData.incorrectnotes+hiveData.correctnotes;
+                    } else if (args[2].toLowerCase() == "catacc") {
+                        upper = hiveData.rccat_kills * 100;
+                        lower = hiveData.rccat_count;
+                    } else if (args[2].toLowerCase() == "chickenacc") {
+                        upper = hiveData.airstrike_kills * 100;
+                        lower = hiveData.airstrike_count;
+                    } else if (args[2].toLowerCase() == "squidacc") {
+                        upper = hiveData.sonicsquid_kills * 100;
+                        lower = hiveData.sonicsquid_count;
                     }
                     var actualAmount = upper/lower;
                     //Decide upon a goal
