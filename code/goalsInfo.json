@@ -276,7 +276,7 @@
     "tables": "tablescleared"
   },
   "cr": {
-    "availableGoals": ["wl","kd","wins","games","kills","deaths","points","catacc","chickenacc","squidac","rankup"],
+    "availableGoals": ["wl","kd","wins","games","kills","deaths","points","catacc","chickenacc","squidacc","rankup"],
     "gameTime": {
       "lobbyTime": 100,
       "lowAverage": 150,
