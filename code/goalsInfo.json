@@ -288,6 +288,46 @@
     "points": "total_points",
     "kills": "kills"
   },
+  "pmk": {
+    "availableGoals": ["wl","wins","games","points","infections","kills","rankup"],
+    "gameTime": {
+      "lobbyTime": 100,
+      "lowAverage": 180,
+      "highAverage": 180
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "points": "total_points",
+    "kills": "kills",
+    "infections": "infections"
+  },
+  "ee": {
+    "availableGoals": ["wl","wins","games","points","leaps"],
+    "gameTime": {
+      "lobbyTime": 100,
+      "lowAverage": 180,
+      "highAverage": 180
+    },
+    "wins": "victories",
+    "games": "gamesplayed",
+    "points": "points",
+    "leaps": "leaps"
+  },
+  "surv": {
+    "availableGoals": ["wl","wins","games","points","kills","deaths","generators","crates","rankup"],
+    "gameTime": {
+      "lobbyTime": 100,
+      "lowAverage": 180,
+      "highAverage": 180
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "points": "total_points",
+    "kills": "kills",
+    "deaths": "deaths",
+    "generators": "generators_powered",
+    "crates": "looted_crates",
+  },
   "descriptors": {
     "wl": "W/L",
     "kd": "K/D",
