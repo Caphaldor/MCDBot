@@ -326,7 +326,7 @@
     "kills": "kills",
     "deaths": "deaths",
     "generators": "generators_powered",
-    "crates": "looted_crates",
+    "crates": "looted_crates"
   },
   "descriptors": {
     "wl": "W/L",
