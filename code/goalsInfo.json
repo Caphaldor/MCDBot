@@ -119,7 +119,7 @@
     "gameTime": {
       "lobbyTime": 200,
       "lowAverage": 600,
-      "highAverage": 900
+      "highAverage": 1020
     },
     "wins": "victories",
     "games": "games_played",
