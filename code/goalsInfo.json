@@ -117,9 +117,25 @@
   "gnt": {
     "availableGoals": ["wl","kd","wins","kills","games","points","deaths","gold","beasts","shutdowns","rankup"],
     "gameTime": {
+      "lobbyTime": 200,
+      "lowAverage": 600,
+      "highAverage": 900
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "deaths": "deaths",
+    "points": "total_points",
+    "kills": "kills",
+    "gold": "gold_earned",
+    "beasts": "beasts_slain",
+    "shutdowns": "shutdowns"
+  },
+  "gntm": {
+    "availableGoals": ["wl","kd","wins","kills","games","points","deaths","gold","beasts","shutdowns","rankup"],
+    "gameTime": {
       "lobbyTime": 150,
       "lowAverage": 180,
-      "highAverage": 900
+      "highAverage": 360
     },
     "wins": "victories",
     "games": "games_played",
