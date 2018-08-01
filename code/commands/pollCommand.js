@@ -23,6 +23,7 @@ function findSeparators(inputArray) {
         if (inputArray[i] == "|") {
             separatorPositions[j] = i;
             j++;
+            i++;
         }
     }
     return separatorPositions
