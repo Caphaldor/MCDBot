@@ -22,5 +22,6 @@ module.exports = {
     player: require("./playerCommand.js"),
     records: require("./recordsCommand.js"),
     dr: require("./recordsCommand.js"),
-    goal: require("./goalCommand.js")
+    goal: require("./goalCommand.js"),
+    poll: require("./pollCommand.js")
 };
