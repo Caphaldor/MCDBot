@@ -1,8 +1,9 @@
 {
   "settings": {
     "adminChannels": ["269526879759761408","262699430711525377","262699181620068352"],
-	"serverID": "262699181620068352",
-	"logChannelID": "274488503243636737"
+    "serverID": "262699181620068352",
+    "logChannelID": "274488503243636737",
+    "pollChannelID": "274488503243636737"
   },
   "gameToken": "Screw you Max, you're not getting the answer from here",
   "hint": "`Day 1:` *The overseer tried to stop me, but I just had to leave, there's got to be others that survived. I'm still sifting through all this rubble, I hope I can find a way to move faster once I get out...*",
