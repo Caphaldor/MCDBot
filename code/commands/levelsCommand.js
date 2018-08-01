@@ -50,8 +50,8 @@ function checkDM(msg, DM, div) {
     }
 };
 module.exports = {
-    description: "Lists players block levels from Hide and Seek.",
-    usage: "-levels {Player} <Page> [-d]",
+    description: "Lists players block levels from Hide and Seek. Adding `-d` at the end will add progress bars, adding `-o` will give an overview of all levels.",
+    usage: "-levels {Player} <Page> [-d|-o]",
     allowedInDM: true,
     allowedChannels: ["281725164247449600","262699631123759106"],
     call: function(message, args){

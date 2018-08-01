@@ -19,7 +19,7 @@ function addComplexReactions(message, amount) {
 }
 function findSeparators(inputArray) {
     var separatorPositions = [],j=0;
-    for (i = 0; i<inputArray.length;i++) {
+    for (i = 0; i<(inputArray.length-1);i++) {
         if (inputArray[i] == "|") {
             separatorPositions[j] = i;
             j++;
@@ -29,15 +29,20 @@ function findSeparators(inputArray) {
     return separatorPositions
 }
 module.exports = {
-    description: "Command used to create polls",
-    usage: "-polls",
+    description: "The command will create a poll in #polls",
+    usage: "-poll {PolL Message} [\"| {Poll answer 1} | { Poll Answer 2} | [etc.]\"]",
     allowedInDM: false,
     allowedChannels: ["281725164247449600"],
     call: function(message, args){
         if (!args.includes("|")) {
+            var response = args.join(" ");
+            if (!(response.replace(/\s+/g,""))) {
+                message.reply("",{embed: embed("Error","Is it just me, or did you forget to put a question in your poll?", "red")}).then(msg => checkDM(msg, message.channel.type, divN));;
+            } else {
             bot.channels.get(config.settings.pollChannelID).send(
-                "",{embed: embed("Poll from " + message.author.username,args.join(" "), "pink")}
+                "",{embed: embed("Poll from " + message.author.username,response, "pink")}
             ).then(msg => addSimpleReactions(msg));
+            }
         } else {
             var separators = findSeparators(args),response="";
             if (separators.length<2 || separators.length>20) {
@@ -47,6 +52,9 @@ module.exports = {
             for (i=0;i<separators[0];i++) {
                 response += args[i] + " ";
             }
+            if (!(response.replace(/\s+/g,""))) {
+                message.reply("",{embed: embed("Error","Is it just me, or did you forget to put a question in your poll?", "red")}).then(msg => checkDM(msg, message.channel.type, divN));;
+            } else {
             for (i=0;i<(separators.length-1);i++) {
                 var temp = "";
                 for (j=(separators[i]+1);j<separators[i+1];j++) {
@@ -57,7 +65,7 @@ module.exports = {
             bot.channels.get(config.settings.pollChannelID).send(
                 "",{embed: embed("Poll from " + message.author.username, response, "pink")}
             ).then(msg => addComplexReactions(msg,(separators.length-2)));
-            }
+            }}
         }
     }
 };
