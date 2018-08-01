@@ -16,7 +16,6 @@ function addComplexReactions(message, amount) {
         });
         i++;
     }, 500);
-    }
 }
 function findSeparators(inputArray) {
     var separatorPositions = [],j=0;
