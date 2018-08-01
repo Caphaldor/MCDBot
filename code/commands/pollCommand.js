@@ -14,7 +14,7 @@ function addComplexReactions(message, options) {
 }
 function findSeparators(inputArray) {
     var separatorPositions = [],j=0;
-    for (i = 0; i<inputArray.length();i++) {
+    for (i = 0; i<inputArray.length;i++) {
         if (inputArray[i] == "|") {
             separatorPositions[j] = i;
             j++;
@@ -35,7 +35,7 @@ module.exports = {
         } else {
             var separators = findSeparators(args);
             bot.channels.get(config.settings.pollChannelID).send(
-                "",{embed: embed("Poll from " + message.author.username,"found " + separators.length() + " separators, first after " + args[separators[0]] , "gold")}
+                "",{embed: embed("Poll from " + message.author.username,"found " + separators.length + " separators, first after " + args[separators[0]] , "gold")}
             ).then(msg => addComplexReactions(msg));
         }
     }
