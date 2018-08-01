@@ -39,8 +39,8 @@ module.exports = {
             ).then(msg => addSimpleReactions(msg));
         } else {
             var separators = findSeparators(args),response="";
-            if (separators.length>20) {
-                message.reply("",{embed: embed("Error","You have provided too many options, the maximum I can do is 20.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));;
+            if (separators.length<2 || separators.length>20) {
+                message.reply("",{embed: embed("Error","You have provided an invalid number of options.\nI need at least 2 and no more than 20.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));;
             } else {
             separators.push(args.length);
             for (i=0;i<separators[0];i++) {
