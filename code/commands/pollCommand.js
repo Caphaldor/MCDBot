@@ -43,7 +43,7 @@ module.exports = {
                 for (j=(separators[i]+1);j<separators[i+1];j++) {
                     temp += args[j] + " ";
                 }
-                response += "\n" + settings.emojiCodes[i] + " - " + temp;
+                response += "\n" + config.emojiCodes[i] + " - " + temp;
             }
             bot.channels.get(config.settings.pollChannelID).send(
                 "",{embed: embed("Poll from " + message.author.username,"found " + separators.length + " separators, first after " + args[separators[0]-1] + response , "gold")}
