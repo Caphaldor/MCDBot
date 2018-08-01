@@ -163,7 +163,7 @@ bot.on("message", function (message) {
        setTimeout(function() {message.react(message.guild.emojis.get("303100826434404362")).catch(function () {
             logging.legacyLog("Fatal Error in adding disagree rating.");
         })}, 1000);
-        //timeout exists so that disagree is always before agree
+        //timeout exists so that agree is always before disagree
     }
 });
 

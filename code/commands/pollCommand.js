@@ -1,3 +1,12 @@
+function addSimpleReactions(message) {
+    message.react(message.guild.emojis.get("303100818041733120")).catch(function () {
+        logging.legacyLog("Fatal Error in adding agree rating.");
+    });
+   setTimeout(function() {message.react(message.guild.emojis.get("303100826434404362")).catch(function () {
+        logging.legacyLog("Fatal Error in adding disagree rating.");
+    })}, 1000);
+    //timeout exists so that agree is always before disagree
+}
 module.exports = {
     description: "Command used to create polls",
     usage: "-polls",
@@ -7,17 +16,10 @@ module.exports = {
         if (!args.includes("|")) {
             bot.channels.get(config.settings.pollChannelID).send(
                 "Detected a yes or no question"
-            ).then(msg =>
-                msg.react(message.guild.emojis.get("303100818041733120")).catch(function () {
-                    logging.legacyLog("Fatal Error in adding agree rating.");
-                })).then(
-               setTimeout(function() {msg.react(message.guild.emojis.get("303100826434404362")).catch(function () {
-                    logging.legacyLog("Fatal Error in adding disagree rating.");
-                })}, 1000)
-            );
+            ).then(msg => addSimpleReactions(msg));
         } else {
             bot.channels.get(config.settings.pollChannelID).send(
-                "",{embed: embed("` `","Just testing embeds", "gold")}
+                "",{embed: embed("Poll from " + message.author.username,"Just testing embeds", "gold")}
             );
         }
     }
