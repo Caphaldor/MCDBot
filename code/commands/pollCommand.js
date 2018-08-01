@@ -9,9 +9,9 @@ function addSimpleReactions(message) {
 }
 function addComplexReactions(message, amount) {
     for (i=0;i<amount;i++) {
-        message.react(config.emojiCodes[i]).catch(function () {
+        setTimeout(function() {message.react(config.emojiCodes[i]).catch(function () {
             logging.legacyLog("Fatal Error in adding a reaction.");
-        });
+        })}, 500);
     }
 }
 function findSeparators(inputArray) {
