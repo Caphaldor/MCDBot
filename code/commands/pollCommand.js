@@ -8,9 +8,11 @@ function addSimpleReactions(message) {
     //timeout exists so that agree is always before disagree
 }
 function addComplexReactions(message, amount) {
-    message.react(message.guild.emojis.get("474283452934651914")).catch(function () {
-        logging.legacyLog("Fatal Error in adding A rating.");
-    });
+    for (i=0;i<amount;i++) {
+        message.react(config.emojiCodes[i]).catch(function () {
+            logging.legacyLog("Fatal Error in adding a reaction.");
+        });
+    }
 }
 function findSeparators(inputArray) {
     var separatorPositions = [],j=0;
@@ -30,7 +32,7 @@ module.exports = {
     call: function(message, args){
         if (!args.includes("|")) {
             bot.channels.get(config.settings.pollChannelID).send(
-                "",{embed: embed("Poll from " + message.author.username,args.join(" "), "gold")}
+                "",{embed: embed("Poll from " + message.author.username,args.join(" "), "pink")}
             ).then(msg => addSimpleReactions(msg));
         } else {
             var separators = findSeparators(args),response="";
@@ -46,7 +48,7 @@ module.exports = {
                 response += "\n" + config.emojiCodes[i] + " - " + temp;
             }
             bot.channels.get(config.settings.pollChannelID).send(
-                "",{embed: embed("Poll from " + message.author.username,"found " + separators.length + " separators, first after " + args[separators[0]-1] + response , "gold")}
+                "",{embed: embed("Poll from " + message.author.username, response, "pink")}
             ).then(msg => addComplexReactions(msg,(separators.length-2)));
         }
     }

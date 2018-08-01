@@ -11,11 +11,13 @@ module.exports = function (title, msg, color, thumb,urlLink) {
         colour = 0x008a00;
     }else if(color == "white"){
         //Not truly white, slightly blue so it's visible on Light settings
-        colour =0xc1f1ff;
+        colour = 0xc1f1ff;
     }else if(color == "gray"){
-        colour =0x808080;
+        colour = 0x808080;
     }else if(color == "orange"){
 		colour = 0xff6600;
+    }else if(color == "pink"){
+        colour = 0xffb0ff
     }else{
         colour = 0x333333;
     }
