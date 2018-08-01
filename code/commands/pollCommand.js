@@ -12,6 +12,16 @@ function addComplexReactions(message, options) {
         logging.legacyLog("Fatal Error in adding agree rating.");
     });
 }
+function findSeparators(inputArray) {
+    var separatorPositions = [],j=0;
+    for (i = 0; i<inputArray.size();i++) {
+        if (inputArray[i] == "|") {
+            separatorPositions[j] = i;
+            j++;
+        }
+    }
+    return separatorPositions
+}
 module.exports = {
     description: "Command used to create polls",
     usage: "-polls",
@@ -23,8 +33,9 @@ module.exports = {
                 "",{embed: embed("Poll from " + message.author.username,args.join(" "), "gold")}
             ).then(msg => addSimpleReactions(msg));
         } else {
+            var separators = findSeparators(args);
             bot.channels.get(config.settings.pollChannelID).send(
-                "",{embed: embed("Poll from " + message.author.username,"Just testing embeds", "gold")}
+                "",{embed: embed("Poll from " + message.author.username,"found " + separators.size() + " separators, first after " + args[separators[0]] , "gold")}
             ).then(msg => addComplexReactions(msg));
         }
     }
