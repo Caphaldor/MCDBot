@@ -36,6 +36,9 @@ module.exports = {
             ).then(msg => addSimpleReactions(msg));
         } else {
             var separators = findSeparators(args),response="";
+            if (separators.length>20) {
+                message.reply("",{embed: embed("Error","You have provided too many options, the maximum I can do is 20.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));;
+            } else {
             separators.push(args.length);
             for (i=0;i<separators[0];i++) {
                 response += args[i] + " ";
@@ -50,6 +53,7 @@ module.exports = {
             bot.channels.get(config.settings.pollChannelID).send(
                 "",{embed: embed("Poll from " + message.author.username, response, "pink")}
             ).then(msg => addComplexReactions(msg,(separators.length-1)));
+            }
         }
     }
 };
