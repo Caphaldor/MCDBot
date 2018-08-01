@@ -28,7 +28,7 @@ module.exports = {
     description: "Command used to create polls",
     usage: "-polls",
     allowedInDM: false,
-    allowedChannels: ["274488503243636737"],
+    allowedChannels: ["281725164247449600"],
     call: function(message, args){
         if (!args.includes("|")) {
             bot.channels.get(config.settings.pollChannelID).send(
