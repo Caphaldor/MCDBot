@@ -55,7 +55,7 @@ module.exports = {
             }
             bot.channels.get(config.settings.pollChannelID).send(
                 "",{embed: embed("Poll from " + message.author.username, response, "pink")}
-            ).then(msg => addComplexReactions(msg,(separators.length-1)));
+            ).then(msg => addComplexReactions(msg,(separators.length-2)));
             }
         }
     }
