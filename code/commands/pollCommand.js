@@ -10,10 +10,10 @@ module.exports = {
             ).then(msg =>
                 msg.react(message.guild.emojis.get("303100818041733120")).catch(function () {
                     logging.legacyLog("Fatal Error in adding agree rating.");
-                });
-               setTimeout(function() {message.react(message.guild.emojis.get("303100826434404362")).catch(function () {
+                })).then(msg =>
+               setTimeout(function() {msg.react(message.guild.emojis.get("303100826434404362")).catch(function () {
                     logging.legacyLog("Fatal Error in adding disagree rating.");
-                })}, 1000);
+                })}, 1000)
             );
         } else {
             bot.channels.get(config.settings.pollChannelID).send(
