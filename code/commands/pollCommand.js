@@ -8,10 +8,14 @@ function addSimpleReactions(message) {
     //timeout exists so that agree is always before disagree
 }
 function addComplexReactions(message, amount) {
-    for (i=0;i<amount;i++) {
-        setTimeout(function() {message.react(config.emojiCodes[i]).catch(function () {
+    var i=0;
+    var reactor = setInterval(function() {
+        if (i>=amount) {clearInterval(reactor)}
+        message.react(config.emojiCodes[i]).catch(function () {
             logging.legacyLog("Fatal Error in adding a reaction.");
-        })}, 500);
+        });
+        i++;
+    }, 500);
     }
 }
 function findSeparators(inputArray) {
