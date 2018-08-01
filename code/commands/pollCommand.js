@@ -7,6 +7,11 @@ function addSimpleReactions(message) {
     })}, 1000);
     //timeout exists so that agree is always before disagree
 }
+function addComplexReactions(message, options) {
+    message.react(message.guild.emojis.get("303100818041733120")).catch(function () {
+        logging.legacyLog("Fatal Error in adding agree rating.");
+    });
+}
 module.exports = {
     description: "Command used to create polls",
     usage: "-polls",
@@ -15,12 +20,12 @@ module.exports = {
     call: function(message, args){
         if (!args.includes("|")) {
             bot.channels.get(config.settings.pollChannelID).send(
-                "Detected a yes or no question"
+                "",{embed: embed("Poll from " + message.author.username,args.join(" "), "gold")}
             ).then(msg => addSimpleReactions(msg));
         } else {
             bot.channels.get(config.settings.pollChannelID).send(
                 "",{embed: embed("Poll from " + message.author.username,"Just testing embeds", "gold")}
-            );
+            ).then(msg => addComplexReactions(msg));
         }
     }
 };
