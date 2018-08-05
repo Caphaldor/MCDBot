@@ -25,7 +25,7 @@ function blockLevel(xp, detail) {
 	if (detail) {
 		var bars = 10;
 		var leftoverXP = Math.floor(bars*exp/(level*50))
-		if (level == 30) {leftoverXP = 10}
+		if (level == 50) {leftoverXP = 10}
 		var end = bars-leftoverXP;
 		for (; leftoverXP > 0; leftoverXP--) {
 			progressBar += "▮";
@@ -33,7 +33,7 @@ function blockLevel(xp, detail) {
 		for (; end > 0; end--) {
 			progressBar += "▯";
 		}
-		if (level == 30) {
+		if (level == 50) {
 			progressBar +=  "`  *Max Level*";
 		}else{
 			progressBar += "`  *" + exp + "/" + (level*50) + "*";
@@ -99,7 +99,7 @@ module.exports = {
                         });
                         var messageFields = [];
                         var fieldNum=0;
-                        var fieldInformation = [{title:"Unplayed blocks",count:0},{title:"Levels 1-4",count:0},{title:"Levels 5-9",count:0},{title:"Levels 10-14",count:0},{title:"Levels 15-19",count:0},{title:"Levels 20-24",count:0},{title:"Levels 25-29",count:0},{title:"Max Level Blocks",count:0},{title:"Levels 35-39",count:0},{title:"Levels 40-44",count:0},{title:"Levels 45-49",count:0},{title:"Max Level Blocks",count:0}];
+                        var fieldInformation = [{title:"Unplayed blocks",count:0},{title:"Levels 1-4",count:0},{title:"Levels 5-9",count:0},{title:"Levels 10-14",count:0},{title:"Levels 15-19",count:0},{title:"Levels 20-24",count:0},{title:"Levels 25-29",count:0},{title:"Levels 30-34",count:0},{title:"Levels 35-39",count:0},{title:"Levels 40-44",count:0},{title:"Levels 45-49",count:0},{title:"Max Level Blocks",count:0}];
                         for (i=0; expInfo[i] != undefined; i++) {
                             fieldInformation[Math.ceil((expInfo[i][2]/5)+0.1)].count++;
                         }

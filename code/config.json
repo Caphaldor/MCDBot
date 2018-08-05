@@ -90,6 +90,15 @@
     "WOOD:3": "Jungle Wood Planks",
     "HARD_CLAY": "Hardened Clay",
     "STONE:6": "Polished Andesite",
-    "WOOL": "White Wool"
+    "WOOL": "White Wool",
+	"BRICK": "Bricks",
+	"GOLD_ORE": "Gold Ore",
+	"WOOD:2": "Birch Wood Planks",
+	"STAINED_CLAY:5": "Lime Stained Clay",
+	"LOG:3": "Jungle Log",
+	"CAULDRON": "Cauldron",
+	"NOTE_BLOCK": "Note Block",
+	"STONE:2": "Granite",
+	"SPRUCE_WOOD_STAIRS": "Spruce Wood Stairs"
   }
 }

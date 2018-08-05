@@ -35,7 +35,7 @@ function checkDM(msg, DM, div) {
     }
 };
 module.exports = {
-    description: "The command will create a poll in #polls",
+    description: "The command will create a poll in #polls, do `-poll help` for more information.",
     usage: "-poll {PolL Message} [\"| {Poll answer 1} | { Poll Answer 2} | [etc.]\"]",
     allowedInDM: false,
     allowedChannels: ["281725164247449600"],
