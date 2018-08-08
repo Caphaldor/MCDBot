@@ -1,11 +1,10 @@
 function timeG(valu) {
     var temp = "Map not played\n";
     if (valu != "N/A") {
-        var minutes = "";
+        var minutes = seconds = descriptor = "";
         if ((valu/60000)>1) {
             minutes = Math.floor(valu/60000) + ":";
-        }
-        var seconds = "";
+        } else {descriptor = "seconds";}
         if ((valu/10000) > 1) {
             seconds += Math.floor((valu % 60000)/10000);
         }
@@ -18,8 +17,7 @@ function timeG(valu) {
             }
         }
         miliseconds += (valu % 1000);
-        if (minutes) {minutes += ":";}
-        temp = minutes + seconds + miliseconds + " seconds\n";
+        temp = minutes + seconds + miliseconds + " " + descriptor + "\n";
     } return temp;
 };
 //checks for deletion in case not in DM
