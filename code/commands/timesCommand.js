@@ -18,6 +18,7 @@ function timeG(valu) {
             }
         }
         miliseconds += (valu % 1000);
+        if (minutes) {minutes += ":";}
         temp = minutes + seconds + miliseconds + " seconds\n";
     } return temp;
 };
