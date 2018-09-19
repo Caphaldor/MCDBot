@@ -809,8 +809,132 @@ module.exports = {
                                     "\n**Deaths:** " + hiveData.deaths +
                                     "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
                                     "\n**Team Eliminations:** " + hiveData.teams_eliminated +
-                                    "\n**Current Win Streak:**`*` " + hiveData.win_streak +
-                                    "\n\n**This Win Streak takes into consideration games in all BW modes.*", "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                                    "\n**Current Win Streak:** " + hiveData.win_streak +
+                                    "`*`\n\n**This Win Streak takes into consideration games in all BW modes.*", "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }else{
+                        message.reply("",
+                            {
+                                embed: embed("Error",
+                                    "An error occured.\nMaybe you misspelled the player's name?", "red")
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }
+                });
+                break;
+            case "beds":
+                var divN = 2;
+                if (message.channel.id == "314752337354948608" || message.channel.id == "281725164247449600") {divN = 1;}
+                if (message.channel.type != "dm") {message.delete();}
+                req("http://api.hivemc.com/v1/player/" + args[1] + "/BEDS", function (error, response, body) {
+                    //in case Hive's API has issues
+                    if (error){logging.legacyLog("URGENT HTTP ERROR")}
+                    //get Hive's response
+                    var hiveData = JSON.parse(body);
+                    if (hiveData.UUID){
+                        message.reply("",
+                            {
+                                embed: embed("Total Bed Wars: Solos stats of `" + args[1] + "`",
+                                    "**Points:** " + hiveData.total_points +
+                                    "\n**Victories:** " + hiveData.victories +
+                                    "\n**Games Played:** " + hiveData.games_played +
+                                    "\n**Kills:** " + hiveData.kills+
+                                    "\n**Deaths:** " + hiveData.deaths +
+                                    "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
+                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated +
+                                    "\n**Current Win Streak:** " + hiveData.win_streak, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }else{
+                        message.reply("",
+                            {
+                                embed: embed("Error",
+                                    "An error occured.\nMaybe you misspelled the player's name?", "red")
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }
+                });
+                break;
+            case "bedD":
+                var divN = 2;
+                if (message.channel.id == "314752337354948608" || message.channel.id == "281725164247449600") {divN = 1;}
+                if (message.channel.type != "dm") {message.delete();}
+                req("http://api.hivemc.com/v1/player/" + args[1] + "/BEDD", function (error, response, body) {
+                    //in case Hive's API has issues
+                    if (error){logging.legacyLog("URGENT HTTP ERROR")}
+                    //get Hive's response
+                    var hiveData = JSON.parse(body);
+                    if (hiveData.UUID){
+                        message.reply("",
+                            {
+                                embed: embed("Total Bed Wars: Duos stats of `" + args[1] + "`",
+                                    "**Points:** " + hiveData.total_points +
+                                    "\n**Victories:** " + hiveData.victories +
+                                    "\n**Games Played:** " + hiveData.games_played +
+                                    "\n**Kills:** " + hiveData.kills+
+                                    "\n**Deaths:** " + hiveData.deaths +
+                                    "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
+                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated +
+                                    "\n**Current Win Streak:** " + hiveData.win_streak, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }else{
+                        message.reply("",
+                            {
+                                embed: embed("Error",
+                                    "An error occured.\nMaybe you misspelled the player's name?", "red")
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }
+                });
+                break;
+            case "bedT":
+                var divN = 2;
+                if (message.channel.id == "314752337354948608" || message.channel.id == "281725164247449600") {divN = 1;}
+                if (message.channel.type != "dm") {message.delete();}
+                req("http://api.hivemc.com/v1/player/" + args[1] + "/BEDT", function (error, response, body) {
+                    //in case Hive's API has issues
+                    if (error){logging.legacyLog("URGENT HTTP ERROR")}
+                    //get Hive's response
+                    var hiveData = JSON.parse(body);
+                    if (hiveData.UUID){
+                        message.reply("",
+                            {
+                                embed: embed("Total Bed Wars: Teams stats of `" + args[1] + "`",
+                                    "**Points:** " + hiveData.total_points +
+                                    "\n**Victories:** " + hiveData.victories +
+                                    "\n**Games Played:** " + hiveData.games_played +
+                                    "\n**Kills:** " + hiveData.kills+
+                                    "\n**Deaths:** " + hiveData.deaths +
+                                    "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
+                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated +
+                                    "\n**Current Win Streak:** " + hiveData.win_streak, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }else{
+                        message.reply("",
+                            {
+                                embed: embed("Error",
+                                    "An error occured.\nMaybe you misspelled the player's name?", "red")
+                             }).then(msg => checkDM(msg, message.channel.type, divN));
+                    }
+                });
+                break;
+            case "bedx":
+                var divN = 2;
+                if (message.channel.id == "314752337354948608" || message.channel.id == "281725164247449600") {divN = 1;}
+                if (message.channel.type != "dm") {message.delete();}
+                req("http://api.hivemc.com/v1/player/" + args[1] + "/BEDX", function (error, response, body) {
+                    //in case Hive's API has issues
+                    if (error){logging.legacyLog("URGENT HTTP ERROR")}
+                    //get Hive's response
+                    var hiveData = JSON.parse(body);
+                    if (hiveData.UUID){
+                        message.reply("",
+                            {
+                                embed: embed("Total Bed Wars: Double Fun stats of `" + args[1] + "`",
+                                    "**Points:** " + hiveData.total_points +
+                                    "\n**Victories:** " + hiveData.victories +
+                                    "\n**Games Played:** " + hiveData.games_played +
+                                    "\n**Kills:** " + hiveData.kills+
+                                    "\n**Deaths:** " + hiveData.deaths +
+                                    "\n**Beds Destroyed:** " + hiveData.beds_destroyed +
+                                    "\n**Team Eliminations:** " + hiveData.teams_eliminated +
+                                    "\n**Current Win Streak:** " + hiveData.win_streak, "gold","https://crafatar.com/renders/body/"+ hiveData.UUID.toString() +"?overlay", "https://hivemc.com/player/" + args[1])
                              }).then(msg => checkDM(msg, message.channel.type, divN));
                     }else{
                         message.reply("",
@@ -937,7 +1061,7 @@ module.exports = {
                         embed: embed("HiveMC Stats Help",
                             "Available Gamemodes: \n" +
                             " • Block Party - BP\n" +
-                            " • Bed Wars - BED\n" +
+                            " • Bed Wars - BED`*`\n" +
                             " • Cowboys and Indians - CAI\n" +
                             " • DeathRun - DR\n" +
                             " • Exploding Eggs - EE\n" +
@@ -953,7 +1077,8 @@ module.exports = {
                             " • The Lab - LAB\n" +
                             " • Trouble in Mineville - TIMV\n" +
                             "For Arcade game codes use `-stats Arcade`\n" +
-                            "\nUsage: `-stats {Game Code} {Player}`", "blue")
+                            "\nUsage: `-stats {Game Code} {Player}`" +
+                            "\n\n**For stats on each BW mode add S, D, T or X; at the end, to get stats for Solos, Duos, Teams and Double Fun respectively. (ex. BEDX)*", "blue")
                     }).then(msg => checkDM(msg, message.channel.type, divN));
                 break;
         }
