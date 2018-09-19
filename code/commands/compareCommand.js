@@ -930,7 +930,7 @@ module.exports = {
                             var playerB = JSON.parse(body2);
                             if (playerB.UUID) {
 
-                                message.reply("**Comparison of Bed Wars Stats of " + args[1] + " and " + args[2] + "**\n" +
+                                message.reply("**Comparison of Total Bed Wars Stats of " + args[1] + " and " + args[2] + "**\n" +
                                     "```md\n" + statsFormatting(args[1], false, true) + "> *     Category     * <" + statsFormatting(args[2], true, true) + "\n" +
                                     theText(playerA.total_points,playerB.total_points,"*      Points      *",true) + "\n" +
                                     theText(playerA.victories,playerB.victories,"*    Victories     *",true) + "\n" +
@@ -942,7 +942,8 @@ module.exports = {
                                     theText(Math.round(100*playerA.kills/playerA.deaths)/100,Math.round(100*playerB.kills/playerB.deaths)/100,"*    K/D  Ratio    *",true) + "\n" +
                                     theText(playerA.beds_destroyed,playerB.beds_destroyed,"*  Beds destroyed  *",true) + "\n" +
                                     theText(Math.round(100*playerA.beds_destroyed/playerA.games_played)/100,Math.round(100*playerB.beds_destroyed/playerB.games_played)/100,"* Beds  Per  Game  *",true) + "\n" +
-                                    theText(playerA.teams_eliminated,playerB.teams_eliminated,"* Teams Eliminated *",true) + "```"
+                                    theText(playerA.teams_eliminated,playerB.teams_eliminated,"* Teams Eliminated *",true) + "\n" +
+                                    theText(playerA.win_streak,playerB.win_streak,"*    Win Streak    *",true) + "```"
                                 ).then(msg => checkDM(msg, message.channel.type, divN));
                             }else{
                                 message.reply("",

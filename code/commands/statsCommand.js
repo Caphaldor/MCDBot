@@ -833,7 +833,7 @@ module.exports = {
                     if (hiveData.UUID){
                         message.reply("",
                             {
-                                embed: embed("Total Bed Wars: Solos stats of `" + args[1] + "`",
+                                embed: embed("Bed Wars: Solos stats of `" + args[1] + "`",
                                     "**Points:** " + hiveData.total_points +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.games_played +
@@ -864,7 +864,7 @@ module.exports = {
                     if (hiveData.UUID){
                         message.reply("",
                             {
-                                embed: embed("Total Bed Wars: Duos stats of `" + args[1] + "`",
+                                embed: embed("Bed Wars: Duos stats of `" + args[1] + "`",
                                     "**Points:** " + hiveData.total_points +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.games_played +
@@ -895,7 +895,7 @@ module.exports = {
                     if (hiveData.UUID){
                         message.reply("",
                             {
-                                embed: embed("Total Bed Wars: Teams stats of `" + args[1] + "`",
+                                embed: embed("Bed Wars: Teams stats of `" + args[1] + "`",
                                     "**Points:** " + hiveData.total_points +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.games_played +
@@ -926,7 +926,7 @@ module.exports = {
                     if (hiveData.UUID){
                         message.reply("",
                             {
-                                embed: embed("Total Bed Wars: Double Fun stats of `" + args[1] + "`",
+                                embed: embed("Bed Wars: Double Fun stats of `" + args[1] + "`",
                                     "**Points:** " + hiveData.total_points +
                                     "\n**Victories:** " + hiveData.victories +
                                     "\n**Games Played:** " + hiveData.games_played +
