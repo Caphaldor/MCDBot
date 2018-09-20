@@ -50,6 +50,7 @@ module.exports = {
         if (args[0] == undefined) {
             message.reply("",{embed: embed("Error","The proper usage of this command is `-goal {Player} {Game} {Goal} <Specific Goal>`", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else if ((args[1].toLowerCase() == "available")&&(goalsConfig[args[0].toLowerCase()] != undefined)){
+            if (message.channel.type != "dm") {message.delete();}
             var response = "Available goals for `" + args[0] + "`:";
             goalsConfig[args[0].toLowerCase()].availableGoals.forEach(function(goal){
                 response += "\n• " + goal;
