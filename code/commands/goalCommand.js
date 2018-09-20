@@ -48,7 +48,13 @@ module.exports = {
     call: function(message, args){
         var divN = 2;
         if (args[0] == undefined) {
-            message.reply("",{embed: embed("Error","The proper usage of this command is `-goal {Player} {Game} {Goal} <Specific Goal>`", "red")}).then(msg => checkDM(msg, message.channel.type, divN));;
+            message.reply("",{embed: embed("Error","The proper usage of this command is `-goal {Player} {Game} {Goal} <Specific Goal>`", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
+        } else if ((args[1].toLowerCase() == "available")&&(goalsConfig[args[0].toLowerCase()] != undefined)){
+            var response = "Available goals for `" + args[0] + "`:";
+            goalsConfig[args[0].toLowerCase()].availableGoals.forEach(function(goal){
+                response += "\n• " + goal;
+            });
+            message.reply("",{embed: embed("`-goal` Help",response,"white")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
         if (goalsConfig[args[1].toLowerCase()] == undefined) {
             message.reply("",{embed: embed("Error","I'm sorry, but we do not support this gamemode yet. Make sure that `" + args[1] + "` is the proper game code for what you're looking for.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
@@ -194,7 +200,7 @@ module.exports = {
                     }
                     break;
                 //Gamemode specific goals
-
+                //Tempoary empty, will be added in future update
                 default:
                     var actualAmount = hiveData[goalsConfig[args[1].toLowerCase()][args[2].toLowerCase]];
                     var goalAmount = -1;
