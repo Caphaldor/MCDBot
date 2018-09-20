@@ -852,7 +852,7 @@ module.exports = {
                     }
                 });
                 break;
-            case "bedD":
+            case "bedd":
                 var divN = 2;
                 if (message.channel.id == "314752337354948608" || message.channel.id == "281725164247449600") {divN = 1;}
                 if (message.channel.type != "dm") {message.delete();}
@@ -883,7 +883,7 @@ module.exports = {
                     }
                 });
                 break;
-            case "bedT":
+            case "bedt":
                 var divN = 2;
                 if (message.channel.id == "314752337354948608" || message.channel.id == "281725164247449600") {divN = 1;}
                 if (message.channel.type != "dm") {message.delete();}
