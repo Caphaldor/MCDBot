@@ -49,6 +49,9 @@ module.exports = {
         var divN = 2;
         if (args[0] == undefined) {
             message.reply("",{embed: embed("Error","The proper usage of this command is `-goal {Player} {Game} {Goal} <Specific Goal>`", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
+        } else if ((args[0] == "help") && (args[1] == undefined)){
+            if (message.channel.type != "dm") {message.delete();}
+            message.reply("",{embed: embed("`-goal` help","To see an estimate of how long it will take for you to reach a goal, use this format: `-goal {Player} {Game} {Goal} [Specific Goal]` Where the [Specific Goal] is optional. For example, doing:\n`-goal _Tim HIDE deaths 12345` Will tell you how many more deaths _Tim will need until he reaches 12345, and how long it will take him to get there. But doing:\n`-goal _Tim HIDE deaths` will automatically pick the closest round goal for _Tim to reach, and say how long *that* will take.\n\nTo get the available goals for a game, do `-goal {GAME} available` *(temporary solution)*\nTo get the game codes use `-stats list` and `-stats arcade` *(temporary solution)*","white")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else if ((args[1].toLowerCase() == "available")&&(goalsConfig[args[0].toLowerCase()] != undefined)){
             if (message.channel.type != "dm") {message.delete();}
             var response = "Available goals for `" + args[0] + "`:";
@@ -56,10 +59,7 @@ module.exports = {
                 response += "\n• " + goal;
             });
             message.reply("",{embed: embed("`-goal` Help",response,"white")}).then(msg => checkDM(msg, message.channel.type, divN));
-        } else if ((args[0] == "help") && (args[1] == undefined)){
-            if (message.channel.type != "dm") {message.delete();}
-            message.reply("",{embed: embed("`-goal` help","To see an estimate of how long it will take for you to reach a goal, use this format: `-goal {Player} {Game} {Goal} [Specific Goal]` Where the [Specific Goal] is optional. For example, doing:\n`-goal _Tim HIDE deaths 12345` Will tell you how many more deaths _Tim will need until he reaches 12345, and how long it will take him to get there. But doing:\n`-goal _Tim HIDE deaths` will automatically pick the closest round goal for _Tim to reach, and say how long *that* will take.\n\nTo get the available goals for a game, do `-goal {GAME} available` *(temporary solution)*\nTo get the game codes use `-stats list` and `-stats arcade` *(temporary solution)*","white")}).then(msg => checkDM(msg, message.channel.type, divN));
-        }else {
+        } else {
         if (goalsConfig[args[1].toLowerCase()] == undefined) {
             message.reply("",{embed: embed("Error","I'm sorry, but we do not support this gamemode yet. Make sure that `" + args[1] + "` is the proper game code for what you're looking for.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
