@@ -102,9 +102,69 @@
   "bed": {
     "availableGoals": ["wl","kd","wins","games","kills","deaths","points","beds","teams"],
     "gameTime": {
-      "lobbyTime": 55,
+      "lobbyTime": 100,
       "lowAverage": 180,
       "highAverage": 600
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "deaths": "deaths",
+    "points": "total_points",
+    "kills": "kills",
+    "beds": "beds_destroyed",
+    "teams": "teams_eliminated"
+  },
+  "beds": {
+    "availableGoals": ["wl","kd","wins","games","kills","deaths","points","beds","teams"],
+    "gameTime": {
+      "lobbyTime": 120,
+      "lowAverage": 420,
+      "highAverage": 900
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "deaths": "deaths",
+    "points": "total_points",
+    "kills": "kills",
+    "beds": "beds_destroyed",
+    "teams": "teams_eliminated"
+  },
+  "bedd": {
+    "availableGoals": ["wl","kd","wins","games","kills","deaths","points","beds","teams"],
+    "gameTime": {
+      "lobbyTime": 150,
+      "lowAverage": 360,
+      "highAverage": 900
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "deaths": "deaths",
+    "points": "total_points",
+    "kills": "kills",
+    "beds": "beds_destroyed",
+    "teams": "teams_eliminated"
+  },
+  "bedt": {
+    "availableGoals": ["wl","kd","wins","games","kills","deaths","points","beds","teams"],
+    "gameTime": {
+      "lobbyTime": 90,
+      "lowAverage": 180,
+      "highAverage": 660
+    },
+    "wins": "victories",
+    "games": "games_played",
+    "deaths": "deaths",
+    "points": "total_points",
+    "kills": "kills",
+    "beds": "beds_destroyed",
+    "teams": "teams_eliminated"
+  },
+  "bedx": {
+    "availableGoals": ["wl","kd","wins","games","kills","deaths","points","beds","teams"],
+    "gameTime": {
+      "lobbyTime": 120,
+      "lowAverage": 390,
+      "highAverage": 90
     },
     "wins": "victories",
     "games": "games_played",
