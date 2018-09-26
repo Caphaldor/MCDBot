@@ -61,10 +61,10 @@ module.exports = {
             message.reply("",{embed: embed("`-goal` Help",response,"white")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
         if (goalsConfig[args[1].toLowerCase()] == undefined) {
-            message.reply("",{embed: embed("Error","I'm sorry, but we do not support this gamemode yet. Make sure that `" + args[1] + "` is the proper game code for what you're looking for.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
+            message.reply("",{embed: embed("Error","I'm sorry, but we do not support this gamemode yet. Make sure that `" + args[1] + "` is the proper game code for what you're looking for.\n*(full list of codes at `-stats list`)", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
         if (!goalsConfig[args[1].toLowerCase()].availableGoals.includes(args[2].toLowerCase())) {
-            message.reply("",{embed: embed("Error","I'm sorry, but I don't think I can check for this goal in the gamemode you specified. If you believe this is a mistake, please contact <@155963500265603072>.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
+            message.reply("",{embed: embed("Error","I'm sorry, but I cannot check for this goal yet. Do `-goal " + args[1] + " available` to get the available goals.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
         req("https://api.hivemc.com/v1/player/" + args[0] + "/" + args[1], function (error, response, body) {
             if (message.channel.id == "281725164247449600") {divN = 1;}
