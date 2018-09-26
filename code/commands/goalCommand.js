@@ -221,7 +221,7 @@ module.exports = {
                 } else {
                     response = "From what I can see, you already have the highest rank in the gamemode you specified, so I can't help you. Congrats though!";
                 }
-                message.reply("",{embed: embed("` `",response, "gold")}).then(msg => checkDM(msg, message.channel.type, divN));
+                message.reply("",{embed: embed("Rank goal of " + args[0] + " for " + args[1],response, "gold")}).then(msg => checkDM(msg, message.channel.type, divN));
                 },1337);
             } else {
                 if (!goalReached) {
@@ -229,7 +229,7 @@ module.exports = {
                 } else {
                     response = "From what I can see, you already reached the goal of " + goalAmount + " " + goalDescriptor + ", as you have " + actualAmount + ". Try a higher goal.";
                 }
-                message.reply("",{embed: embed("` `",response, "gold")}).then(msg => checkDM(msg, message.channel.type, divN));
+                message.reply("",{embed: embed("Goal of " + args[2] + " for " + args[0],response, "gold")}).then(msg => checkDM(msg, message.channel.type, divN));
             }
             }
         });}}}
