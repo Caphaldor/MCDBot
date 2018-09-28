@@ -39,6 +39,7 @@ module.exports = {
     call: function(message, args){
         var divN = 2;
         if (args[0] == undefined) {
+            if (message.channel.type != "dm") {message.delete();}
             message.reply("",{embed: embed("Error","The proper usage of this command is `-goal {Player} {Game} {Goal} <Specific Goal>`", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else if ((args[0] == "help") && (args[1] == undefined)){
             if (message.channel.type != "dm") {message.delete();}
@@ -52,9 +53,11 @@ module.exports = {
             message.reply("",{embed: embed("`-goal` Help",response,"white")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
         if (goalsConfig[args[1].toLowerCase()] == undefined) {
+            if (message.channel.type != "dm") {message.delete();}
             message.reply("",{embed: embed("Error","I'm sorry, but we do not support this gamemode yet. Make sure that `" + args[1] + "` is the proper game code for what you're looking for.\n*(full list of codes at `-stats list`)*", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
         if (!goalsConfig[args[1].toLowerCase()].availableGoals.includes(args[2].toLowerCase())) {
+            if (message.channel.type != "dm") {message.delete();}
             message.reply("",{embed: embed("Error","I'm sorry, but I cannot check for this goal yet. Do\n`-goal " + args[1] + " available` to get the available goals.", "red")}).then(msg => checkDM(msg, message.channel.type, divN));
         } else {
         req("https://api.hivemc.com/v1/player/" + args[0] + "/" + args[1], function (error, response, body) {
