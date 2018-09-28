@@ -87,7 +87,7 @@ module.exports = {
                     if (args[3]&&!isNaN(parseInt(args[3]))) {
                         var goalAmount = args[3];
                     } else {
-                        var goalAmount = Math.ceil(currentCount/(Math.pow(10,currentCount.toString().length-1)))*Math.pow(10,currentCount.toString().length-1);
+                        var goalAmount = Math.ceil(actualAmount/(Math.pow(10,actualAmount.toString().length-1)))*Math.pow(10,actualAmount.toString().length-1);
                     }
                     //Check if goal has been reached
                     if (goalAmount<actualAmount) {goalReached = true; break;}
@@ -138,7 +138,7 @@ module.exports = {
                     if (args[3]&&!isNaN(parseInt(args[3]))) {
                         var goalAmount = args[3];
                     } else {
-                        var goalAmount = Math.ceil(currentRatio);
+                        var goalAmount = Math.ceil(actualAmount);
                     }
                     //Check if goal has been reached
                     if (goalAmount<actualAmount) {goalReached = true; break;}
