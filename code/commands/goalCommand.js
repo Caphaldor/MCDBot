@@ -12,14 +12,6 @@ function hideLevel(expArray) {
     }
     return level;
 };
-function goalCountDecider(currentCount) {
-    var assumedGoal = Math.ceil(currentCount/(Math.pow(10,currentCount.toString().length-1)))*Math.pow(10,currentCount.toString().length-1);
-    while (assumedGoal<currentCount) {assumedGoal += Math.pow(10,assumedGoal.toString().length-1);}
-    return assumedGoal;
-};
-function goalRatioDecider(currentRatio) {
-    return Math.ceil(currentRatio);
-};
 function timeEstimator(timeNeeded) {
     var temp = 0;
     var time = -1;
@@ -95,7 +87,7 @@ module.exports = {
                     if (args[3]&&!isNaN(parseInt(args[3]))) {
                         var goalAmount = args[3];
                     } else {
-                        var goalAmount = goalCountDecider(actualAmount);
+                        var goalAmount = Math.ceil(currentCount/(Math.pow(10,currentCount.toString().length-1)))*Math.pow(10,currentCount.toString().length-1);
                     }
                     //Check if goal has been reached
                     if (goalAmount<actualAmount) {goalReached = true; break;}
@@ -146,7 +138,7 @@ module.exports = {
                     if (args[3]&&!isNaN(parseInt(args[3]))) {
                         var goalAmount = args[3];
                     } else {
-                        var goalAmount = goalRatioDecider(actualAmount);
+                        var goalAmount = Math.ceil(currentRatio);
                     }
                     //Check if goal has been reached
                     if (goalAmount<actualAmount) {goalReached = true; break;}
