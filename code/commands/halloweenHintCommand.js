@@ -15,7 +15,7 @@ module.exports = {
                 message.reply("Where does Night of the Living Dead begin?");
             break;
             case "4" :
-                message.reply("Mine. Prepare. Fight!);
+                message.reply("Mine. Prepare. Fight!");
             break;
             case "5" :
                 message.reply("Witch ghost are you looking for?");
