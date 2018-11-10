@@ -1,5 +1,5 @@
 module.exports = {
-    hint: require("./halloweenHintCommand.js"),
+    hint: require("./easterChallenge.js"),
     //guess: require("./challengeGuessCommand.js"),
 	levels: require("./levelsCommand"),
     math: require("./math.js"),
