@@ -57,7 +57,7 @@ console.log("Starting up...");
 //Auto-message on join
 bot.on('guildMemberAdd', function(member){
     member.sendMessage("Welcome to The Hive's Community Discord! I am BeeBot, and I am here to help you verify!\n"+
-                               "Verifying will grant you access to our text and voice channels, so you can talk with everyone! To do it, just follow these simple steps:\n" +
+                               "Verifying will grant you access to our text and voice channels, so you can talk with everyone! If you're on Bedrock Edition (Win10/Phones/XBOX/Nintendo) simply use the command `-toggle bedrock`. If you're a Java player, you can verify with the following steps:\n" +
                                "**1.)** Launch Minecraft __**1.12.2**__, and use Direct Connect in the Multiplayer menu to join `caphaldor.com`. You will be kicked with a Token.\n" +
                                "**2.)** Send me a message saying `-token YOUR_TOKEN`.\n\n" +
                                "And that's it! You should now have your rank, enjoy your stay!\n" +
