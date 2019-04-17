@@ -18,7 +18,7 @@ module.exports = {
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 3", "green");
             break;
             case "broken clock" :
-                message.reply("*\"'kay, enough of this. Get to the point: where did he go?\" I hurried him after I got tired of waiting.\n\"Well the ol' crank came in here drunk as a skunk, spillin' his drink everywhere. I couldn't do nothing to kick him out, but he withdrew a whole loada money and left on 'is own. Last I saw he tottered off 'round the corner.\"\nWhere could he have went? The road lead outside of the town, and I only could think of one place where he could've went to spend all the cash.*");
+                message.reply("*\"'kay, enough of this. Get to the point: where did he go?\" I hurried him after I got tired of waiting.\n\"Well the ol' crank came in here drunk as a skunk, spillin' his drink everywhere. I couldn't do nothing to kick him out, but he withdrew a whole loada money and left on 'is own. Last I saw he tottered off 'round the corner.\"\nWhere could he have gone? The road lead outside of the town, and I only could think of one place where he could've went to spend all the cash.*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 4", "green");
             break;
             case "the farm" :
