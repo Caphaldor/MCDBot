@@ -77,15 +77,15 @@ module.exports = {
                 message.reply("*Evil labs can't be expected to make sense and this one certainly didn't, but the giant drill explained where the money came from. Sadly as ecstatic as I was from figuring out this conspiracy, the discovery brought me no closer in figuring out where my pops disappeared to. Looking around the lab, I spotted what must've been their meeting table. On it a big piece of paper with some poor quality graphic decorations for the plan:\n```\nBiggest Money Yet!\nQuartz - 11$\nSea Lantern - 42$\nGold - 80$\n```\nThere were some calculations, leading to a mindblowing amount of cash.*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 16.", "green");
             break;
-            case "2630" :
+            case "2634" :
                 message.reply("*Knowing how much money they made didn't help me though. I wanted to look for more clues when I heard footsteps at the door.\n\"You know, you really need to clean that lab Tim.\"\n\"Oh please, it's not that bad, Tim.\"\n\"It literally has radioactive waste spilling out of containers.\"\n\"A little glow never hurt nobody.\"\n\"What about old man Johnson? \"\n\"Ahh I'm sure the old coot's fine, we shot him up with somethin' to clear out the radiation.\"\n\"Yeah, after letting him get away...\"\nAs soon as I heard them mention my dad, I knew I was closer than ever. He was right there, I almost had him. But at least he managed to get away before they hurt him, I just had to catch up.*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 17.", "green");
             break;
-            case "$2630" :
+            case "$2634" :
                 message.reply("*Knowing how much money they made didn't help me though. I wanted to look for more clues when I heard footsteps at the door.\n\"You know, you really need to clean that lab Tim.\"\n\"Oh please, it's not that bad, Tim.\"\n\"It literally has radioactive waste spilling out of containers.\"\n\"A little glow never hurt nobody.\"\n\"What about old man Johnson? \"\n\"Ahh I'm sure the old coot's fine, we shot him up with somethin' to clear out the radiation.\"\n\"Yeah, after letting him get away...\"\nAs soon as I heard them mention my dad, I knew I was closer than ever. He was right there, I almost had him. But at least he managed to get away before they hurt him, I just had to catch up.*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 17.", "green");
             break;
-            case "2630$" :
+            case "2634$" :
                 message.reply("*Knowing how much money they made didn't help me though. I wanted to look for more clues when I heard footsteps at the door.\n\"You know, you really need to clean that lab Tim.\"\n\"Oh please, it's not that bad, Tim.\"\n\"It literally has radioactive waste spilling out of containers.\"\n\"A little glow never hurt nobody.\"\n\"What about old man Johnson? \"\n\"Ahh I'm sure the old coot's fine, we shot him up with somethin' to clear out the radiation.\"\n\"Yeah, after letting him get away...\"\nAs soon as I heard them mention my dad, I knew I was closer than ever. He was right there, I almost had him. But at least he managed to get away before they hurt him, I just had to catch up.*");
                 logging.log(message.author.username + " challenge progress.", message.author.username + " solved step 17.", "green");
             break;
